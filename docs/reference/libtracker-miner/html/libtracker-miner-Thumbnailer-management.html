@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Thumbnailer management</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Miner Library Reference Manual">
+<link rel="up" href="ch06.html" title="Utilities">
+<link rel="prev" href="libtracker-miner-Media-art-management.html" title="Media art management">
+<link rel="next" href="annotation-glossary.html" title="Annotation Glossary">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libtracker-miner-Media-art-management.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch06.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Miner Library Reference Manual</th>
+<td><a accesskey="n" href="annotation-glossary.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libtracker-miner-Thumbnailer-management.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libtracker-miner-Thumbnailer-management.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libtracker-miner-Thumbnailer-management"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libtracker-miner-Thumbnailer-management.top_of_page"></a>Thumbnailer management</span></h2>
+<p>Thumbnailer management — Request the thumbnailer service creates or
+updates thumbnails.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libtracker-miner-Thumbnailer-management.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;libtracker-miner/tracker-miner.h&gt;
+
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-cleanup" title="tracker_thumbnailer_cleanup ()">tracker_thumbnailer_cleanup</a>         (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri_prefix</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-init" title="tracker_thumbnailer_init ()">tracker_thumbnailer_init</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-move-add" title="tracker_thumbnailer_move_add ()">tracker_thumbnailer_move_add</a>        (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *from_uri</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *to_uri</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-remove-add" title="tracker_thumbnailer_remove_add ()">tracker_thumbnailer_remove_add</a>      (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-send" title="tracker_thumbnailer_send ()">tracker_thumbnailer_send</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-shutdown" title="tracker_thumbnailer_shutdown ()">tracker_thumbnailer_shutdown</a>        (<em class="parameter"><code><span class="type">void</span></code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libtracker-miner-Thumbnailer-management.description"></a><h2>Description</h2>
+<p>
+This is a convenience API using D-Bus for creating and updating
+thumbnails for files being mined. It is also used to create
+thumbnails for album art found embedded in some medias.
+</p>
+<p>
+This follows the thumbnailer specification:
+http://live.gnome.org/ThumbnailerSpec
+</p>
+</div>
+<div class="refsect1">
+<a name="libtracker-miner-Thumbnailer-management.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="tracker-thumbnailer-cleanup"></a><h3>tracker_thumbnailer_cleanup ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_thumbnailer_cleanup         (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri_prefix</code></em>);</pre>
+<p>
+Tells thumbnailer to cleanup all thumbnails under <em class="parameter"><code>uri_prefix</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri_prefix</code></em> :</span></p></td>
+<td>URI prefix</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if successfully reported, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-thumbnailer-init"></a><h3>tracker_thumbnailer_init ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_thumbnailer_init            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Initializes the thumbnailer connection.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if connection was successfully initialized, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> otherwise.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-thumbnailer-move-add"></a><h3>tracker_thumbnailer_move_add ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_thumbnailer_move_add        (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *from_uri</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *to_uri</code></em>);</pre>
+<p>
+Adds a new request to tell the thumbnailer that <em class="parameter"><code>from_uri</code></em> was moved to
+<em class="parameter"><code>to_uri</code></em>. Stored requests can be sent with <a class="link" href="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-send" title="tracker_thumbnailer_send ()"><code class="function">tracker_thumbnailer_send()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>from_uri</code></em> :</span></p></td>
+<td>URI of the file before the move</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mime_type</code></em> :</span></p></td>
+<td>mime-type of the file</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>to_uri</code></em> :</span></p></td>
+<td>URI of the file after the move</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if successfully stored to be reported, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-thumbnailer-remove-add"></a><h3>tracker_thumbnailer_remove_add ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_thumbnailer_remove_add      (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>);</pre>
+<p>
+Adds a new request to tell the thumbnailer that <em class="parameter"><code>uri</code></em> was removed.
+Stored requests can be sent with <a class="link" href="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-send" title="tracker_thumbnailer_send ()"><code class="function">tracker_thumbnailer_send()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>URI of the file</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mime_type</code></em> :</span></p></td>
+<td>mime-type of the file</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if successfully stored to be reported, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-thumbnailer-send"></a><h3>tracker_thumbnailer_send ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_thumbnailer_send            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Sends to the thumbnailer all stored requests.
+</p>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-thumbnailer-shutdown"></a><h3>tracker_thumbnailer_shutdown ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_thumbnailer_shutdown        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Shuts down the thumbnailer connection.
+</p>
+<p class="since">Since 0.8</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

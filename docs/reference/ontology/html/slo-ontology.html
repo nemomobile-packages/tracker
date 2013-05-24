@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Simplified Maemo Location Ontology (SLO) (experimental/for testing): Simpler, faster, better ontology for locations and landmarks</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="up" href="ontology.html" title="Part I. Overview">
+<link rel="prev" href="mtp-properties.html" title="MTP Ontology Properties">
+<link rel="next" href="slo-properties.html" title="SLO Ontology Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="mtp-properties.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ontology.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Ontology Reference Manual</th>
+<td><a accesskey="n" href="slo-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="slo-ontology"></a>Simplified Maemo Location Ontology (SLO) (experimental/for testing): Simpler, faster, better ontology for locations and landmarks</h2></div></div></div>
+<div class="toc"><dl>
+<dt><span class="section"><a href="slo-ontology.html#slo-classes">SLO Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="slo-properties.html">SLO Ontology Properties</a></span></dt>
+</dl></div>
+<dt><span class="term">Authors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">Ivan Frade &lt;ivan.frade@nokia.com&gt;</li></ul></div></dd>
+<dt><span class="term">Editors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">Ivan Frade &lt;ivan.frade@nokia.com&gt;</li></ul></div></dd>
+<dt><span class="term">Upstream:</span></dt>
+<dd><p>Not available</p></dd>
+<dt><span class="term">ChangeLog:</span></dt>
+<dd><p><a class="ulink" href="http://git.gnome.org/cgit/tracker/log/data/ontologies/92-slo.ontology" target="_top">Tracker changes</a></p></dd>
+<dt><span class="term">Copyright:</span></dt>
+<dd><p>© 2009, 2010 <a class="ulink" href="http://www.nokia.com/" target="_top">Nokia</a></p></dd>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="slo-classes"></a>SLO Ontology Classes</h2></div></div></div>
+<div class="refsect2">
+<a name="slo-Route"></a><h3>slo:Route</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="slo-ontology.html#slo-GeoLocation" title="slo:GeoLocation">slo:GeoLocation</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="slo-properties.html#slo-routeDetails" title="slo:routeDetails">slo:routeDetails</a>, <a class="link" href="slo-properties.html#slo-endTime" title="slo:endTime">slo:endTime</a>, <a class="link" href="slo-properties.html#slo-startTime" title="slo:startTime">slo:startTime</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="slo-GeoLocation"></a><h3>slo:GeoLocation</h3>
+<p>A place in the space, can be defined by coordinates or text</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="slo-ontology.html#slo-Route" title="slo:Route">slo:Route</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="slo-properties.html#slo-postalAddress" title="slo:postalAddress">slo:postalAddress</a>, <a class="link" href="slo-properties.html#slo-timestamp" title="slo:timestamp">slo:timestamp</a>, <a class="link" href="slo-properties.html#slo-radius" title="slo:radius">slo:radius</a>, <a class="link" href="slo-properties.html#slo-boundingLongitudeMax" title="slo:boundingLongitudeMax">slo:boundingLongitudeMax</a>, <a class="link" href="slo-properties.html#slo-boundingLongitudeMin" title="slo:boundingLongitudeMin">slo:boundingLongitudeMin</a>, <a class="link" href="slo-properties.html#slo-boundingLatitudeMax" title="slo:boundingLatitudeMax">slo:boundingLatitudeMax</a>, <a class="link" href="slo-properties.html#slo-boundingLatitudeMin" title="slo:boundingLatitudeMin">slo:boundingLatitudeMin</a>, <a class="link" href="slo-properties.html#slo-altitude" title="slo:altitude">slo:altitude</a>, <a class="link" href="slo-properties.html#slo-horizontalAccuracy" title="slo:horizontalAccuracy">slo:horizontalAccuracy</a>, <a class="link" href="slo-properties.html#slo-verticalAccuracy" title="slo:verticalAccuracy">slo:verticalAccuracy</a>, <a class="link" href="slo-properties.html#slo-longitude" title="slo:longitude">slo:longitude</a>, <a class="link" href="slo-properties.html#slo-latitude" title="slo:latitude">slo:latitude</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="slo-properties.html#slo-location" title="slo:location">slo:location</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="slo-LandmarkCategory"></a><h3>slo:LandmarkCategory</h3>
+<p>Predefined set of instances for categories of landmarks</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="slo-properties.html#slo-categoryIconUrl" title="slo:categoryIconUrl">slo:categoryIconUrl</a>, <a class="link" href="slo-properties.html#slo-isRemovable" title="slo:isRemovable">slo:isRemovable</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="slo-properties.html#slo-belongsToCategory" title="slo:belongsToCategory">slo:belongsToCategory</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+slo:predefined-landmark-category-transport, slo:predefined-landmark-category-sports, slo:predefined-landmark-category-sightseeing, slo:predefined-landmark-category-shopping, slo:predefined-landmark-category-religious-places, slo:predefined-landmark-category-public-service, slo:predefined-landmark-category-people, slo:predefined-landmark-category-outdoor-activities, slo:predefined-landmark-category-geographical-area, slo:predefined-landmark-category-food-beverage, slo:predefined-landmark-category-entertainment, slo:predefined-landmark-category-educational-institute, slo:predefined-landmark-category-communication, slo:predefined-landmark-category-business, slo:predefined-landmark-category-accommodation, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="slo-Landmark"></a><h3>slo:Landmark</h3>
+<p>Use the nie title, description, ... properties</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="slo-properties.html#slo-iconUrl" title="slo:iconUrl">slo:iconUrl</a>, <a class="link" href="slo-properties.html#slo-hasContact" title="slo:hasContact">slo:hasContact</a>, <a class="link" href="slo-properties.html#slo-belongsToCategory" title="slo:belongsToCategory">slo:belongsToCategory</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

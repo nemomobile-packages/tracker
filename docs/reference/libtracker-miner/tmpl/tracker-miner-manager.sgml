@@ -1,0 +1,274 @@
+<!-- ##### SECTION Title ##### -->
+TrackerMinerManager
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO TRACKER_MINER_MANAGER_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### STRUCT TrackerMinerManager ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL TrackerMinerManager::miner-activated ##### -->
+<para>
+
+</para>
+
+@trackerminermanager: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL TrackerMinerManager::miner-deactivated ##### -->
+<para>
+
+</para>
+
+@trackerminermanager: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL TrackerMinerManager::miner-paused ##### -->
+<para>
+
+</para>
+
+@trackerminermanager: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL TrackerMinerManager::miner-progress ##### -->
+<para>
+
+</para>
+
+@trackerminermanager: the object which received the signal.
+@arg1: 
+@arg2: 
+@arg3: 
+@arg4: 
+
+<!-- ##### SIGNAL TrackerMinerManager::miner-resumed ##### -->
+<para>
+
+</para>
+
+@trackerminermanager: the object which received the signal.
+@arg1: 
+
+<!-- ##### ARG TrackerMinerManager:auto-start ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT TrackerMinerManagerClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+@miner_progress: 
+@miner_paused: 
+@miner_resumed: 
+@miner_activated: 
+@miner_deactivated: 
+
+<!-- ##### ENUM TrackerMinerManagerError ##### -->
+<para>
+
+</para>
+
+@TRACKER_MINER_MANAGER_ERROR_NOT_AVAILABLE: 
+@TRACKER_MINER_MANAGER_ERROR_NOENT: 
+
+<!-- ##### FUNCTION tracker_miner_manager_error_quark ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_get_available ##### -->
+<para>
+
+</para>
+
+@manager: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_get_description ##### -->
+<para>
+
+</para>
+
+@manager: 
+@miner: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_get_display_name ##### -->
+<para>
+
+</para>
+
+@manager: 
+@miner: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_get_running ##### -->
+<para>
+
+</para>
+
+@manager: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_get_status ##### -->
+<para>
+
+</para>
+
+@manager: 
+@miner: 
+@status: 
+@progress: 
+@remaining_time: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_ignore_next_update ##### -->
+<para>
+
+</para>
+
+@manager: 
+@miner: 
+@urls: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_index_file ##### -->
+<para>
+
+</para>
+
+@manager: 
+@file: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_is_active ##### -->
+<para>
+
+</para>
+
+@manager: 
+@miner: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_is_paused ##### -->
+<para>
+
+</para>
+
+@manager: 
+@miner: 
+@applications: 
+@reasons: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_new_full ##### -->
+<para>
+
+</para>
+
+@auto_start: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_pause ##### -->
+<para>
+
+</para>
+
+@manager: 
+@miner: 
+@reason: 
+@cookie: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_pause_for_process ##### -->
+<para>
+
+</para>
+
+@manager: 
+@miner: 
+@reason: 
+@cookie: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_reindex_by_mimetype ##### -->
+<para>
+
+</para>
+
+@manager: 
+@mimetypes: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_manager_resume ##### -->
+<para>
+
+</para>
+
+@manager: 
+@miner: 
+@cookie: 
+@Returns: 
+
+

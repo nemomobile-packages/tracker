@@ -1,0 +1,77 @@
+<!-- ##### SECTION Title ##### -->
+TrackerNetworkProvider
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### TYPEDEF TrackerNetworkProvider ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT TrackerNetworkProviderIface ##### -->
+<para>
+
+</para>
+
+@parent_iface: 
+@get_status: 
+
+<!-- ##### ENUM TrackerNetworkProviderStatus ##### -->
+<para>
+
+</para>
+
+@TRACKER_NETWORK_PROVIDER_DISCONNECTED: 
+@TRACKER_NETWORK_PROVIDER_UNKNOWN: 
+@TRACKER_NETWORK_PROVIDER_GPRS: 
+@TRACKER_NETWORK_PROVIDER_EDGE: 
+@TRACKER_NETWORK_PROVIDER_3G: 
+@TRACKER_NETWORK_PROVIDER_LAN: 
+
+<!-- ##### FUNCTION tracker_network_provider_get ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_network_provider_get_name ##### -->
+<para>
+
+</para>
+
+@provider: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_network_provider_get_status ##### -->
+<para>
+
+</para>
+
+@provider: 
+@Returns: 
+
+

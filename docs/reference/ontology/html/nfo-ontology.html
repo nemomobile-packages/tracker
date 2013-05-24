@@ -1,0 +1,1690 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Nepomuk File Ontology (NFO): About files and other desktop resources.</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="up" href="ontology.html" title="Part I. Overview">
+<link rel="prev" href="nao-properties.html" title="NAO Ontology Properties">
+<link rel="next" href="nfo-properties.html" title="NFO Ontology Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="nao-properties.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ontology.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Ontology Reference Manual</th>
+<td><a accesskey="n" href="nfo-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="nfo-ontology"></a>Nepomuk File Ontology (NFO): About files and other desktop resources.</h2></div></div></div>
+<div class="toc"><dl>
+<dt><span class="section"><a href="nfo-ontology.html#nfo-classes">NFO Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="nfo-properties.html">NFO Ontology Properties</a></span></dt>
+</dl></div>
+<dt><span class="term">Authors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">Tracker Developers</li>
+<li class="listitem">Ludger van Elst, DFKI,  &lt;elst@dfki.uni-kl.de&gt;</li>
+<li class="listitem">Michael Sintek, DFKI,  &lt;michael.sintek@dfki.de&gt;</li>
+<li class="listitem">Leo Sauermann, DFKI,  &lt;leo.sauermann@dfki.de&gt;</li>
+<li class="listitem">Antoni Mylka, DFKI, &lt;antoni.mylka@dfki.de&gt;</li>
+</ul></div></dd>
+<dt><span class="term">Editors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">Antoni Mylka, DFKI, &lt;antoni.mylka@dfki.de&gt;</li>
+<li class="listitem">Tracker developers (translation into turtle)</li>
+</ul></div></dd>
+<dt><span class="term">Contributors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">Christiaan Fluit, Aduna, &lt;christiaan.fluit@aduna-software.com&gt;</li>
+<li class="listitem">Evgeny 'phreedom' Egorochkin, KDE Strigi Developer, &lt;stexx@mail.ru&gt;</li>
+</ul></div></dd>
+<dt><span class="term">Upstream:</span></dt>
+<dd><p><a class="ulink" href="http://www.semanticdesktop.org/ontologies/nfo/" target="_top">Upstream version</a></p></dd>
+<dt><span class="term">ChangeLog:</span></dt>
+<dd><p><a class="ulink" href="http://git.gnome.org/cgit/tracker/log/data/ontologies/33-nfo.ontology" target="_top">Tracker changes</a></p></dd>
+<dt><span class="term">Copyright:</span></dt>
+<dd><p>© 2007 <a class="ulink" href="http://www.dfki.de/" target="_top">DFKI</a> © 2009 <a class="ulink" href="http://www.nokia.com/" target="_top">Nokia</a>. The ontologies are made available under the terms of NEPOMUK <a class="ulink" href="http://www.semanticdesktop.org/ontologies/nfo/LICENSE.txt" target="_top">software license</a> (FIXME verify)</p></dd>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="nfo-classes"></a>NFO Ontology Classes</h2></div></div></div>
+<div class="refsect2">
+<a name="nfo-FileDataObject"></a><h3>nfo:FileDataObject</h3>
+<p>A resource containing a finite sequence of bytes with arbitrary information, that is available to a computer program and is usually based on some kind of durable storage. A file is durable in the sense that it remains available for programs to use after the current program has finished.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-DataObject" title="nie:DataObject">nie:DataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-DeletedResource" title="nfo:DeletedResource">nfo:DeletedResource</a>, <a class="link" href="nfo-ontology.html#nfo-EmbeddedFileDataObject" title="nfo:EmbeddedFileDataObject">nfo:EmbeddedFileDataObject</a>, <a class="link" href="nfo-ontology.html#nfo-RemoteDataObject" title="nfo:RemoteDataObject">nfo:RemoteDataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-fileLastModified" title="nfo:fileLastModified">nfo:fileLastModified</a>, <a class="link" href="nfo-properties.html#nfo-fileOwner" title="nfo:fileOwner">nfo:fileOwner</a>, <a class="link" href="nfo-properties.html#nfo-hasHash" title="nfo:hasHash">nfo:hasHash</a>, <a class="link" href="nfo-properties.html#nfo-fileName" title="nfo:fileName">nfo:fileName</a>, <a class="link" href="nfo-properties.html#nfo-permissions" title="nfo:permissions">nfo:permissions</a>, <a class="link" href="nfo-properties.html#nfo-fileSize" title="nfo:fileSize">nfo:fileSize</a>, <a class="link" href="nfo-properties.html#nfo-fileCreated" title="nfo:fileCreated">nfo:fileCreated</a>, <a class="link" href="nfo-properties.html#nfo-fileLastAccessed" title="nfo:fileLastAccessed">nfo:fileLastAccessed</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Video"></a><h3>nfo:Video</h3>
+<p>A video file.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Visual" title="nfo:Visual">nfo:Visual</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-averageVideoBitrate" title="nfo:averageVideoBitrate">nfo:averageVideoBitrate</a>, <a class="link" href="nfo-properties.html#nfo-frameCount" title="nfo:frameCount">nfo:frameCount</a>, <a class="link" href="nfo-properties.html#nfo-frameRate" title="nfo:frameRate">nfo:frameRate</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-MediaList"></a><h3>nfo:MediaList</h3>
+<p>A file containing a list of media files.e.g. a playlist</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-mediaListEntry" title="nfo:mediaListEntry">nfo:mediaListEntry</a>, <a class="link" href="nfo-properties.html#nfo-listDuration" title="nfo:listDuration">nfo:listDuration</a>, <a class="link" href="nfo-properties.html#nfo-entryCounter" title="nfo:entryCounter">nfo:entryCounter</a>, <a class="link" href="nfo-properties.html#nfo-hasMediaFileListEntry" title="nfo:hasMediaFileListEntry">nfo:hasMediaFileListEntry</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Executable"></a><h3>nfo:Executable</h3>
+<p>An executable file.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-SoftwareCategory"></a><h3>nfo:SoftwareCategory</h3>
+<p>A software category</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, <a class="link" href="nfo-ontology.html#nfo-DataContainer" title="nfo:DataContainer">nfo:DataContainer</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-softwareCategoryIcon" title="nfo:softwareCategoryIcon">nfo:softwareCategoryIcon</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-SourceCode"></a><h3>nfo:SourceCode</h3>
+<p>Code in a compilable or interpreted programming language.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-PlainTextDocument" title="nfo:PlainTextDocument">nfo:PlainTextDocument</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-definesGlobalVariable" title="nfo:definesGlobalVariable">nfo:definesGlobalVariable</a>, <a class="link" href="nfo-properties.html#nfo-definesFunction" title="nfo:definesFunction">nfo:definesFunction</a>, <a class="link" href="nfo-properties.html#nfo-definesClass" title="nfo:definesClass">nfo:definesClass</a>, <a class="link" href="nfo-properties.html#nfo-programmingLanguage" title="nfo:programmingLanguage">nfo:programmingLanguage</a>, <a class="link" href="nfo-properties.html#nfo-commentCharacterCount" title="nfo:commentCharacterCount">nfo:commentCharacterCount</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-RemotePortAddress"></a><h3>nfo:RemotePortAddress</h3>
+<p>An address specifying a remote host and port. Such an address can be interpreted in many ways (examples of such interpretations include mailboxes, websites, remote calendars or filesystems), depending on an interpretation, various kinds of data may be extracted from such an address.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-DataObject" title="nie:DataObject">nie:DataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Cursor"></a><h3>nfo:Cursor</h3>
+<p>A Cursor.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-RasterImage" title="nfo:RasterImage">nfo:RasterImage</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-RegionOfInterest"></a><h3>nfo:RegionOfInterest</h3>
+<p>Area on an image with relevant content. Following the spec in http://www.metadataworkinggroup.org</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-roiRefersTo" title="nfo:roiRefersTo">nfo:roiRefersTo</a>, <a class="link" href="nfo-properties.html#nfo-regionOfInterestType" title="nfo:regionOfInterestType">nfo:regionOfInterestType</a>, <a class="link" href="nfo-properties.html#nfo-regionOfInterestHeight" title="nfo:regionOfInterestHeight">nfo:regionOfInterestHeight</a>, <a class="link" href="nfo-properties.html#nfo-regionOfInterestWidth" title="nfo:regionOfInterestWidth">nfo:regionOfInterestWidth</a>, <a class="link" href="nfo-properties.html#nfo-regionOfInterestY" title="nfo:regionOfInterestY">nfo:regionOfInterestY</a>, <a class="link" href="nfo-properties.html#nfo-regionOfInterestX" title="nfo:regionOfInterestX">nfo:regionOfInterestX</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-hasRegionOfInterest" title="nfo:hasRegionOfInterest">nfo:hasRegionOfInterest</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Document"></a><h3>nfo:Document</h3>
+<p>A generic document. A common superclass for all documents on the desktop.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-HelpDocument" title="nfo:HelpDocument">nfo:HelpDocument</a>, <a class="link" href="nfo-ontology.html#nfo-Note" title="nfo:Note">nfo:Note</a>, <a class="link" href="nfo-ontology.html#nfo-MindMap" title="nfo:MindMap">nfo:MindMap</a>, <a class="link" href="nfo-ontology.html#nfo-Spreadsheet" title="nfo:Spreadsheet">nfo:Spreadsheet</a>, <a class="link" href="nfo-ontology.html#nfo-Presentation" title="nfo:Presentation">nfo:Presentation</a>, <a class="link" href="nfo-ontology.html#nfo-TextDocument" title="nfo:TextDocument">nfo:TextDocument</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-tableOfContents" title="nfo:tableOfContents">nfo:tableOfContents</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="http-//www.tracker-project.org/ontologies/poi#ObjectOfInterest"></a><h3>http://www.tracker-project.org/ontologies/poi#ObjectOfInterest</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-depicts" title="nfo:depicts">nfo:depicts</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Presentation"></a><h3>nfo:Presentation</h3>
+<p>A Presentation made by some presentation software (Corel Presentations, OpenOffice Impress, MS Powerpoint etc.)</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Document" title="nfo:Document">nfo:Document</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-RemoteDataObject"></a><h3>nfo:RemoteDataObject</h3>
+<p>A file data object stored at a remote location. Don't confuse this class with a RemotePortAddress. This one applies to a particular resource, RemotePortAddress applies to an address, that can have various interpretations.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-FileDataObject" title="nfo:FileDataObject">nfo:FileDataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Software"></a><h3>nfo:Software</h3>
+<p>A piece of software. Examples may include applications and the operating system. This interpretation most commonly applies to SoftwareItems.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-SoftwareApplication" title="nfo:SoftwareApplication">nfo:SoftwareApplication</a>, <a class="link" href="nfo-ontology.html#nfo-Application" title="nfo:Application">nfo:Application</a>, <a class="link" href="nfo-ontology.html#nfo-OperatingSystem" title="nfo:OperatingSystem">nfo:OperatingSystem</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-softwareCmdLine" title="nfo:softwareCmdLine">nfo:softwareCmdLine</a>, <a class="link" href="nfo-properties.html#nfo-softwareIcon" title="nfo:softwareIcon">nfo:softwareIcon</a>, <a class="link" href="nfo-properties.html#nfo-supercedes" title="nfo:supercedes">nfo:supercedes</a>, <a class="link" href="nfo-properties.html#nfo-conflicts" title="nfo:conflicts">nfo:conflicts</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-supercedes" title="nfo:supercedes">nfo:supercedes</a>, <a class="link" href="nfo-properties.html#nfo-conflicts" title="nfo:conflicts">nfo:conflicts</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-ArchiveItem"></a><h3>nfo:ArchiveItem</h3>
+<p>A file entity inside an archive.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-EmbeddedFileDataObject" title="nfo:EmbeddedFileDataObject">nfo:EmbeddedFileDataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-isPasswordProtected" title="nfo:isPasswordProtected">nfo:isPasswordProtected</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-HardDiskPartition"></a><h3>nfo:HardDiskPartition</h3>
+<p>A partition on a hard disk</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-DataObject" title="nie:DataObject">nie:DataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Font"></a><h3>nfo:Font</h3>
+<p>A font.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-foundry" title="nfo:foundry">nfo:foundry</a>, <a class="link" href="nfo-properties.html#nfo-fontFamily" title="nfo:fontFamily">nfo:fontFamily</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-FilesystemImage"></a><h3>nfo:FilesystemImage</h3>
+<p>An image of a filesystem. Instances of this class may include CD images, DVD images or hard disk partition images created by various pieces of software (e.g. Norton Ghost)</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Filesystem" title="nfo:Filesystem">nfo:Filesystem</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-HelpDocument"></a><h3>nfo:HelpDocument</h3>
+<p>User guides and similar to assist the user</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Document" title="nfo:Document">nfo:Document</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-DeletedResource"></a><h3>nfo:DeletedResource</h3>
+<p>A file entity that has been deleted from the original source. Usually such entities are stored within various kinds of 'Trash' or 'Recycle Bin' folders.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-FileDataObject" title="nfo:FileDataObject">nfo:FileDataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-deletionDate" title="nfo:deletionDate">nfo:deletionDate</a>, <a class="link" href="nfo-properties.html#nfo-originalLocation" title="nfo:originalLocation">nfo:originalLocation</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-RasterImage"></a><h3>nfo:RasterImage</h3>
+<p>A raster image.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Image" title="nfo:Image">nfo:Image</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Cursor" title="nfo:Cursor">nfo:Cursor</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-MindMap"></a><h3>nfo:MindMap</h3>
+<p>A MindMap, created by a mind-mapping utility. Examples might include FreeMind or mind mapper.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Document" title="nfo:Document">nfo:Document</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Note"></a><h3>nfo:Note</h3>
+<p>Usually small document with snippets, reminders or frequenly used content.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Document" title="nfo:Document">nfo:Document</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-PlainTextDocument"></a><h3>nfo:PlainTextDocument</h3>
+<p>A file containing plain text (ASCII, Unicode or other encodings). Examples may include TXT, HTML, XML, program source code etc.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-TextDocument" title="nfo:TextDocument">nfo:TextDocument</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-SourceCode" title="nfo:SourceCode">nfo:SourceCode</a>, <a class="link" href="nfo-ontology.html#nfo-HtmlDocument" title="nfo:HtmlDocument">nfo:HtmlDocument</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Spreadsheet"></a><h3>nfo:Spreadsheet</h3>
+<p>A spreadsheet, created by a spreadsheet application. Examples might include Gnumeric, OpenOffice Calc or MS Excel.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Document" title="nfo:Document">nfo:Document</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Trash"></a><h3>nfo:Trash</h3>
+<p>Represents a container for deleted files, a feature common in modern operating systems.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-DataContainer" title="nfo:DataContainer">nfo:DataContainer</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Media"></a><h3>nfo:Media</h3>
+<p>A piece of media content. This class may be used to express complex media containers with many streams of various media content (both aural and visual).</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Audio" title="nfo:Audio">nfo:Audio</a>, <a class="link" href="nfo-ontology.html#nfo-Visual" title="nfo:Visual">nfo:Visual</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-lastPlayedPosition" title="nfo:lastPlayedPosition">nfo:lastPlayedPosition</a>, <a class="link" href="nfo-properties.html#nfo-equipment" title="nfo:equipment">nfo:equipment</a>, <a class="link" href="nfo-properties.html#nfo-genre" title="nfo:genre">nfo:genre</a>, <a class="link" href="nfo-properties.html#nfo-averageBitrate" title="nfo:averageBitrate">nfo:averageBitrate</a>, <a class="link" href="nfo-properties.html#nfo-bitrateType" title="nfo:bitrateType">nfo:bitrateType</a>, <a class="link" href="nfo-properties.html#nfo-encodedBy" title="nfo:encodedBy">nfo:encodedBy</a>, <a class="link" href="nfo-properties.html#nfo-codec" title="nfo:codec">nfo:codec</a>, <a class="link" href="nfo-properties.html#nfo-bitDepth" title="nfo:bitDepth">nfo:bitDepth</a>, <a class="link" href="nfo-properties.html#nfo-hasMediaStream" title="nfo:hasMediaStream">nfo:hasMediaStream</a>, <a class="link" href="nfo-properties.html#nfo-compressionType" title="nfo:compressionType">nfo:compressionType</a>, <a class="link" href="nfo-properties.html#nfo-duration" title="nfo:duration">nfo:duration</a>, <a class="link" href="nfo-properties.html#nfo-count" title="nfo:count">nfo:count</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-SoftwareService"></a><h3>nfo:SoftwareService</h3>
+<p>A service published by a piece of software, either by an operating system or an application. Examples of such services may include calendar, addresbook and mailbox managed by a PIM application. This category is introduced to distinguish between data available directly from the applications (Via some Interprocess Communication Mechanisms) and data available from files on a disk. In either case both DataObjects would receive a similar interpretation (e.g. a Mailbox) and wouldn't differ on the content level.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-DataObject" title="nie:DataObject">nie:DataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-VectorImage"></a><h3>nfo:VectorImage</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Image" title="nfo:Image">nfo:Image</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-WebHistory"></a><h3>nfo:WebHistory</h3>
+<p>A web history entry</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-uri" title="nfo:uri">nfo:uri</a>, <a class="link" href="nfo-properties.html#nfo-domain" title="nfo:domain">nfo:domain</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-HtmlDocument"></a><h3>nfo:HtmlDocument</h3>
+<p>A HTML document, may contain links to other files.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-PlainTextDocument" title="nfo:PlainTextDocument">nfo:PlainTextDocument</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-TextDocument"></a><h3>nfo:TextDocument</h3>
+<p>A text document</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Document" title="nfo:Document">nfo:Document</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-PaginatedTextDocument" title="nfo:PaginatedTextDocument">nfo:PaginatedTextDocument</a>, <a class="link" href="nfo-ontology.html#nfo-PlainTextDocument" title="nfo:PlainTextDocument">nfo:PlainTextDocument</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-characterCount" title="nfo:characterCount">nfo:characterCount</a>, <a class="link" href="nfo-properties.html#nfo-lineCount" title="nfo:lineCount">nfo:lineCount</a>, <a class="link" href="nfo-properties.html#nfo-wordCount" title="nfo:wordCount">nfo:wordCount</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-SoftwareItem"></a><h3>nfo:SoftwareItem</h3>
+<p>A DataObject representing a piece of software. Examples of interpretations of a SoftwareItem include an Application and an OperatingSystem.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-DataObject" title="nie:DataObject">nie:DataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-OperatingSystem"></a><h3>nfo:OperatingSystem</h3>
+<p>An OperatingSystem</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Software" title="nfo:Software">nfo:Software</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-PaginatedTextDocument"></a><h3>nfo:PaginatedTextDocument</h3>
+<p>A file containing a text document, that is unambiguously divided into pages. Examples might include PDF, DOC, PS', DVI etc.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-TextDocument" title="nfo:TextDocument">nfo:TextDocument</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-pageCount" title="nfo:pageCount">nfo:pageCount</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-MediaFileListEntry"></a><h3>nfo:MediaFileListEntry</h3>
+<p>A single node in the list of media files contained within an MediaList instance. This class is intended to provide a type all those links have. In valid NRL untyped resources cannot be linked. There are no properties defined for this class but the application may expect rdf:first and rdf:last links. The former points to the DataObject instance, interpreted as Media the latter points at another MediaFileListEntr. At the end of the list there is a link to rdf:nil.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-entryUrl" title="nfo:entryUrl">nfo:entryUrl</a>, <a class="link" href="nfo-properties.html#nfo-listPosition" title="nfo:listPosition">nfo:listPosition</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-hasMediaFileListEntry" title="nfo:hasMediaFileListEntry">nfo:hasMediaFileListEntry</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Folder"></a><h3>nfo:Folder</h3>
+<p>A folder/directory. Examples of folders include folders on a filesystem and message folders in a mailbox.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-DataContainer" title="nfo:DataContainer">nfo:DataContainer</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Filesystem"></a><h3>nfo:Filesystem</h3>
+<p>A filesystem. Examples of filesystems include hard disk partitions, removable media, but also images thereof stored in files.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-DataContainer" title="nfo:DataContainer">nfo:DataContainer</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-FilesystemImage" title="nfo:FilesystemImage">nfo:FilesystemImage</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Image"></a><h3>nfo:Image</h3>
+<p>A file containing an image.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Visual" title="nfo:Visual">nfo:Visual</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Icon" title="nfo:Icon">nfo:Icon</a>, <a class="link" href="nfo-ontology.html#nfo-VectorImage" title="nfo:VectorImage">nfo:VectorImage</a>, <a class="link" href="nfo-ontology.html#nfo-RasterImage" title="nfo:RasterImage">nfo:RasterImage</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-hasRegionOfInterest" title="nfo:hasRegionOfInterest">nfo:hasRegionOfInterest</a>, <a class="link" href="nfo-properties.html#nfo-depicts" title="nfo:depicts">nfo:depicts</a>, <a class="link" href="nfo-properties.html#nfo-orientation" title="nfo:orientation">nfo:orientation</a>, <a class="link" href="nfo-properties.html#nfo-horizontalResolution" title="nfo:horizontalResolution">nfo:horizontalResolution</a>, <a class="link" href="nfo-properties.html#nfo-verticalResolution" title="nfo:verticalResolution">nfo:verticalResolution</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-softwareIcon" title="nfo:softwareIcon">nfo:softwareIcon</a>, <a class="link" href="nfo-properties.html#nfo-softwareCategoryIcon" title="nfo:softwareCategoryIcon">nfo:softwareCategoryIcon</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-CompressionType"></a><h3>nfo:CompressionType</h3>
+<p>Type of compression. Instances of this class represent the limited set of values allowed for the nfo:compressionType property.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-compressionType" title="nfo:compressionType">nfo:compressionType</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-FileHash"></a><h3>nfo:FileHash</h3>
+<p>A fingerprint of the file, generated by some hashing function.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-hashAlgorithm" title="nfo:hashAlgorithm">nfo:hashAlgorithm</a>, <a class="link" href="nfo-properties.html#nfo-hashValue" title="nfo:hashValue">nfo:hashValue</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-hasHash" title="nfo:hasHash">nfo:hasHash</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-MediaStream"></a><h3>nfo:MediaStream</h3>
+<p>A stream of multimedia content, usually contained within a media container such as a movie (containing both audio and video) or a DVD (possibly containing many streams of audio and video). Most common interpretations for such a DataObject include Audio and Video.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-DataObject" title="nie:DataObject">nie:DataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Attachment"></a><h3>nfo:Attachment</h3>
+<p>A file attached to another data object. Many data formats allow for attachments: emails, vcards, ical events, id3 and exif...</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-EmbeddedFileDataObject" title="nfo:EmbeddedFileDataObject">nfo:EmbeddedFileDataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Equipment"></a><h3>nfo:Equipment</h3>
+<p>The equipment used to create media</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-equipmentSoftware" title="nfo:equipmentSoftware">nfo:equipmentSoftware</a>, <a class="link" href="nfo-properties.html#nfo-model" title="nfo:model">nfo:model</a>, <a class="link" href="nfo-properties.html#nfo-manufacturer" title="nfo:manufacturer">nfo:manufacturer</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-equipment" title="nfo:equipment">nfo:equipment</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Website"></a><h3>nfo:Website</h3>
+<p>A website, usually a container for remote resources, that may be interpreted as HTMLDocuments, images or other types of content.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Application"></a><h3>nfo:Application</h3>
+<p>An application</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Software" title="nfo:Software">nfo:Software</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-EmbeddedFileDataObject"></a><h3>nfo:EmbeddedFileDataObject</h3>
+<p>A file embedded in another data object. There are many ways in which a file may be embedded in another one. Use this class directly only in cases if none of the subclasses gives a better description of your case.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-FileDataObject" title="nfo:FileDataObject">nfo:FileDataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-ArchiveItem" title="nfo:ArchiveItem">nfo:ArchiveItem</a>, <a class="link" href="nfo-ontology.html#nfo-Attachment" title="nfo:Attachment">nfo:Attachment</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-encoding" title="nfo:encoding">nfo:encoding</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-DataContainer"></a><h3>nfo:DataContainer</h3>
+<p>A superclass for all entities, whose primary purpose is to serve as containers for other data object. They usually don't have any 'meaning' by themselves. Examples include folders, archives and optical disc images.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-SoftwareCategory" title="nfo:SoftwareCategory">nfo:SoftwareCategory</a>, <a class="link" href="nfo-ontology.html#nfo-Archive" title="nfo:Archive">nfo:Archive</a>, <a class="link" href="nfo-ontology.html#nfo-Trash" title="nfo:Trash">nfo:Trash</a>, <a class="link" href="nfo-ontology.html#nfo-Filesystem" title="nfo:Filesystem">nfo:Filesystem</a>, <a class="link" href="nfo-ontology.html#nfo-Folder" title="nfo:Folder">nfo:Folder</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-belongsToContainer" title="nfo:belongsToContainer">nfo:belongsToContainer</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-BookmarkFolder"></a><h3>nfo:BookmarkFolder</h3>
+<p>A folder with bookmarks of a webbrowser. Use nfo:containsBookmark to relate Bookmarks. Folders can contain subfolders, use containsBookmarkFolder to relate them.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-containsBookmark" title="nfo:containsBookmark">nfo:containsBookmark</a>, <a class="link" href="nfo-properties.html#nfo-containsBookmarkFolder" title="nfo:containsBookmarkFolder">nfo:containsBookmarkFolder</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-containsBookmarkFolder" title="nfo:containsBookmarkFolder">nfo:containsBookmarkFolder</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Audio"></a><h3>nfo:Audio</h3>
+<p>A file containing audio content</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Media" title="nfo:Media">nfo:Media</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-audioOffset" title="nfo:audioOffset">nfo:audioOffset</a>, <a class="link" href="nfo-properties.html#nfo-peakGain" title="nfo:peakGain">nfo:peakGain</a>, <a class="link" href="nfo-properties.html#nfo-gain" title="nfo:gain">nfo:gain</a>, <a class="link" href="nfo-properties.html#nfo-rearChannels" title="nfo:rearChannels">nfo:rearChannels</a>, <a class="link" href="nfo-properties.html#nfo-averageAudioBitrate" title="nfo:averageAudioBitrate">nfo:averageAudioBitrate</a>, <a class="link" href="nfo-properties.html#nfo-sampleRate" title="nfo:sampleRate">nfo:sampleRate</a>, <a class="link" href="nfo-properties.html#nfo-frontChannels" title="nfo:frontChannels">nfo:frontChannels</a>, <a class="link" href="nfo-properties.html#nfo-bitsPerSample" title="nfo:bitsPerSample">nfo:bitsPerSample</a>, <a class="link" href="nfo-properties.html#nfo-sampleCount" title="nfo:sampleCount">nfo:sampleCount</a>, <a class="link" href="nfo-properties.html#nfo-lfeChannels" title="nfo:lfeChannels">nfo:lfeChannels</a>, <a class="link" href="nfo-properties.html#nfo-sideChannels" title="nfo:sideChannels">nfo:sideChannels</a>, <a class="link" href="nfo-properties.html#nfo-channels" title="nfo:channels">nfo:channels</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Archive"></a><h3>nfo:Archive</h3>
+<p>A compressed file. May contain other files or folder inside.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-DataContainer" title="nfo:DataContainer">nfo:DataContainer</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-uncompressedSize" title="nfo:uncompressedSize">nfo:uncompressedSize</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Visual"></a><h3>nfo:Visual</h3>
+<p>File containing visual content.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Media" title="nfo:Media">nfo:Media</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Video" title="nfo:Video">nfo:Video</a>, <a class="link" href="nfo-ontology.html#nfo-Image" title="nfo:Image">nfo:Image</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-colorDepth" title="nfo:colorDepth">nfo:colorDepth</a>, <a class="link" href="nfo-properties.html#nfo-width" title="nfo:width">nfo:width</a>, <a class="link" href="nfo-properties.html#nfo-height" title="nfo:height">nfo:height</a>, <a class="link" href="nfo-properties.html#nfo-interlaceMode" title="nfo:interlaceMode">nfo:interlaceMode</a>, <a class="link" href="nfo-properties.html#nfo-tilt" title="nfo:tilt">nfo:tilt</a>, <a class="link" href="nfo-properties.html#nfo-heading" title="nfo:heading">nfo:heading</a>, <a class="link" href="nfo-properties.html#nfo-aspectRatio" title="nfo:aspectRatio">nfo:aspectRatio</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Icon"></a><h3>nfo:Icon</h3>
+<p>An Icon (regardless of whether it's a raster or a vector icon. A resource representing an icon could have two types (Icon and Raster, or Icon and Vector) if required.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Image" title="nfo:Image">nfo:Image</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-RegionOfInterestContent"></a><h3>nfo:RegionOfInterestContent</h3>
+<p>Content in the area. There is a predefined set of contents in the spec: http://www.metadataworkinggroup.org</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-regionOfInterestType" title="nfo:regionOfInterestType">nfo:regionOfInterestType</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nfo:roi-content-undefined, nfo:roi-content-barcode, nfo:roi-content-focus, nfo:roi-content-pet, nfo:roi-content-face, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Bookmark"></a><h3>nfo:Bookmark</h3>
+<p>A bookmark of a webbrowser. Use nie:title for the name/label, nie:contentCreated to represent the date when the user added the bookmark, and nie:contentLastModified for modifications. nfo:bookmarks to store the link.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-streamDuration" title="nfo:streamDuration">nfo:streamDuration</a>, <a class="link" href="nfo-properties.html#nfo-streamPosition" title="nfo:streamPosition">nfo:streamPosition</a>, <a class="link" href="nfo-properties.html#nfo-pageNumber" title="nfo:pageNumber">nfo:pageNumber</a>, <a class="link" href="nfo-properties.html#nfo-characterPosition" title="nfo:characterPosition">nfo:characterPosition</a>, <a class="link" href="nfo-properties.html#nfo-bookmarks" title="nfo:bookmarks">nfo:bookmarks</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-containsBookmark" title="nfo:containsBookmark">nfo:containsBookmark</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-SoftwareApplication"></a><h3>nfo:SoftwareApplication</h3>
+<p>An application</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Software" title="nfo:Software">nfo:Software</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nfo-Orientation"></a><h3>nfo:Orientation</h3>
+<p>Orientation enum</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-properties.html#nfo-orientation" title="nfo:orientation">nfo:orientation</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nfo:orientation-left, nfo:orientation-right-mirror, nfo:orientation-right, nfo:orientation-left-mirror, nfo:orientation-bottom-mirror, nfo:orientation-bottom, nfo:orientation-top-mirror, nfo:orientation-top, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

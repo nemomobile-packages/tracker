@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TrackerIndexingTree</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Miner Library Reference Manual">
+<link rel="up" href="ch03.html" title="Miner classes for file system">
+<link rel="prev" href="TrackerMinerFS.html" title="TrackerMinerFS">
+<link rel="next" href="ch04.html" title="Managing miners">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="TrackerMinerFS.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Miner Library Reference Manual</th>
+<td><a accesskey="n" href="ch04.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#TrackerIndexingTree.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#TrackerIndexingTree.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#TrackerIndexingTree.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#TrackerIndexingTree.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#TrackerIndexingTree.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="TrackerIndexingTree"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="TrackerIndexingTree.top_of_page"></a>TrackerIndexingTree</span></h2>
+<p>TrackerIndexingTree — Indexing tree handling</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="TrackerIndexingTree.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="TrackerIndexingTree.html#TrackerIndexingTree-struct" title="struct TrackerIndexingTree">TrackerIndexingTree</a>;
+                    <a class="link" href="TrackerIndexingTree.html#TrackerIndexingTreeClass" title="TrackerIndexingTreeClass">TrackerIndexingTreeClass</a>;
+<span class="returnvalue">void</span>                <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-add" title="tracker_indexing_tree_add ()">tracker_indexing_tree_add</a>           (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *directory</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerDirectoryFlags" title="enum TrackerDirectoryFlags"><span class="type">TrackerDirectoryFlags</span></a> flags</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-add-filter" title="tracker_indexing_tree_add_filter ()">tracker_indexing_tree_add_filter</a>    (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterType" title="enum TrackerFilterType"><span class="type">TrackerFilterType</span></a> filter</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *glob_string</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-clear-filters" title="tracker_indexing_tree_clear_filters ()">tracker_indexing_tree_clear_filters</a> (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterType" title="enum TrackerFilterType"><span class="type">TrackerFilterType</span></a> type</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-file-is-indexable" title="tracker_indexing_tree_file_is_indexable ()">tracker_indexing_tree_file_is_indexable</a>
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFileInfo.html#GFileType"><span class="type">GFileType</span></a> file_type</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-file-is-root" title="tracker_indexing_tree_file_is_root ()">tracker_indexing_tree_file_is_root</a>  (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-file-matches-filter" title="tracker_indexing_tree_file_matches_filter ()">tracker_indexing_tree_file_matches_filter</a>
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterType" title="enum TrackerFilterType"><span class="type">TrackerFilterType</span></a> type</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>);
+<a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterPolicy" title="enum TrackerFilterPolicy"><span class="returnvalue">TrackerFilterPolicy</span></a> <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-get-default-policy" title="tracker_indexing_tree_get_default_policy ()">tracker_indexing_tree_get_default_policy</a>
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterType" title="enum TrackerFilterType"><span class="type">TrackerFilterType</span></a> filter</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-get-filter-hidden" title="tracker_indexing_tree_get_filter_hidden ()">tracker_indexing_tree_get_filter_hidden</a>
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>);
+<a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="returnvalue">GFile</span></a> *             <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-get-root" title="tracker_indexing_tree_get_root ()">tracker_indexing_tree_get_root</a>      (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerDirectoryFlags" title="enum TrackerDirectoryFlags"><span class="type">TrackerDirectoryFlags</span></a> *directory_flags</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-list-roots" title="tracker_indexing_tree_list_roots ()">tracker_indexing_tree_list_roots</a>    (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>);
+<a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="returnvalue">TrackerIndexingTree</span></a> * <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-new" title="tracker_indexing_tree_new ()">tracker_indexing_tree_new</a>         (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-parent-is-indexable" title="tracker_indexing_tree_parent_is_indexable ()">tracker_indexing_tree_parent_is_indexable</a>
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *parent</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *children</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-remove" title="tracker_indexing_tree_remove ()">tracker_indexing_tree_remove</a>        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *directory</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-set-default-policy" title="tracker_indexing_tree_set_default_policy ()">tracker_indexing_tree_set_default_policy</a>
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterType" title="enum TrackerFilterType"><span class="type">TrackerFilterType</span></a> filter</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterPolicy" title="enum TrackerFilterPolicy"><span class="type">TrackerFilterPolicy</span></a> policy</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-set-filter-hidden" title="tracker_indexing_tree_set_filter_hidden ()">tracker_indexing_tree_set_filter_hidden</a>
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> filter_hidden</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="TrackerIndexingTree.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----TrackerIndexingTree
+</pre>
+</div>
+<div class="refsect1">
+<a name="TrackerIndexingTree.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="TrackerIndexingTree.html#TrackerIndexingTree--filter-hidden" title='The "filter-hidden" property'>filter-hidden</a>"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="TrackerIndexingTree.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="TrackerIndexingTree.html#TrackerIndexingTree-directory-added" title='The "directory-added" signal'>directory-added</a>"                                : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="TrackerIndexingTree.html#TrackerIndexingTree-directory-removed" title='The "directory-removed" signal'>directory-removed</a>"                              : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="TrackerIndexingTree.html#TrackerIndexingTree-directory-updated" title='The "directory-updated" signal'>directory-updated</a>"                              : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="TrackerIndexingTree.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> handles the tree of directories configured to be indexed
+by the <a class="link" href="TrackerMinerFS.html" title="TrackerMinerFS"><span class="type">TrackerMinerFS</span></a>.
+</p>
+</div>
+<div class="refsect1">
+<a name="TrackerIndexingTree.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="TrackerIndexingTree-struct"></a><h3>struct TrackerIndexingTree</h3>
+<pre class="programlisting">struct TrackerIndexingTree;</pre>
+<p>
+Base object used to configure indexing within <a class="link" href="TrackerMinerFS.html" title="TrackerMinerFS"><span class="type">TrackerMinerFS</span></a> items.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TrackerIndexingTreeClass"></a><h3>TrackerIndexingTreeClass</h3>
+<pre class="programlisting">typedef struct {
+	GObjectClass parent_class;
+
+	void (* directory_added)   (TrackerIndexingTree *indexing_tree,
+	                            GFile               *directory);
+	void (* directory_removed) (TrackerIndexingTree *indexing_tree,
+	                            GFile               *directory);
+	void (* directory_updated) (TrackerIndexingTree *indexing_tree,
+	                            GFile               *directory);
+} TrackerIndexingTreeClass;
+</pre>
+<p>
+Class for the <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="TrackerIndexingTreeClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>parent object class</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="TrackerIndexingTreeClass.directory-added"></a>directory_added</code></em> ()</span></p></td>
+<td>Called when a directory is added.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="TrackerIndexingTreeClass.directory-removed"></a>directory_removed</code></em> ()</span></p></td>
+<td>Called when a directory is removed.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="TrackerIndexingTreeClass.directory-updated"></a>directory_updated</code></em> ()</span></p></td>
+<td>Called when a directory is updated.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-add"></a><h3>tracker_indexing_tree_add ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_indexing_tree_add           (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *directory</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerDirectoryFlags" title="enum TrackerDirectoryFlags"><span class="type">TrackerDirectoryFlags</span></a> flags</code></em>);</pre>
+<p>
+Adds a directory to the indexing tree with the
+given configuration flags.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tree</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>directory</code></em> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> pointing to a directory</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flags</code></em> :</span></p></td>
+<td>Configuration flags for the directory</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-add-filter"></a><h3>tracker_indexing_tree_add_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_indexing_tree_add_filter    (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterType" title="enum TrackerFilterType"><span class="type">TrackerFilterType</span></a> filter</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *glob_string</code></em>);</pre>
+<p>
+Adds a new filter for basenames.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tree</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filter</code></em> :</span></p></td>
+<td>filter type</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>glob_string</code></em> :</span></p></td>
+<td>glob-style string for the filter</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-clear-filters"></a><h3>tracker_indexing_tree_clear_filters ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_indexing_tree_clear_filters (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterType" title="enum TrackerFilterType"><span class="type">TrackerFilterType</span></a> type</code></em>);</pre>
+<p>
+Clears all filters of a given type.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tree</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>filter type to clear</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-file-is-indexable"></a><h3>tracker_indexing_tree_file_is_indexable ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_indexing_tree_file_is_indexable
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFileInfo.html#GFileType"><span class="type">GFileType</span></a> file_type</code></em>);</pre>
+<p>
+returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>file</code></em> should be indexed according to the
+parameters given through <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-add" title="tracker_indexing_tree_add ()"><code class="function">tracker_indexing_tree_add()</code></a> and
+<a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-add-filter" title="tracker_indexing_tree_add_filter ()"><code class="function">tracker_indexing_tree_add_filter()</code></a>.
+</p>
+<p>
+If <em class="parameter"><code>file_type</code></em> is <a href="http://library.gnome.org/devel/gio/unstable/GFileInfo.html#G-FILE-TYPE-UNKNOWN:CAPS"><span class="type">G_FILE_TYPE_UNKNOWN</span></a>, file type will be queried to the
+file system.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tree</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_type</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/gio/unstable/GFileInfo.html#GFileType"><span class="type">GFileType</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>file</code></em> should be indexed.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-file-is-root"></a><h3>tracker_indexing_tree_file_is_root ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_indexing_tree_file_is_root  (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-file-matches-filter"></a><h3>tracker_indexing_tree_file_matches_filter ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_indexing_tree_file_matches_filter
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterType" title="enum TrackerFilterType"><span class="type">TrackerFilterType</span></a> type</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>);</pre>
+<p>
+Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>file</code></em> matches any filter of the given filter type.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tree</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>filter type</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>file</code></em> is filtered</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-get-default-policy"></a><h3>tracker_indexing_tree_get_default_policy ()</h3>
+<pre class="programlisting"><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterPolicy" title="enum TrackerFilterPolicy"><span class="returnvalue">TrackerFilterPolicy</span></a> tracker_indexing_tree_get_default_policy
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterType" title="enum TrackerFilterType"><span class="type">TrackerFilterType</span></a> filter</code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-get-filter-hidden"></a><h3>tracker_indexing_tree_get_filter_hidden ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_indexing_tree_get_filter_hidden
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-get-root"></a><h3>tracker_indexing_tree_get_root ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="returnvalue">GFile</span></a> *             tracker_indexing_tree_get_root      (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerDirectoryFlags" title="enum TrackerDirectoryFlags"><span class="type">TrackerDirectoryFlags</span></a> *directory_flags</code></em>);</pre>
+<p>
+Returns the <a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> that was previously added through <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-add" title="tracker_indexing_tree_add ()"><code class="function">tracker_indexing_tree_add()</code></a>
+and would equal or contain <em class="parameter"><code>file</code></em>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none applies.
+</p>
+<p>
+If the return value is non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, <em class="parameter"><code>directory_flags</code></em> would contain the
+<a class="link" href="libtracker-miner-Enumerations.html#TrackerDirectoryFlags" title="enum TrackerDirectoryFlags"><span class="type">TrackerDirectoryFlags</span></a> applying to <em class="parameter"><code>file</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tree</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>directory_flags</code></em> :</span></p></td>
+<td>return location for the applying <a class="link" href="libtracker-miner-Enumerations.html#TrackerDirectoryFlags" title="enum TrackerDirectoryFlags"><span class="type">TrackerDirectoryFlags</span></a>. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the effective parent in <em class="parameter"><code>tree</code></em>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-list-roots"></a><h3>tracker_indexing_tree_list_roots ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             tracker_indexing_tree_list_roots    (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>);</pre>
+<p>
+Returns the list of indexing roots in <em class="parameter"><code>tree</code></em>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tree</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The list
+of roots, the list itself must be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a>,
+the list elements are owned by <em class="parameter"><code>tree</code></em> and should not be
+freed. <span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GFile]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-new"></a><h3>tracker_indexing_tree_new ()</h3>
+<pre class="programlisting"><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="returnvalue">TrackerIndexingTree</span></a> * tracker_indexing_tree_new         (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Returns a newly created <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a newly allocated <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-parent-is-indexable"></a><h3>tracker_indexing_tree_parent_is_indexable ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_indexing_tree_parent_is_indexable
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *parent</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *children</code></em>);</pre>
+<p>
+returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>parent</code></em> should be indexed based on its contents.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tree</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parent</code></em> :</span></p></td>
+<td>parent directory</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>children</code></em> :</span></p></td>
+<td>children within <em class="parameter"><code>parent</code></em>. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GFile]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>parent</code></em> should be indexed.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-remove"></a><h3>tracker_indexing_tree_remove ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_indexing_tree_remove        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *directory</code></em>);</pre>
+<p>
+Removes <em class="parameter"><code>directory</code></em> from the indexing tree, note that
+only directories previously added with <a class="link" href="TrackerIndexingTree.html#tracker-indexing-tree-add" title="tracker_indexing_tree_add ()"><code class="function">tracker_indexing_tree_add()</code></a>
+can be effectively removed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tree</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>directory</code></em> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> pointing to a directory</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-set-default-policy"></a><h3>tracker_indexing_tree_set_default_policy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_indexing_tree_set_default_policy
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterType" title="enum TrackerFilterType"><span class="type">TrackerFilterType</span></a> filter</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterPolicy" title="enum TrackerFilterPolicy"><span class="type">TrackerFilterPolicy</span></a> policy</code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-indexing-tree-set-filter-hidden"></a><h3>tracker_indexing_tree_set_filter_hidden ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_indexing_tree_set_filter_hidden
+                                                        (<em class="parameter"><code><a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *tree</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> filter_hidden</code></em>);</pre>
+<p>
+</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="TrackerIndexingTree.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="TrackerIndexingTree--filter-hidden"></a><h3>The <code class="literal">"filter-hidden"</code> property</h3>
+<pre class="programlisting">  "filter-hidden"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>Whether hidden resources are filtered.</p>
+<p>Default value: FALSE</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="TrackerIndexingTree.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="TrackerIndexingTree-directory-added"></a><h3>The <code class="literal">"directory-added"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *trackerindexingtree,
+                                                        <a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a>               *arg1,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             user_data)                : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>trackerindexingtree</code></em> :</span></p></td>
+<td>the object which received the signal.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TrackerIndexingTree-directory-removed"></a><h3>The <code class="literal">"directory-removed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *trackerindexingtree,
+                                                        <a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a>               *arg1,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             user_data)                : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>trackerindexingtree</code></em> :</span></p></td>
+<td>the object which received the signal.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TrackerIndexingTree-directory-updated"></a><h3>The <code class="literal">"directory-updated"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a> *trackerindexingtree,
+                                                        <a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a>               *arg1,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             user_data)                : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>trackerindexingtree</code></em> :</span></p></td>
+<td>the object which received the signal.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

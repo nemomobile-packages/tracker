@@ -1,0 +1,192 @@
+<!-- ##### SECTION Title ##### -->
+TrackerSparqlCursor
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT TrackerSparqlCursor ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG TrackerSparqlCursor:connection ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TrackerSparqlCursor:n-columns ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM TrackerSparqlValueType ##### -->
+<para>
+
+</para>
+
+@TRACKER_SPARQL_VALUE_TYPE_UNBOUND: 
+@TRACKER_SPARQL_VALUE_TYPE_URI: 
+@TRACKER_SPARQL_VALUE_TYPE_STRING: 
+@TRACKER_SPARQL_VALUE_TYPE_INTEGER: 
+@TRACKER_SPARQL_VALUE_TYPE_DOUBLE: 
+@TRACKER_SPARQL_VALUE_TYPE_DATETIME: 
+@TRACKER_SPARQL_VALUE_TYPE_BLANK_NODE: 
+@TRACKER_SPARQL_VALUE_TYPE_BOOLEAN: 
+
+<!-- ##### FUNCTION tracker_sparql_cursor_get_connection ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_get_n_columns ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_get_string ##### -->
+<para>
+
+</para>
+
+@self: 
+@column: 
+@length: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_get_boolean ##### -->
+<para>
+
+</para>
+
+@self: 
+@column: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_get_double ##### -->
+<para>
+
+</para>
+
+@self: 
+@column: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_get_integer ##### -->
+<para>
+
+</para>
+
+@self: 
+@column: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_get_value_type ##### -->
+<para>
+
+</para>
+
+@self: 
+@column: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_get_variable_name ##### -->
+<para>
+
+</para>
+
+@self: 
+@column: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_close ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_is_bound ##### -->
+<para>
+
+</para>
+
+@self: 
+@column: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_next ##### -->
+<para>
+
+</para>
+
+@self: 
+@cancellable: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_next_async ##### -->
+<para>
+
+</para>
+
+@self: 
+@cancellable: 
+@_callback_: 
+@_user_data_: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_next_finish ##### -->
+<para>
+
+</para>
+
+@self: 
+@_res_: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_cursor_rewind ##### -->
+<para>
+
+</para>
+
+@self: 
+
+

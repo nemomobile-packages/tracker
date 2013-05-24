@@ -1,0 +1,128 @@
+<!-- ##### SECTION Title ##### -->
+tracker-utils
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION tracker_coalesce ##### -->
+<para>
+
+</para>
+
+@n_values: 
+@...: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_coalesce_strip ##### -->
+<para>
+
+</para>
+
+@n_values: 
+@...: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_merge ##### -->
+<para>
+
+</para>
+
+@delimiter: 
+@n_values: 
+@...: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_merge_const ##### -->
+<para>
+
+</para>
+
+@delimiter: 
+@n_values: 
+@...: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_getline ##### -->
+<para>
+
+</para>
+
+@lineptr: 
+@n: 
+@stream: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_text_normalize ##### -->
+<para>
+
+</para>
+
+@text: 
+@max_words: 
+@n_words: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_text_validate_utf8 ##### -->
+<para>
+
+</para>
+
+@text: 
+@text_len: 
+@str: 
+@valid_len: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_date_format_to_iso8601 ##### -->
+<para>
+
+</para>
+
+@date_string: 
+@format: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_date_guess ##### -->
+<para>
+
+</para>
+
+@date_string: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_keywords_parse ##### -->
+<para>
+
+</para>
+
+@store: 
+@keywords: 
+
+

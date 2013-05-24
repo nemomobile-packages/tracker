@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>NIE Ontology Classes</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="up" href="nie-ontology.html" title="Nepomuk Information Element (NIE): Top classes in the ontology. Almost everything else is subclass of these.">
+<link rel="prev" href="nie-ontology.html" title="Nepomuk Information Element (NIE): Top classes in the ontology. Almost everything else is subclass of these.">
+<link rel="next" href="nie-properties.html" title="NIE Ontology Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="nie-ontology.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="nie-ontology.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Ontology Reference Manual</th>
+<td><a accesskey="n" href="nie-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="nie-classes"></a>NIE Ontology Classes</h2></div></div></div>
+<div class="refsect2">
+<a name="nie-DataObject"></a><h3>nie:DataObject</h3>
+<p>A unit of data that is created, annotated and processed on the user desktop. It represents a native structure the user works with. The usage of the term 'native'	is important. It means that a DataObject can be directly mapped to a data structure maintained by a native application.	This may be a file, a set of files or a part of a file. The granularity depends on the user. This class is not intended to be instantiated by itself. Use more specific subclasses.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-properties.html#nie-isPartOf" title="nie:isPartOf">nie:isPartOf</a>, <a class="link" href="nie-properties.html#nie-created" title="nie:created">nie:created</a>, <a class="link" href="nie-properties.html#nie-lastRefreshed" title="nie:lastRefreshed">nie:lastRefreshed</a>, <a class="link" href="nie-properties.html#nie-interpretedAs" title="nie:interpretedAs">nie:interpretedAs</a>, <a class="link" href="nie-properties.html#nie-dataSource" title="nie:dataSource">nie:dataSource</a>, <a class="link" href="nie-properties.html#nie-byteSize" title="nie:byteSize">nie:byteSize</a>, <a class="link" href="nie-properties.html#nie-url" title="nie:url">nie:url</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-properties.html#nie-hasPart" title="nie:hasPart">nie:hasPart</a>, <a class="link" href="nie-properties.html#nie-isStoredAs" title="nie:isStoredAs">nie:isStoredAs</a>, <a class="link" href="nie-properties.html#nie-links" title="nie:links">nie:links</a>, <a class="link" href="nie-properties.html#nie-depends" title="nie:depends">nie:depends</a>, <a class="link" href="nie-properties.html#nie-relatedTo" title="nie:relatedTo">nie:relatedTo</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nie-DataSource"></a><h3>nie:DataSource</h3>
+<p>A superclass for all entities from which DataObjects can be extracted. Each entity represents a native application or some other system that manages information that may be of interest to the user of the Semantic Desktop. Subclasses may include FileSystems, Mailboxes, Calendars, websites etc. The exact choice of subclasses and their properties is considered application-specific. Each data extraction application is supposed to provide it's own DataSource ontology. Such an ontology should contain supported data source types coupled with properties necessary for the application to gain access to the data sources. (paths, urls, passwords etc...)</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-properties.html#nie-rootElementOf" title="nie:rootElementOf">nie:rootElementOf</a>, <a class="link" href="nie-properties.html#nie-dataSource" title="nie:dataSource">nie:dataSource</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nie-InformationElement"></a><h3>nie:InformationElement</h3>
+<p>A unit of content the user works with. This is a superclass for all interpretations of a DataObject.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-properties.html#nie-usageCounter" title="nie:usageCounter">nie:usageCounter</a>, <a class="link" href="nie-properties.html#nie-rootElementOf" title="nie:rootElementOf">nie:rootElementOf</a>, <a class="link" href="nie-properties.html#nie-contentSize" title="nie:contentSize">nie:contentSize</a>, <a class="link" href="nie-properties.html#nie-isLogicalPartOf" title="nie:isLogicalPartOf">nie:isLogicalPartOf</a>, <a class="link" href="nie-properties.html#nie-characterSet" title="nie:characterSet">nie:characterSet</a>, <a class="link" href="nie-properties.html#nie-licenseType" title="nie:licenseType">nie:licenseType</a>, <a class="link" href="nie-properties.html#nie-hasPart" title="nie:hasPart">nie:hasPart</a>, <a class="link" href="nie-properties.html#nie-hasLogicalPart" title="nie:hasLogicalPart">nie:hasLogicalPart</a>, <a class="link" href="nie-properties.html#nie-keyword" title="nie:keyword">nie:keyword</a>, <a class="link" href="nie-properties.html#nie-identifier" title="nie:identifier">nie:identifier</a>, <a class="link" href="nie-properties.html#nie-license" title="nie:license">nie:license</a>, <a class="link" href="nie-properties.html#nie-contentAccessed" title="nie:contentAccessed">nie:contentAccessed</a>, <a class="link" href="nie-properties.html#nie-contentCreated" title="nie:contentCreated">nie:contentCreated</a>, <a class="link" href="nie-properties.html#nie-version" title="nie:version">nie:version</a>, <a class="link" href="nie-properties.html#nie-isStoredAs" title="nie:isStoredAs">nie:isStoredAs</a>, <a class="link" href="nie-properties.html#nie-comment" title="nie:comment">nie:comment</a>, <a class="link" href="nie-properties.html#nie-copyright" title="nie:copyright">nie:copyright</a>, <a class="link" href="nie-properties.html#nie-links" title="nie:links">nie:links</a>, <a class="link" href="nie-properties.html#nie-depends" title="nie:depends">nie:depends</a>, <a class="link" href="nie-properties.html#nie-disclaimer" title="nie:disclaimer">nie:disclaimer</a>, <a class="link" href="nie-properties.html#nie-description" title="nie:description">nie:description</a>, <a class="link" href="nie-properties.html#nie-generator" title="nie:generator">nie:generator</a>, <a class="link" href="nie-properties.html#nie-relatedTo" title="nie:relatedTo">nie:relatedTo</a>, <a class="link" href="nie-properties.html#nie-legal" title="nie:legal">nie:legal</a>, <a class="link" href="nie-properties.html#nie-plainTextContent" title="nie:plainTextContent">nie:plainTextContent</a>, <a class="link" href="nie-properties.html#nie-language" title="nie:language">nie:language</a>, <a class="link" href="nie-properties.html#nie-mimeType" title="nie:mimeType">nie:mimeType</a>, <a class="link" href="nie-properties.html#nie-subject" title="nie:subject">nie:subject</a>, <a class="link" href="nie-properties.html#nie-contentLastModified" title="nie:contentLastModified">nie:contentLastModified</a>, <a class="link" href="nie-properties.html#nie-informationElementDate" title="nie:informationElementDate">nie:informationElementDate</a>, <a class="link" href="nie-properties.html#nie-title" title="nie:title">nie:title</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-properties.html#nie-isLogicalPartOf" title="nie:isLogicalPartOf">nie:isLogicalPartOf</a>, <a class="link" href="nie-properties.html#nie-isPartOf" title="nie:isPartOf">nie:isPartOf</a>, <a class="link" href="nie-properties.html#nie-hasLogicalPart" title="nie:hasLogicalPart">nie:hasLogicalPart</a>, <a class="link" href="nie-properties.html#nie-interpretedAs" title="nie:interpretedAs">nie:interpretedAs</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

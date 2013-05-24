@@ -1,0 +1,351 @@
+<!-- ##### SECTION Title ##### -->
+TrackerSparqlBuilder
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT TrackerSparqlBuilder ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG TrackerSparqlBuilder:length ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TrackerSparqlBuilder:result ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TrackerSparqlBuilder:state ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM TrackerSparqlBuilderState ##### -->
+<para>
+
+</para>
+
+@TRACKER_SPARQL_BUILDER_STATE_UPDATE: 
+@TRACKER_SPARQL_BUILDER_STATE_INSERT: 
+@TRACKER_SPARQL_BUILDER_STATE_DELETE: 
+@TRACKER_SPARQL_BUILDER_STATE_SUBJECT: 
+@TRACKER_SPARQL_BUILDER_STATE_PREDICATE: 
+@TRACKER_SPARQL_BUILDER_STATE_OBJECT: 
+@TRACKER_SPARQL_BUILDER_STATE_BLANK: 
+@TRACKER_SPARQL_BUILDER_STATE_WHERE: 
+@TRACKER_SPARQL_BUILDER_STATE_EMBEDDED_INSERT: 
+@TRACKER_SPARQL_BUILDER_STATE_GRAPH: 
+
+<!-- ##### FUNCTION tracker_sparql_builder_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_new_embedded_insert ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_new_update ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_get_state ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_get_result ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_get_length ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_append ##### -->
+<para>
+
+</para>
+
+@self: 
+@raw: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_prepend ##### -->
+<para>
+
+</para>
+
+@self: 
+@raw: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_insert_open ##### -->
+<para>
+
+</para>
+
+@self: 
+@graph: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_insert_silent_open ##### -->
+<para>
+
+</para>
+
+@self: 
+@graph: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_insert_close ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_where_open ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_where_close ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_delete_open ##### -->
+<para>
+
+</para>
+
+@self: 
+@graph: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_delete_close ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_graph_open ##### -->
+<para>
+
+</para>
+
+@self: 
+@graph: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_graph_close ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_subject_variable ##### -->
+<para>
+
+</para>
+
+@self: 
+@var_name: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_subject_iri ##### -->
+<para>
+
+</para>
+
+@self: 
+@iri: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_subject ##### -->
+<para>
+
+</para>
+
+@self: 
+@s: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_predicate_iri ##### -->
+<para>
+
+</para>
+
+@self: 
+@iri: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_predicate ##### -->
+<para>
+
+</para>
+
+@self: 
+@s: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_object_iri ##### -->
+<para>
+
+</para>
+
+@self: 
+@iri: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_object ##### -->
+<para>
+
+</para>
+
+@self: 
+@s: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_object_string ##### -->
+<para>
+
+</para>
+
+@self: 
+@literal: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_object_boolean ##### -->
+<para>
+
+</para>
+
+@self: 
+@literal: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_object_int64 ##### -->
+<para>
+
+</para>
+
+@self: 
+@literal: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_object_date ##### -->
+<para>
+
+</para>
+
+@self: 
+@literal: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_object_double ##### -->
+<para>
+
+</para>
+
+@self: 
+@literal: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_object_variable ##### -->
+<para>
+
+</para>
+
+@self: 
+@var_name: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_object_blank_open ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_object_blank_close ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION tracker_sparql_builder_object_unvalidated ##### -->
+<para>
+
+</para>
+
+@self: 
+@value: 
+
+

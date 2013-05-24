@@ -1,0 +1,79 @@
+<!-- ##### SECTION Title ##### -->
+tracker-thumbnailer
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION tracker_thumbnailer_cleanup ##### -->
+<para>
+
+</para>
+
+@uri_prefix: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_thumbnailer_init ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_thumbnailer_move_add ##### -->
+<para>
+
+</para>
+
+@from_uri: 
+@mime_type: 
+@to_uri: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_thumbnailer_remove_add ##### -->
+<para>
+
+</para>
+
+@uri: 
+@mime_type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_thumbnailer_send ##### -->
+<para>
+
+</para>
+
+@void: 
+
+
+<!-- ##### FUNCTION tracker_thumbnailer_shutdown ##### -->
+<para>
+
+</para>
+
+@void: 
+
+

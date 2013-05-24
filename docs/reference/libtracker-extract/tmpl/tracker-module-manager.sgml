@@ -1,0 +1,128 @@
+<!-- ##### SECTION Title ##### -->
+tracker-module-manager
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### USER_FUNCTION TrackerExtractInitFunc ##### -->
+<para>
+
+</para>
+
+@thread_awareness_ret: 
+@error: 
+@Returns: 
+
+
+<!-- ##### USER_FUNCTION TrackerExtractMetadataFunc ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### USER_FUNCTION TrackerExtractShutdownFunc ##### -->
+<para>
+
+</para>
+
+@void: 
+
+
+<!-- ##### ENUM TrackerModuleThreadAwareness ##### -->
+<para>
+
+</para>
+
+@TRACKER_MODULE_NONE: 
+@TRACKER_MODULE_MAIN_THREAD: 
+@TRACKER_MODULE_SINGLE_THREAD: 
+@TRACKER_MODULE_MULTI_THREAD: 
+
+<!-- ##### FUNCTION tracker_extract_module_init ##### -->
+<para>
+
+</para>
+
+@thread_awareness_ret: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_module_manager_get_fallback_rdf_types ##### -->
+<para>
+
+</para>
+
+@mimetype: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_module_manager_get_for_mimetype ##### -->
+<para>
+
+</para>
+
+@mimetype: 
+@init_func: 
+@shutdown_func: 
+@extract_func: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_module_manager_get_mimetype_handlers ##### -->
+<para>
+
+</para>
+
+@mimetype: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_module_manager_init ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_module_manager_mimetype_is_handled ##### -->
+<para>
+
+</para>
+
+@mimetype: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_module_shutdown ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+

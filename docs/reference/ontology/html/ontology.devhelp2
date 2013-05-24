@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="Tracker Ontology Reference Manual" link="index.html" author="" name="ontology" version="2" language="c">
+  <chapters>
+    <sub name="Overview" link="ontology.html">
+      <sub name="XML schema (XSD): Basic types definitions (int, double,...)" link="xsd-ontology.html">
+        <sub name="Overview" link="xsd-ontology.html#xsd-explanation"/>
+        <sub name="XSD Ontology Classes" link="xsd-classes.html"/>
+        <sub name="XSD Ontology Properties" link="xsd-properties.html"/>
+      </sub>
+      <sub name="Resource Description Framework (RDF): Core RDF classes to keep the internal consistency of the ontology" link="rdf-ontology.html">
+        <sub name="RDF Ontology Classes" link="rdf-ontology.html#rdf-classes"/>
+        <sub name="RDF Ontology Properties" link="rdf-properties.html"/>
+      </sub>
+      <sub name="Dublin Core metadata (DC): Common superproperties for documents" link="dc-ontology.html">
+        <sub name="DC Ontology Classes" link="dc-ontology.html#dc-classes"/>
+        <sub name="DC Ontology Properties" link="dc-properties.html"/>
+      </sub>
+      <sub name="Nepomuk Information Element (NIE): Top classes in the ontology. Almost everything else is subclass of these." link="nie-ontology.html">
+        <sub name="Overview" link="nie-ontology.html#nie-explanation"/>
+        <sub name="NIE Ontology Classes" link="nie-classes.html"/>
+        <sub name="NIE Ontology Properties" link="nie-properties.html"/>
+      </sub>
+      <sub name="Nepomuk Annotation Ontology (NAO): Tags, ratings and other common annotations to all classes" link="nao-ontology.html">
+        <sub name="NAO Ontology Classes" link="nao-ontology.html#nao-classes"/>
+        <sub name="NAO Ontology Properties" link="nao-properties.html"/>
+      </sub>
+      <sub name="Nepomuk File Ontology (NFO): About files and other desktop resources." link="nfo-ontology.html">
+        <sub name="NFO Ontology Classes" link="nfo-ontology.html#nfo-classes"/>
+        <sub name="NFO Ontology Properties" link="nfo-properties.html"/>
+      </sub>
+      <sub name="Nepomuk Contacts Ontology (NCO): All about contacts. Rough equivalent of the VCARD standard." link="nco-ontology.html">
+        <sub name="Overview" link="nco-ontology.html#nco-explanation"/>
+        <sub name="NCO Ontology Classes" link="nco-classes.html"/>
+        <sub name="NCO Ontology Properties" link="nco-properties.html"/>
+      </sub>
+      <sub name="Nepomuk Messaging Ontology (NMO): Model for messages and communications, including Email, SMS, MMS and phone calls" link="nmo-ontology.html">
+        <sub name="Overview" link="nmo-ontology.html#nmo-explanation"/>
+        <sub name="NMO Ontology Classes" link="nmo-classes.html"/>
+        <sub name="NMO Ontology Properties" link="nmo-properties.html"/>
+      </sub>
+      <sub name="Nepomuk Calendar Ontology (NCAL): Automatic translation of the ICAL standard into ontology. Too complex for our taste. Please check SCAL" link="ncal-ontology.html">
+        <sub name="NCAL Ontology Classes" link="ncal-ontology.html#ncal-classes"/>
+        <sub name="NCAL Ontology Properties" link="ncal-properties.html"/>
+      </sub>
+      <sub name="Simplified Calendar Ontology (SCAL): Simple and efficient ontology to represent calendar information (events, ToDos, recurrency rules...)" link="scal-ontology.html">
+        <sub name="SCAL Ontology Classes" link="scal-ontology.html#scal-classes"/>
+        <sub name="SCAL Ontology Properties" link="scal-properties.html"/>
+      </sub>
+      <sub name="Nepomuk MultiMedia (NMM): Description of multimedia objects like Music, Video and Images" link="nmm-ontology.html">
+        <sub name="Overview" link="nmm-ontology.html#nmm-explanation"/>
+        <sub name="NMM Ontology Classes" link="nmm-classes.html"/>
+        <sub name="NMM Ontology Properties" link="nmm-properties.html"/>
+      </sub>
+      <sub name="Maemo Transfer Ontology (MTO): Representation of download and upload operations in the system" link="mto-ontology.html">
+        <sub name="MTO Ontology Classes" link="mto-ontology.html#mto-classes"/>
+        <sub name="MTO Ontology Properties" link="mto-properties.html"/>
+      </sub>
+      <sub name="Maemo Feeds Ontology (MFO): Model for feeds and alike online streams" link="mfo-ontology.html">
+        <sub name="Overview" link="mfo-ontology.html#mfo-explanation"/>
+        <sub name="MFO Ontology Classes" link="mfo-classes.html"/>
+        <sub name="MFO Ontology Properties" link="mfo-properties.html"/>
+      </sub>
+      <sub name="Multimetida Transfer Protocol (MTP) Ontology: Extra properties to add MTP information to the objects in the ontology" link="mtp-ontology.html">
+        <sub name="MTP Ontology Classes" link="mtp-ontology.html#mtp-classes"/>
+        <sub name="MTP Ontology Properties" link="mtp-properties.html"/>
+      </sub>
+      <sub name="Simplified Maemo Location Ontology (SLO) (experimental/for testing): Simpler, faster, better ontology for locations and landmarks" link="slo-ontology.html">
+        <sub name="SLO Ontology Classes" link="slo-ontology.html#slo-classes"/>
+        <sub name="SLO Ontology Properties" link="slo-properties.html"/>
+      </sub>
+      <sub name="Tracker-specific annotations Ontology: Internal tracker properties" link="tracker-ontology.html">
+        <sub name="TRACKER Ontology Classes" link="tracker-ontology.html#tracker-classes"/>
+        <sub name="TRACKER Ontology Properties" link="tracker-properties.html"/>
+      </sub>
+      <sub name="Maemo-specific classes: Some maemo/meego specific properties" link="maemo-ontology.html">
+        <sub name="MAEMO Ontology Classes" link="maemo-ontology.html#maemo-classes"/>
+        <sub name="MAEMO Ontology Properties" link="maemo-properties.html"/>
+      </sub>
+      <sub name="Full-text indexed properties in the ontology" link="fts-properties.html"/>
+    </sub>
+    <sub name="Notation" link="ontology-notation-description.html"/>
+    <sub name="The big picture" link="ontology-graphs.html"/>
+  </chapters>
+  <functions>
+    <keyword type="" name="xsd:integer" link="xsd-classes.html#xsd-integer"/>
+    <keyword type="" name="xsd:boolean" link="xsd-classes.html#xsd-boolean"/>
+    <keyword type="" name="xsd:string" link="xsd-classes.html#xsd-string"/>
+    <keyword type="" name="xsd:double" link="xsd-classes.html#xsd-double"/>
+    <keyword type="" name="xsd:date" link="xsd-classes.html#xsd-date"/>
+    <keyword type="" name="xsd:dateTime" link="xsd-classes.html#xsd-dateTime"/>
+    <keyword type="" name="rdf:Class" link="rdf-ontology.html#rdf-Class"/>
+    <keyword type="" name="rdf:Literal" link="rdf-ontology.html#rdf-Literal"/>
+    <keyword type="" name="rdf:Resource" link="rdf-ontology.html#rdf-Resource"/>
+    <keyword type="" name="tracker:Namespace" link="rdf-ontology.html#tracker-Namespace"/>
+    <keyword type="" name="tracker:Ontology" link="rdf-ontology.html#tracker-Ontology"/>
+    <keyword type="" name="rdf:Property" link="rdf-ontology.html#rdf-Property"/>
+    <keyword type="" name="tracker:domainIndex" link="rdf-properties.html#tracker-domainIndex"/>
+    <keyword type="" name="tracker:fulltextNoLimit" link="rdf-properties.html#tracker-fulltextNoLimit"/>
+    <keyword type="" name="rdf:range" link="rdf-properties.html#rdf-range"/>
+    <keyword type="" name="tracker:modified" link="rdf-properties.html#tracker-modified"/>
+    <keyword type="" name="tracker:damaged" link="rdf-properties.html#tracker-damaged"/>
+    <keyword type="" name="tracker:weight" link="rdf-properties.html#tracker-weight"/>
+    <keyword type="" name="tracker:indexed" link="rdf-properties.html#tracker-indexed"/>
+    <keyword type="" name="tracker:added" link="rdf-properties.html#tracker-added"/>
+    <keyword type="" name="rdf:type" link="rdf-properties.html#rdf-type"/>
+    <keyword type="" name="rdf:subPropertyOf" link="rdf-properties.html#rdf-subPropertyOf"/>
+    <keyword type="" name="rdf:label" link="rdf-properties.html#rdf-label"/>
+    <keyword type="" name="rdf:domain" link="rdf-properties.html#rdf-domain"/>
+    <keyword type="" name="tracker:secondaryIndex" link="rdf-properties.html#tracker-secondaryIndex"/>
+    <keyword type="" name="tracker:prefix" link="rdf-properties.html#tracker-prefix"/>
+    <keyword type="" name="rdf:subClassOf" link="rdf-properties.html#rdf-subClassOf"/>
+    <keyword type="" name="tracker:defaultValue" link="rdf-properties.html#tracker-defaultValue"/>
+    <keyword type="" name="rdf:comment" link="rdf-properties.html#rdf-comment"/>
+    <keyword type="" name="tracker:fulltextIndexed" link="rdf-properties.html#tracker-fulltextIndexed"/>
+    <keyword type="" name="tracker:transient" link="rdf-properties.html#tracker-transient"/>
+    <keyword type="" name="dc:creator" link="dc-properties.html#dc-creator"/>
+    <keyword type="" name="dc:type" link="dc-properties.html#dc-type"/>
+    <keyword type="" name="dc:publisher" link="dc-properties.html#dc-publisher"/>
+    <keyword type="" name="dc:date" link="dc-properties.html#dc-date"/>
+    <keyword type="" name="dc:source" link="dc-properties.html#dc-source"/>
+    <keyword type="" name="dc:relation" link="dc-properties.html#dc-relation"/>
+    <keyword type="" name="dc:contributor" link="dc-properties.html#dc-contributor"/>
+    <keyword type="" name="dc:identifier" link="dc-properties.html#dc-identifier"/>
+    <keyword type="" name="dc:language" link="dc-properties.html#dc-language"/>
+    <keyword type="" name="dc:subject" link="dc-properties.html#dc-subject"/>
+    <keyword type="" name="dc:format" link="dc-properties.html#dc-format"/>
+    <keyword type="" name="dc:coverage" link="dc-properties.html#dc-coverage"/>
+    <keyword type="" name="dc:rights" link="dc-properties.html#dc-rights"/>
+    <keyword type="" name="dc:title" link="dc-properties.html#dc-title"/>
+    <keyword type="" name="dc:description" link="dc-properties.html#dc-description"/>
+    <keyword type="" name="URIs and full representation of a file" link="nie-ontology.html#nie-uri-representation"/>
+    <keyword type="" name="" link="nie-ontology.html#nie-graphical-overview"/>
+    <keyword type="" name="Related information" link="nie-ontology.html#nie-related-information"/>
+    <keyword type="" name="nie:DataObject" link="nie-classes.html#nie-DataObject"/>
+    <keyword type="" name="nie:DataSource" link="nie-classes.html#nie-DataSource"/>
+    <keyword type="" name="nie:InformationElement" link="nie-classes.html#nie-InformationElement"/>
+    <keyword type="" name="nie:generator" link="nie-properties.html#nie-generator"/>
+    <keyword type="" name="nie:hasLogicalPart" link="nie-properties.html#nie-hasLogicalPart"/>
+    <keyword type="" name="nie:keyword" link="nie-properties.html#nie-keyword"/>
+    <keyword type="" name="nie:interpretedAs" link="nie-properties.html#nie-interpretedAs"/>
+    <keyword type="" name="nie:depends" link="nie-properties.html#nie-depends"/>
+    <keyword type="" name="nie:comment" link="nie-properties.html#nie-comment"/>
+    <keyword type="" name="nie:informationElementDate" link="nie-properties.html#nie-informationElementDate"/>
+    <keyword type="" name="nie:subject" link="nie-properties.html#nie-subject"/>
+    <keyword type="" name="nie:isStoredAs" link="nie-properties.html#nie-isStoredAs"/>
+    <keyword type="" name="nie:disclaimer" link="nie-properties.html#nie-disclaimer"/>
+    <keyword type="" name="nie:identifier" link="nie-properties.html#nie-identifier"/>
+    <keyword type="" name="nie:description" link="nie-properties.html#nie-description"/>
+    <keyword type="" name="nie:mimeType" link="nie-properties.html#nie-mimeType"/>
+    <keyword type="" name="nie:contentLastModified" link="nie-properties.html#nie-contentLastModified"/>
+    <keyword type="" name="nie:contentSize" link="nie-properties.html#nie-contentSize"/>
+    <keyword type="" name="nie:isLogicalPartOf" link="nie-properties.html#nie-isLogicalPartOf"/>
+    <keyword type="" name="nie:copyright" link="nie-properties.html#nie-copyright"/>
+    <keyword type="" name="nie:version" link="nie-properties.html#nie-version"/>
+    <keyword type="" name="nie:lastRefreshed" link="nie-properties.html#nie-lastRefreshed"/>
+    <keyword type="" name="nie:licenseType" link="nie-properties.html#nie-licenseType"/>
+    <keyword type="" name="nie:usageCounter" link="nie-properties.html#nie-usageCounter"/>
+    <keyword type="" name="nie:license" link="nie-properties.html#nie-license"/>
+    <keyword type="" name="nie:isPartOf" link="nie-properties.html#nie-isPartOf"/>
+    <keyword type="" name="nie:url" link="nie-properties.html#nie-url"/>
+    <keyword type="" name="nie:dataSource" link="nie-properties.html#nie-dataSource"/>
+    <keyword type="" name="nie:rootElementOf" link="nie-properties.html#nie-rootElementOf"/>
+    <keyword type="" name="nie:byteSize" link="nie-properties.html#nie-byteSize"/>
+    <keyword type="" name="nie:characterSet" link="nie-properties.html#nie-characterSet"/>
+    <keyword type="" name="nie:hasPart" link="nie-properties.html#nie-hasPart"/>
+    <keyword type="" name="nie:contentAccessed" link="nie-properties.html#nie-contentAccessed"/>
+    <keyword type="" name="nie:links" link="nie-properties.html#nie-links"/>
+    <keyword type="" name="nie:legal" link="nie-properties.html#nie-legal"/>
+    <keyword type="" name="nie:contentCreated" link="nie-properties.html#nie-contentCreated"/>
+    <keyword type="" name="nie:plainTextContent" link="nie-properties.html#nie-plainTextContent"/>
+    <keyword type="" name="nie:relatedTo" link="nie-properties.html#nie-relatedTo"/>
+    <keyword type="" name="nie:title" link="nie-properties.html#nie-title"/>
+    <keyword type="" name="nie:language" link="nie-properties.html#nie-language"/>
+    <keyword type="" name="nie:created" link="nie-properties.html#nie-created"/>
+    <keyword type="" name="nao:Property" link="nao-ontology.html#nao-Property"/>
+    <keyword type="" name="nao:Tag" link="nao-ontology.html#nao-Tag"/>
+    <keyword type="" name="nao:identifier" link="nao-properties.html#nao-identifier"/>
+    <keyword type="" name="nao:propertyValue" link="nao-properties.html#nao-propertyValue"/>
+    <keyword type="" name="nao:hasProperty" link="nao-properties.html#nao-hasProperty"/>
+    <keyword type="" name="nao:lastModified" link="nao-properties.html#nao-lastModified"/>
+    <keyword type="" name="nao:isRelated" link="nao-properties.html#nao-isRelated"/>
+    <keyword type="" name="nao:prefLabel" link="nao-properties.html#nao-prefLabel"/>
+    <keyword type="" name="nao:deprecated" link="nao-properties.html#nao-deprecated"/>
+    <keyword type="" name="nao:description" link="nao-properties.html#nao-description"/>
+    <keyword type="" name="nao:propertyName" link="nao-properties.html#nao-propertyName"/>
+    <keyword type="" name="nao:numericRating" link="nao-properties.html#nao-numericRating"/>
+    <keyword type="" name="nao:hasTag" link="nao-properties.html#nao-hasTag"/>
+    <keyword type="" name="nfo:FileDataObject" link="nfo-ontology.html#nfo-FileDataObject"/>
+    <keyword type="" name="nfo:Video" link="nfo-ontology.html#nfo-Video"/>
+    <keyword type="" name="nfo:MediaList" link="nfo-ontology.html#nfo-MediaList"/>
+    <keyword type="" name="nfo:Executable" link="nfo-ontology.html#nfo-Executable"/>
+    <keyword type="" name="nfo:SoftwareCategory" link="nfo-ontology.html#nfo-SoftwareCategory"/>
+    <keyword type="" name="nfo:SourceCode" link="nfo-ontology.html#nfo-SourceCode"/>
+    <keyword type="" name="nfo:RemotePortAddress" link="nfo-ontology.html#nfo-RemotePortAddress"/>
+    <keyword type="" name="nfo:Cursor" link="nfo-ontology.html#nfo-Cursor"/>
+    <keyword type="" name="nfo:RegionOfInterest" link="nfo-ontology.html#nfo-RegionOfInterest"/>
+    <keyword type="" name="nfo:Document" link="nfo-ontology.html#nfo-Document"/>
+    <keyword type="" name="http://www.tracker-project.org/ontologies/poi#ObjectOfInterest" link="poi#ObjectOfInterest"/>
+    <keyword type="" name="nfo:Presentation" link="nfo-ontology.html#nfo-Presentation"/>
+    <keyword type="" name="nfo:RemoteDataObject" link="nfo-ontology.html#nfo-RemoteDataObject"/>
+    <keyword type="" name="nfo:Software" link="nfo-ontology.html#nfo-Software"/>
+    <keyword type="" name="nfo:ArchiveItem" link="nfo-ontology.html#nfo-ArchiveItem"/>
+    <keyword type="" name="nfo:HardDiskPartition" link="nfo-ontology.html#nfo-HardDiskPartition"/>
+    <keyword type="" name="nfo:Font" link="nfo-ontology.html#nfo-Font"/>
+    <keyword type="" name="nfo:FilesystemImage" link="nfo-ontology.html#nfo-FilesystemImage"/>
+    <keyword type="" name="nfo:HelpDocument" link="nfo-ontology.html#nfo-HelpDocument"/>
+    <keyword type="" name="nfo:DeletedResource" link="nfo-ontology.html#nfo-DeletedResource"/>
+    <keyword type="" name="nfo:RasterImage" link="nfo-ontology.html#nfo-RasterImage"/>
+    <keyword type="" name="nfo:MindMap" link="nfo-ontology.html#nfo-MindMap"/>
+    <keyword type="" name="nfo:Note" link="nfo-ontology.html#nfo-Note"/>
+    <keyword type="" name="nfo:PlainTextDocument" link="nfo-ontology.html#nfo-PlainTextDocument"/>
+    <keyword type="" name="nfo:Spreadsheet" link="nfo-ontology.html#nfo-Spreadsheet"/>
+    <keyword type="" name="nfo:Trash" link="nfo-ontology.html#nfo-Trash"/>
+    <keyword type="" name="nfo:Media" link="nfo-ontology.html#nfo-Media"/>
+    <keyword type="" name="nfo:SoftwareService" link="nfo-ontology.html#nfo-SoftwareService"/>
+    <keyword type="" name="nfo:VectorImage" link="nfo-ontology.html#nfo-VectorImage"/>
+    <keyword type="" name="nfo:WebHistory" link="nfo-ontology.html#nfo-WebHistory"/>
+    <keyword type="" name="nfo:HtmlDocument" link="nfo-ontology.html#nfo-HtmlDocument"/>
+    <keyword type="" name="nfo:TextDocument" link="nfo-ontology.html#nfo-TextDocument"/>
+    <keyword type="" name="nfo:SoftwareItem" link="nfo-ontology.html#nfo-SoftwareItem"/>
+    <keyword type="" name="nfo:OperatingSystem" link="nfo-ontology.html#nfo-OperatingSystem"/>
+    <keyword type="" name="nfo:PaginatedTextDocument" link="nfo-ontology.html#nfo-PaginatedTextDocument"/>
+    <keyword type="" name="nfo:MediaFileListEntry" link="nfo-ontology.html#nfo-MediaFileListEntry"/>
+    <keyword type="" name="nfo:Folder" link="nfo-ontology.html#nfo-Folder"/>
+    <keyword type="" name="nfo:Filesystem" link="nfo-ontology.html#nfo-Filesystem"/>
+    <keyword type="" name="nfo:Image" link="nfo-ontology.html#nfo-Image"/>
+    <keyword type="" name="nfo:CompressionType" link="nfo-ontology.html#nfo-CompressionType"/>
+    <keyword type="" name="nfo:FileHash" link="nfo-ontology.html#nfo-FileHash"/>
+    <keyword type="" name="nfo:MediaStream" link="nfo-ontology.html#nfo-MediaStream"/>
+    <keyword type="" name="nfo:Attachment" link="nfo-ontology.html#nfo-Attachment"/>
+    <keyword type="" name="nfo:Equipment" link="nfo-ontology.html#nfo-Equipment"/>
+    <keyword type="" name="nfo:Website" link="nfo-ontology.html#nfo-Website"/>
+    <keyword type="" name="nfo:Application" link="nfo-ontology.html#nfo-Application"/>
+    <keyword type="" name="nfo:EmbeddedFileDataObject" link="nfo-ontology.html#nfo-EmbeddedFileDataObject"/>
+    <keyword type="" name="nfo:DataContainer" link="nfo-ontology.html#nfo-DataContainer"/>
+    <keyword type="" name="nfo:BookmarkFolder" link="nfo-ontology.html#nfo-BookmarkFolder"/>
+    <keyword type="" name="nfo:Audio" link="nfo-ontology.html#nfo-Audio"/>
+    <keyword type="" name="nfo:Archive" link="nfo-ontology.html#nfo-Archive"/>
+    <keyword type="" name="nfo:Visual" link="nfo-ontology.html#nfo-Visual"/>
+    <keyword type="" name="nfo:Icon" link="nfo-ontology.html#nfo-Icon"/>
+    <keyword type="" name="nfo:RegionOfInterestContent" link="nfo-ontology.html#nfo-RegionOfInterestContent"/>
+    <keyword type="" name="nfo:Bookmark" link="nfo-ontology.html#nfo-Bookmark"/>
+    <keyword type="" name="nfo:SoftwareApplication" link="nfo-ontology.html#nfo-SoftwareApplication"/>
+    <keyword type="" name="nfo:Orientation" link="nfo-ontology.html#nfo-Orientation"/>
+    <keyword type="" name="nfo:softwareCategoryIcon" link="nfo-properties.html#nfo-softwareCategoryIcon"/>
+    <keyword type="" name="nfo:hasMediaStream" link="nfo-properties.html#nfo-hasMediaStream"/>
+    <keyword type="" name="nfo:entryCounter" link="nfo-properties.html#nfo-entryCounter"/>
+    <keyword type="" name="nfo:isPasswordProtected" link="nfo-properties.html#nfo-isPasswordProtected"/>
+    <keyword type="" name="nfo:regionOfInterestWidth" link="nfo-properties.html#nfo-regionOfInterestWidth"/>
+    <keyword type="" name="nfo:hasRegionOfInterest" link="nfo-properties.html#nfo-hasRegionOfInterest"/>
+    <keyword type="" name="nfo:hashAlgorithm" link="nfo-properties.html#nfo-hashAlgorithm"/>
+    <keyword type="" name="nfo:frameCount" link="nfo-properties.html#nfo-frameCount"/>
+    <keyword type="" name="nfo:belongsToContainer" link="nfo-properties.html#nfo-belongsToContainer"/>
+    <keyword type="" name="nfo:gain" link="nfo-properties.html#nfo-gain"/>
+    <keyword type="" name="nfo:colorDepth" link="nfo-properties.html#nfo-colorDepth"/>
+    <keyword type="" name="nfo:tilt" link="nfo-properties.html#nfo-tilt"/>
+    <keyword type="" name="nfo:channels" link="nfo-properties.html#nfo-channels"/>
+    <keyword type="" name="nfo:listPosition" link="nfo-properties.html#nfo-listPosition"/>
+    <keyword type="" name="nfo:tableOfContents" link="nfo-properties.html#nfo-tableOfContents"/>
+    <keyword type="" name="nfo:deletionDate" link="nfo-properties.html#nfo-deletionDate"/>
+    <keyword type="" name="nfo:conflicts" link="nfo-properties.html#nfo-conflicts"/>
+    <keyword type="" name="nfo:definesGlobalVariable" link="nfo-properties.html#nfo-definesGlobalVariable"/>
+    <keyword type="" name="nfo:wordCount" link="nfo-properties.html#nfo-wordCount"/>
+    <keyword type="" name="nfo:containsBookmarkFolder" link="nfo-properties.html#nfo-containsBookmarkFolder"/>
+    <keyword type="" name="nfo:frameRate" link="nfo-properties.html#nfo-frameRate"/>
+    <keyword type="" name="nfo:rearChannels" link="nfo-properties.html#nfo-rearChannels"/>
+    <keyword type="" name="nfo:regionOfInterestX" link="nfo-properties.html#nfo-regionOfInterestX"/>
+    <keyword type="" name="nfo:mediaListEntry" link="nfo-properties.html#nfo-mediaListEntry"/>
+    <keyword type="" name="nfo:regionOfInterestY" link="nfo-properties.html#nfo-regionOfInterestY"/>
+    <keyword type="" name="nfo:bookmarks" link="nfo-properties.html#nfo-bookmarks"/>
+    <keyword type="" name="nfo:orientation" link="nfo-properties.html#nfo-orientation"/>
+    <keyword type="" name="nfo:supercedes" link="nfo-properties.html#nfo-supercedes"/>
+    <keyword type="" name="nfo:containsBookmark" link="nfo-properties.html#nfo-containsBookmark"/>
+    <keyword type="" name="nfo:isContentEncrypted" link="nfo-properties.html#nfo-isContentEncrypted"/>
+    <keyword type="" name="nfo:programmingLanguage" link="nfo-properties.html#nfo-programmingLanguage"/>
+    <keyword type="" name="nfo:fileCreated" link="nfo-properties.html#nfo-fileCreated"/>
+    <keyword type="" name="nfo:sampleCount" link="nfo-properties.html#nfo-sampleCount"/>
+    <keyword type="" name="nfo:compressionType" link="nfo-properties.html#nfo-compressionType"/>
+    <keyword type="" name="nfo:isBootable" link="nfo-properties.html#nfo-isBootable"/>
+    <keyword type="" name="nfo:listDuration" link="nfo-properties.html#nfo-listDuration"/>
+    <keyword type="" name="nfo:regionOfInterestHeight" link="nfo-properties.html#nfo-regionOfInterestHeight"/>
+    <keyword type="" name="nfo:model" link="nfo-properties.html#nfo-model"/>
+    <keyword type="" name="nfo:aspectRatio" link="nfo-properties.html#nfo-aspectRatio"/>
+    <keyword type="" name="nfo:hashValue" link="nfo-properties.html#nfo-hashValue"/>
+    <keyword type="" name="nfo:heading" link="nfo-properties.html#nfo-heading"/>
+    <keyword type="" name="nfo:commentCharacterCount" link="nfo-properties.html#nfo-commentCharacterCount"/>
+    <keyword type="" name="nfo:permissions" link="nfo-properties.html#nfo-permissions"/>
+    <keyword type="" name="nfo:duration" link="nfo-properties.html#nfo-duration"/>
+    <keyword type="" name="nfo:manufacturer" link="nfo-properties.html#nfo-manufacturer"/>
+    <keyword type="" name="nfo:streamPosition" link="nfo-properties.html#nfo-streamPosition"/>
+    <keyword type="" name="nfo:domain" link="nfo-properties.html#nfo-domain"/>
+    <keyword type="" name="nfo:lastPlayedPosition" link="nfo-properties.html#nfo-lastPlayedPosition"/>
+    <keyword type="" name="nfo:characterPosition" link="nfo-properties.html#nfo-characterPosition"/>
+    <keyword type="" name="nfo:sideChannels" link="nfo-properties.html#nfo-sideChannels"/>
+    <keyword type="" name="nfo:hasHash" link="nfo-properties.html#nfo-hasHash"/>
+    <keyword type="" name="nfo:foundry" link="nfo-properties.html#nfo-foundry"/>
+    <keyword type="" name="nfo:interlaceMode" link="nfo-properties.html#nfo-interlaceMode"/>
+    <keyword type="" name="nfo:entryUrl" link="nfo-properties.html#nfo-entryUrl"/>
+    <keyword type="" name="nfo:fontFamily" link="nfo-properties.html#nfo-fontFamily"/>
+    <keyword type="" name="nfo:pageCount" link="nfo-properties.html#nfo-pageCount"/>
+    <keyword type="" name="nfo:definesClass" link="nfo-properties.html#nfo-definesClass"/>
+    <keyword type="" name="nfo:fileLastAccessed" link="nfo-properties.html#nfo-fileLastAccessed"/>
+    <keyword type="" name="nfo:equipmentSoftware" link="nfo-properties.html#nfo-equipmentSoftware"/>
+    <keyword type="" name="nfo:encodedBy" link="nfo-properties.html#nfo-encodedBy"/>
+    <keyword type="" name="nfo:depicts" link="nfo-properties.html#nfo-depicts"/>
+    <keyword type="" name="nfo:averageBitrate" link="nfo-properties.html#nfo-averageBitrate"/>
+    <keyword type="" name="nfo:bitrateType" link="nfo-properties.html#nfo-bitrateType"/>
+    <keyword type="" name="nfo:codec" link="nfo-properties.html#nfo-codec"/>
+    <keyword type="" name="nfo:streamDuration" link="nfo-properties.html#nfo-streamDuration"/>
+    <keyword type="" name="nfo:pageNumber" link="nfo-properties.html#nfo-pageNumber"/>
+    <keyword type="" name="nfo:audioOffset" link="nfo-properties.html#nfo-audioOffset"/>
+    <keyword type="" name="nfo:fileSize" link="nfo-properties.html#nfo-fileSize"/>
+    <keyword type="" name="nfo:originalLocation" link="nfo-properties.html#nfo-originalLocation"/>
+    <keyword type="" name="nfo:fileLastModified" link="nfo-properties.html#nfo-fileLastModified"/>
+    <keyword type="" name="nfo:hasMediaFileListEntry" link="nfo-properties.html#nfo-hasMediaFileListEntry"/>
+    <keyword type="" name="nfo:softwareCmdLine" link="nfo-properties.html#nfo-softwareCmdLine"/>
+    <keyword type="" name="nfo:regionOfInterestType" link="nfo-properties.html#nfo-regionOfInterestType"/>
+    <keyword type="" name="nfo:bitsPerSample" link="nfo-properties.html#nfo-bitsPerSample"/>
+    <keyword type="" name="nfo:lineCount" link="nfo-properties.html#nfo-lineCount"/>
+    <keyword type="" name="nfo:averageVideoBitrate" link="nfo-properties.html#nfo-averageVideoBitrate"/>
+    <keyword type="" name="nfo:definesFunction" link="nfo-properties.html#nfo-definesFunction"/>
+    <keyword type="" name="nfo:bitDepth" link="nfo-properties.html#nfo-bitDepth"/>
+    <keyword type="" name="nfo:fileOwner" link="nfo-properties.html#nfo-fileOwner"/>
+    <keyword type="" name="nfo:encoding" link="nfo-properties.html#nfo-encoding"/>
+    <keyword type="" name="nfo:horizontalResolution" link="nfo-properties.html#nfo-horizontalResolution"/>
+    <keyword type="" name="nfo:equipment" link="nfo-properties.html#nfo-equipment"/>
+    <keyword type="" name="nfo:softwareIcon" link="nfo-properties.html#nfo-softwareIcon"/>
+    <keyword type="" name="nfo:fileName" link="nfo-properties.html#nfo-fileName"/>
+    <keyword type="" name="nfo:count" link="nfo-properties.html#nfo-count"/>
+    <keyword type="" name="nfo:uri" link="nfo-properties.html#nfo-uri"/>
+    <keyword type="" name="nfo:averageAudioBitrate" link="nfo-properties.html#nfo-averageAudioBitrate"/>
+    <keyword type="" name="nfo:peakGain" link="nfo-properties.html#nfo-peakGain"/>
+    <keyword type="" name="nfo:characterCount" link="nfo-properties.html#nfo-characterCount"/>
+    <keyword type="" name="nfo:frontChannels" link="nfo-properties.html#nfo-frontChannels"/>
+    <keyword type="" name="nfo:uncompressedSize" link="nfo-properties.html#nfo-uncompressedSize"/>
+    <keyword type="" name="nfo:genre" link="nfo-properties.html#nfo-genre"/>
+    <keyword type="" name="nfo:lfeChannels" link="nfo-properties.html#nfo-lfeChannels"/>
+    <keyword type="" name="nfo:width" link="nfo-properties.html#nfo-width"/>
+    <keyword type="" name="nfo:height" link="nfo-properties.html#nfo-height"/>
+    <keyword type="" name="nfo:sampleRate" link="nfo-properties.html#nfo-sampleRate"/>
+    <keyword type="" name="nfo:roiRefersTo" link="nfo-properties.html#nfo-roiRefersTo"/>
+    <keyword type="" name="nfo:verticalResolution" link="nfo-properties.html#nfo-verticalResolution"/>
+    <keyword type="" name="A contact in this ontology" link="nco-ontology.html#nco-ContactRepresentation"/>
+    <keyword type="" name="Postal Address" link="nco-ontology.html#nco-PostalAddressRepresentation"/>
+    <keyword type="" name="IM Accounts and contacts" link="nco-ontology.html#nco-ImContactsRepresentations"/>
+    <keyword type="" name="Special remarks" link="nco-ontology.html#nco-special-remarks"/>
+    <keyword type="" name="Related information" link="nco-ontology.html#nco-related-information"/>
+    <keyword type="" name="nco:IMAccount" link="nco-classes.html#nco-IMAccount"/>
+    <keyword type="" name="nco:PcsNumber" link="nco-classes.html#nco-PcsNumber"/>
+    <keyword type="" name="nco:PersonContact" link="nco-classes.html#nco-PersonContact"/>
+    <keyword type="" name="nco:VoicePhoneNumber" link="nco-classes.html#nco-VoicePhoneNumber"/>
+    <keyword type="" name="nco:MessagingNumber" link="nco-classes.html#nco-MessagingNumber"/>
+    <keyword type="" name="nco:BbsNumber" link="nco-classes.html#nco-BbsNumber"/>
+    <keyword type="" name="nco:Gender" link="nco-classes.html#nco-Gender"/>
+    <keyword type="" name="nco:ContactMedium" link="nco-classes.html#nco-ContactMedium"/>
+    <keyword type="" name="nco:CellPhoneNumber" link="nco-classes.html#nco-CellPhoneNumber"/>
+    <keyword type="" name="nco:Role" link="nco-classes.html#nco-Role"/>
+    <keyword type="" name="nco:IsdnNumber" link="nco-classes.html#nco-IsdnNumber"/>
+    <keyword type="" name="nco:ContactList" link="nco-classes.html#nco-ContactList"/>
+    <keyword type="" name="nco:VideoTelephoneNumber" link="nco-classes.html#nco-VideoTelephoneNumber"/>
+    <keyword type="" name="nco:DomesticDeliveryAddress" link="nco-classes.html#nco-DomesticDeliveryAddress"/>
+    <keyword type="" name="nco:FaxNumber" link="nco-classes.html#nco-FaxNumber"/>
+    <keyword type="" name="nco:OrganizationContact" link="nco-classes.html#nco-OrganizationContact"/>
+    <keyword type="" name="nco:PhoneNumber" link="nco-classes.html#nco-PhoneNumber"/>
+    <keyword type="" name="nco:IMAddress" link="nco-classes.html#nco-IMAddress"/>
+    <keyword type="" name="nco:PresenceStatus" link="nco-classes.html#nco-PresenceStatus"/>
+    <keyword type="" name="nco:PostalAddress" link="nco-classes.html#nco-PostalAddress"/>
+    <keyword type="" name="nco:EmailAddress" link="nco-classes.html#nco-EmailAddress"/>
+    <keyword type="" name="nco:CarPhoneNumber" link="nco-classes.html#nco-CarPhoneNumber"/>
+    <keyword type="" name="nco:AuthorizationStatus" link="nco-classes.html#nco-AuthorizationStatus"/>
+    <keyword type="" name="nco:ModemNumber" link="nco-classes.html#nco-ModemNumber"/>
+    <keyword type="" name="nco:ContactGroup" link="nco-classes.html#nco-ContactGroup"/>
+    <keyword type="" name="nco:ContactListDataObject" link="nco-classes.html#nco-ContactListDataObject"/>
+    <keyword type="" name="nco:ParcelDeliveryAddress" link="nco-classes.html#nco-ParcelDeliveryAddress"/>
+    <keyword type="" name="nco:IMCapability" link="nco-classes.html#nco-IMCapability"/>
+    <keyword type="" name="nco:PagerNumber" link="nco-classes.html#nco-PagerNumber"/>
+    <keyword type="" name="nco:Affiliation" link="nco-classes.html#nco-Affiliation"/>
+    <keyword type="" name="nco:InternationalDeliveryAddress" link="nco-classes.html#nco-InternationalDeliveryAddress"/>
+    <keyword type="" name="nco:Contact" link="nco-classes.html#nco-Contact"/>
+    <keyword type="" name="nco:imAccountType" link="nco-properties.html#nco-imAccountType"/>
+    <keyword type="" name="nco:imID" link="nco-properties.html#nco-imID"/>
+    <keyword type="" name="nco:imNickname" link="nco-properties.html#nco-imNickname"/>
+    <keyword type="" name="nco:region" link="nco-properties.html#nco-region"/>
+    <keyword type="" name="nco:country" link="nco-properties.html#nco-country"/>
+    <keyword type="" name="nco:imEnabled" link="nco-properties.html#nco-imEnabled"/>
+    <keyword type="" name="nco:publisher" link="nco-properties.html#nco-publisher"/>
+    <keyword type="" name="nco:representative" link="nco-properties.html#nco-representative"/>
+    <keyword type="" name="nco:imCapability" link="nco-properties.html#nco-imCapability"/>
+    <keyword type="" name="nco:hasIMContact" link="nco-properties.html#nco-hasIMContact"/>
+    <keyword type="" name="nco:streetAddress" link="nco-properties.html#nco-streetAddress"/>
+    <keyword type="" name="nco:contactMediumComment" link="nco-properties.html#nco-contactMediumComment"/>
+    <keyword type="" name="nco:logo" link="nco-properties.html#nco-logo"/>
+    <keyword type="" name="nco:contactLocalUID" link="nco-properties.html#nco-contactLocalUID"/>
+    <keyword type="" name="nco:nameAdditional" link="nco-properties.html#nco-nameAdditional"/>
+    <keyword type="" name="nco:contributor" link="nco-properties.html#nco-contributor"/>
+    <keyword type="" name="nco:role" link="nco-properties.html#nco-role"/>
+    <keyword type="" name="nco:hasLocation" link="nco-properties.html#nco-hasLocation"/>
+    <keyword type="" name="nco:contactGroupName" link="nco-properties.html#nco-contactGroupName"/>
+    <keyword type="" name="nco:sound" link="nco-properties.html#nco-sound"/>
+    <keyword type="" name="nco:org" link="nco-properties.html#nco-org"/>
+    <keyword type="" name="nco:addressLocation" link="nco-properties.html#nco-addressLocation"/>
+    <keyword type="" name="nco:hasIMAddress" link="nco-properties.html#nco-hasIMAddress"/>
+    <keyword type="" name="nco:imProtocol" link="nco-properties.html#nco-imProtocol"/>
+    <keyword type="" name="nco:video" link="nco-properties.html#nco-video"/>
+    <keyword type="" name="nco:title" link="nco-properties.html#nco-title"/>
+    <keyword type="" name="nco:birthDate" link="nco-properties.html#nco-birthDate"/>
+    <keyword type="" name="nco:containsContact" link="nco-properties.html#nco-containsContact"/>
+    <keyword type="" name="nco:blogUrl" link="nco-properties.html#nco-blogUrl"/>
+    <keyword type="" name="nco:creator" link="nco-properties.html#nco-creator"/>
+    <keyword type="" name="nco:hasContactMedium" link="nco-properties.html#nco-hasContactMedium"/>
+    <keyword type="" name="nco:contactUID" link="nco-properties.html#nco-contactUID"/>
+    <keyword type="" name="nco:note" link="nco-properties.html#nco-note"/>
+    <keyword type="" name="nco:foafUrl" link="nco-properties.html#nco-foafUrl"/>
+    <keyword type="" name="nco:hasEmailAddress" link="nco-properties.html#nco-hasEmailAddress"/>
+    <keyword type="" name="nco:locality" link="nco-properties.html#nco-locality"/>
+    <keyword type="" name="nco:district" link="nco-properties.html#nco-district"/>
+    <keyword type="" name="nco:nameHonorificSuffix" link="nco-properties.html#nco-nameHonorificSuffix"/>
+    <keyword type="" name="nco:websiteUrl" link="nco-properties.html#nco-websiteUrl"/>
+    <keyword type="" name="nco:nameFamily" link="nco-properties.html#nco-nameFamily"/>
+    <keyword type="" name="nco:imAccountAddress" link="nco-properties.html#nco-imAccountAddress"/>
+    <keyword type="" name="nco:nameHonorificPrefix" link="nco-properties.html#nco-nameHonorificPrefix"/>
+    <keyword type="" name="nco:hasAffiliation" link="nco-properties.html#nco-hasAffiliation"/>
+    <keyword type="" name="nco:gender" link="nco-properties.html#nco-gender"/>
+    <keyword type="" name="nco:imAddressAuthStatusTo" link="nco-properties.html#nco-imAddressAuthStatusTo"/>
+    <keyword type="" name="nco:extendedAddress" link="nco-properties.html#nco-extendedAddress"/>
+    <keyword type="" name="nco:imStatusMessage" link="nco-properties.html#nco-imStatusMessage"/>
+    <keyword type="" name="nco:key" link="nco-properties.html#nco-key"/>
+    <keyword type="" name="nco:imAvatar" link="nco-properties.html#nco-imAvatar"/>
+    <keyword type="" name="nco:emailAddress" link="nco-properties.html#nco-emailAddress"/>
+    <keyword type="" name="nco:url" link="nco-properties.html#nco-url"/>
+    <keyword type="" name="nco:postalcode" link="nco-properties.html#nco-postalcode"/>
+    <keyword type="" name="nco:hasPhoneNumber" link="nco-properties.html#nco-hasPhoneNumber"/>
+    <keyword type="" name="nco:photo" link="nco-properties.html#nco-photo"/>
+    <keyword type="" name="nco:nameGiven" link="nco-properties.html#nco-nameGiven"/>
+    <keyword type="" name="nco:imPresence" link="nco-properties.html#nco-imPresence"/>
+    <keyword type="" name="nco:nickname" link="nco-properties.html#nco-nickname"/>
+    <keyword type="" name="nco:hobby" link="nco-properties.html#nco-hobby"/>
+    <keyword type="" name="nco:department" link="nco-properties.html#nco-department"/>
+    <keyword type="" name="nco:phoneNumber" link="nco-properties.html#nco-phoneNumber"/>
+    <keyword type="" name="nco:presenceLastModified" link="nco-properties.html#nco-presenceLastModified"/>
+    <keyword type="" name="nco:pobox" link="nco-properties.html#nco-pobox"/>
+    <keyword type="" name="nco:imDisplayName" link="nco-properties.html#nco-imDisplayName"/>
+    <keyword type="" name="nco:fullname" link="nco-properties.html#nco-fullname"/>
+    <keyword type="" name="nco:imAddressAuthStatusFrom" link="nco-properties.html#nco-imAddressAuthStatusFrom"/>
+    <keyword type="" name="nco:hasPostalAddress" link="nco-properties.html#nco-hasPostalAddress"/>
+    <keyword type="" name="nco:county" link="nco-properties.html#nco-county"/>
+    <keyword type="" name="nco:voiceMail" link="nco-properties.html#nco-voiceMail"/>
+    <keyword type="" name="nco:belongsToGroup" link="nco-properties.html#nco-belongsToGroup"/>
+    <keyword type="" name="nmo:IMMessage" link="nmo-classes.html#nmo-IMMessage"/>
+    <keyword type="" name="nmo:Email" link="nmo-classes.html#nmo-Email"/>
+    <keyword type="" name="nmo:PermanentChannel" link="nmo-classes.html#nmo-PermanentChannel"/>
+    <keyword type="" name="nmo:Attachment" link="nmo-classes.html#nmo-Attachment"/>
+    <keyword type="" name="nmo:MMSMessage" link="nmo-classes.html#nmo-MMSMessage"/>
+    <keyword type="" name="nmo:MimePart" link="nmo-classes.html#nmo-MimePart"/>
+    <keyword type="" name="nmo:VOIPCall" link="nmo-classes.html#nmo-VOIPCall"/>
+    <keyword type="" name="nmo:Call" link="nmo-classes.html#nmo-Call"/>
+    <keyword type="" name="nmo:MessageHeader" link="nmo-classes.html#nmo-MessageHeader"/>
+    <keyword type="" name="nmo:Multipart" link="nmo-classes.html#nmo-Multipart"/>
+    <keyword type="" name="nmo:Message" link="nmo-classes.html#nmo-Message"/>
+    <keyword type="" name="nmo:MailAccount" link="nmo-classes.html#nmo-MailAccount"/>
+    <keyword type="" name="nmo:TransientChannel" link="nmo-classes.html#nmo-TransientChannel"/>
+    <keyword type="" name="nmo:Conversation" link="nmo-classes.html#nmo-Conversation"/>
+    <keyword type="" name="nmo:CommunicationChannel" link="nmo-classes.html#nmo-CommunicationChannel"/>
+    <keyword type="" name="nmo:PhoneMessageFolder" link="nmo-classes.html#nmo-PhoneMessageFolder"/>
+    <keyword type="" name="nmo:MailboxDataObject" link="nmo-classes.html#nmo-MailboxDataObject"/>
+    <keyword type="" name="nmo:SMSMessage" link="nmo-classes.html#nmo-SMSMessage"/>
+    <keyword type="" name="nmo:PhoneMessage" link="nmo-classes.html#nmo-PhoneMessage"/>
+    <keyword type="" name="nmo:ReportReadStatus" link="nmo-classes.html#nmo-ReportReadStatus"/>
+    <keyword type="" name="nmo:MailFolder" link="nmo-classes.html#nmo-MailFolder"/>
+    <keyword type="" name="nmo:DeliveryStatus" link="nmo-classes.html#nmo-DeliveryStatus"/>
+    <keyword type="" name="nmo:htmlMessageContent" link="nmo-properties.html#nmo-htmlMessageContent"/>
+    <keyword type="" name="nmo:serverUnreadCount" link="nmo-properties.html#nmo-serverUnreadCount"/>
+    <keyword type="" name="nmo:isDeleted" link="nmo-properties.html#nmo-isDeleted"/>
+    <keyword type="" name="nmo:fromVCard" link="nmo-properties.html#nmo-fromVCard"/>
+    <keyword type="" name="nmo:phoneMessageId" link="nmo-properties.html#nmo-phoneMessageId"/>
+    <keyword type="" name="nmo:contentTransferEncoding" link="nmo-properties.html#nmo-contentTransferEncoding"/>
+    <keyword type="" name="nmo:toVCard" link="nmo-properties.html#nmo-toVCard"/>
+    <keyword type="" name="nmo:headerName" link="nmo-properties.html#nmo-headerName"/>
+    <keyword type="" name="nmo:isFlagged" link="nmo-properties.html#nmo-isFlagged"/>
+    <keyword type="" name="nmo:from" link="nmo-properties.html#nmo-from"/>
+    <keyword type="" name="nmo:mmsHasContent" link="nmo-properties.html#nmo-mmsHasContent"/>
+    <keyword type="" name="nmo:sentDate" link="nmo-properties.html#nmo-sentDate"/>
+    <keyword type="" name="nmo:isRecent" link="nmo-properties.html#nmo-isRecent"/>
+    <keyword type="" name="nmo:phoneMessageFolderId" link="nmo-properties.html#nmo-phoneMessageFolderId"/>
+    <keyword type="" name="nmo:reportDelivery" link="nmo-properties.html#nmo-reportDelivery"/>
+    <keyword type="" name="nmo:communicationChannel" link="nmo-properties.html#nmo-communicationChannel"/>
+    <keyword type="" name="nmo:fromAddress" link="nmo-properties.html#nmo-fromAddress"/>
+    <keyword type="" name="nmo:conversation" link="nmo-properties.html#nmo-conversation"/>
+    <keyword type="" name="nmo:isDraft" link="nmo-properties.html#nmo-isDraft"/>
+    <keyword type="" name="nmo:accountName" link="nmo-properties.html#nmo-accountName"/>
+    <keyword type="" name="nmo:isRead" link="nmo-properties.html#nmo-isRead"/>
+    <keyword type="" name="nmo:lastMessageDate" link="nmo-properties.html#nmo-lastMessageDate"/>
+    <keyword type="" name="nmo:accountDisplayName" link="nmo-properties.html#nmo-accountDisplayName"/>
+    <keyword type="" name="nmo:contentMimeType" link="nmo-properties.html#nmo-contentMimeType"/>
+    <keyword type="" name="nmo:duration" link="nmo-properties.html#nmo-duration"/>
+    <keyword type="" name="nmo:folderName" link="nmo-properties.html#nmo-folderName"/>
+    <keyword type="" name="nmo:hasContent" link="nmo-properties.html#nmo-hasContent"/>
+    <keyword type="" name="nmo:serverCount" link="nmo-properties.html#nmo-serverCount"/>
+    <keyword type="" name="nmo:contentDescription" link="nmo-properties.html#nmo-contentDescription"/>
+    <keyword type="" name="nmo:sender" link="nmo-properties.html#nmo-sender"/>
+    <keyword type="" name="nmo:to" link="nmo-properties.html#nmo-to"/>
+    <keyword type="" name="nmo:messageId" link="nmo-properties.html#nmo-messageId"/>
+    <keyword type="" name="nmo:charSet" link="nmo-properties.html#nmo-charSet"/>
+    <keyword type="" name="nmo:lastSuccessfulMessageDate" link="nmo-properties.html#nmo-lastSuccessfulMessageDate"/>
+    <keyword type="" name="nmo:sentWithReportRead" link="nmo-properties.html#nmo-sentWithReportRead"/>
+    <keyword type="" name="nmo:messageHeader" link="nmo-properties.html#nmo-messageHeader"/>
+    <keyword type="" name="nmo:responseType" link="nmo-properties.html#nmo-responseType"/>
+    <keyword type="" name="nmo:references" link="nmo-properties.html#nmo-references"/>
+    <keyword type="" name="nmo:containsPhoneMessageFolder" link="nmo-properties.html#nmo-containsPhoneMessageFolder"/>
+    <keyword type="" name="nmo:receivedDate" link="nmo-properties.html#nmo-receivedDate"/>
+    <keyword type="" name="nmo:status" link="nmo-properties.html#nmo-status"/>
+    <keyword type="" name="nmo:isEmergency" link="nmo-properties.html#nmo-isEmergency"/>
+    <keyword type="" name="nmo:isSent" link="nmo-properties.html#nmo-isSent"/>
+    <keyword type="" name="nmo:signature" link="nmo-properties.html#nmo-signature"/>
+    <keyword type="" name="nmo:replyTo" link="nmo-properties.html#nmo-replyTo"/>
+    <keyword type="" name="nmo:contentId" link="nmo-properties.html#nmo-contentId"/>
+    <keyword type="" name="nmo:contentDisposition" link="nmo-properties.html#nmo-contentDisposition"/>
+    <keyword type="" name="nmo:encoding" link="nmo-properties.html#nmo-encoding"/>
+    <keyword type="" name="nmo:hasParticipant" link="nmo-properties.html#nmo-hasParticipant"/>
+    <keyword type="" name="nmo:mimeHeader" link="nmo-properties.html#nmo-mimeHeader"/>
+    <keyword type="" name="nmo:validityPeriod" link="nmo-properties.html#nmo-validityPeriod"/>
+    <keyword type="" name="nmo:mustAnswerReportRead" link="nmo-properties.html#nmo-mustAnswerReportRead"/>
+    <keyword type="" name="nmo:containsPhoneMessage" link="nmo-properties.html#nmo-containsPhoneMessage"/>
+    <keyword type="" name="nmo:isAnswered" link="nmo-properties.html#nmo-isAnswered"/>
+    <keyword type="" name="nmo:hasAttachment" link="nmo-properties.html#nmo-hasAttachment"/>
+    <keyword type="" name="nmo:partBoundary" link="nmo-properties.html#nmo-partBoundary"/>
+    <keyword type="" name="nmo:deliveryStatus" link="nmo-properties.html#nmo-deliveryStatus"/>
+    <keyword type="" name="nmo:bcc" link="nmo-properties.html#nmo-bcc"/>
+    <keyword type="" name="nmo:reportReadStatus" link="nmo-properties.html#nmo-reportReadStatus"/>
+    <keyword type="" name="nmo:mmsId" link="nmo-properties.html#nmo-mmsId"/>
+    <keyword type="" name="nmo:headerValue" link="nmo-properties.html#nmo-headerValue"/>
+    <keyword type="" name="nmo:cc" link="nmo-properties.html#nmo-cc"/>
+    <keyword type="" name="nmo:messageSubject" link="nmo-properties.html#nmo-messageSubject"/>
+    <keyword type="" name="nmo:inReplyTo" link="nmo-properties.html#nmo-inReplyTo"/>
+    <keyword type="" name="nmo:recipient" link="nmo-properties.html#nmo-recipient"/>
+    <keyword type="" name="ncal:Weekday" link="ncal-ontology.html#ncal-Weekday"/>
+    <keyword type="" name="ncal:Freebusy" link="ncal-ontology.html#ncal-Freebusy"/>
+    <keyword type="" name="ncal:UnionParentClass" link="ncal-ontology.html#ncal-UnionParentClass"/>
+    <keyword type="" name="ncal:Attachment" link="ncal-ontology.html#ncal-Attachment"/>
+    <keyword type="" name="ncal:TodoStatus" link="ncal-ontology.html#ncal-TodoStatus"/>
+    <keyword type="" name="ncal:Attendee" link="ncal-ontology.html#ncal-Attendee"/>
+    <keyword type="" name="ncal:ParticipationStatus" link="ncal-ontology.html#ncal-ParticipationStatus"/>
+    <keyword type="" name="ncal:Todo" link="ncal-ontology.html#ncal-Todo"/>
+    <keyword type="" name="ncal:CalendarUserType" link="ncal-ontology.html#ncal-CalendarUserType"/>
+    <keyword type="" name="ncal:RequestStatus" link="ncal-ontology.html#ncal-RequestStatus"/>
+    <keyword type="" name="ncal:EventStatus" link="ncal-ontology.html#ncal-EventStatus"/>
+    <keyword type="" name="ncal:JournalStatus" link="ncal-ontology.html#ncal-JournalStatus"/>
+    <keyword type="" name="ncal:CalendarScale" link="ncal-ontology.html#ncal-CalendarScale"/>
+    <keyword type="" name="ncal:FreebusyType" link="ncal-ontology.html#ncal-FreebusyType"/>
+    <keyword type="" name="ncal:NcalTimeEntity" link="ncal-ontology.html#ncal-NcalTimeEntity"/>
+    <keyword type="" name="ncal:AlarmAction" link="ncal-ontology.html#ncal-AlarmAction"/>
+    <keyword type="" name="ncal:CalendarDataObject" link="ncal-ontology.html#ncal-CalendarDataObject"/>
+    <keyword type="" name="ncal:AccessClassification" link="ncal-ontology.html#ncal-AccessClassification"/>
+    <keyword type="" name="ncal:RecurrenceFrequency" link="ncal-ontology.html#ncal-RecurrenceFrequency"/>
+    <keyword type="" name="ncal:AttachmentEncoding" link="ncal-ontology.html#ncal-AttachmentEncoding"/>
+    <keyword type="" name="ncal:RecurrenceIdentifierRange" link="ncal-ontology.html#ncal-RecurrenceIdentifierRange"/>
+    <keyword type="" name="ncal:Timezone" link="ncal-ontology.html#ncal-Timezone"/>
+    <keyword type="" name="ncal:NcalPeriod" link="ncal-ontology.html#ncal-NcalPeriod"/>
+    <keyword type="" name="ncal:FreebusyPeriod" link="ncal-ontology.html#ncal-FreebusyPeriod"/>
+    <keyword type="" name="ncal:RecurrenceIdentifier" link="ncal-ontology.html#ncal-RecurrenceIdentifier"/>
+    <keyword type="" name="ncal:BydayRulePart" link="ncal-ontology.html#ncal-BydayRulePart"/>
+    <keyword type="" name="ncal:AttendeeOrOrganizer" link="ncal-ontology.html#ncal-AttendeeOrOrganizer"/>
+    <keyword type="" name="ncal:RecurrenceRule" link="ncal-ontology.html#ncal-RecurrenceRule"/>
+    <keyword type="" name="ncal:Journal" link="ncal-ontology.html#ncal-Journal"/>
+    <keyword type="" name="ncal:Trigger" link="ncal-ontology.html#ncal-Trigger"/>
+    <keyword type="" name="ncal:TriggerRelation" link="ncal-ontology.html#ncal-TriggerRelation"/>
+    <keyword type="" name="ncal:Calendar" link="ncal-ontology.html#ncal-Calendar"/>
+    <keyword type="" name="ncal:NcalDateTime" link="ncal-ontology.html#ncal-NcalDateTime"/>
+    <keyword type="" name="ncal:AttendeeRole" link="ncal-ontology.html#ncal-AttendeeRole"/>
+    <keyword type="" name="ncal:Organizer" link="ncal-ontology.html#ncal-Organizer"/>
+    <keyword type="" name="ncal:TimezoneObservance" link="ncal-ontology.html#ncal-TimezoneObservance"/>
+    <keyword type="" name="ncal:TimeTransparency" link="ncal-ontology.html#ncal-TimeTransparency"/>
+    <keyword type="" name="ncal:Alarm" link="ncal-ontology.html#ncal-Alarm"/>
+    <keyword type="" name="ncal:Event" link="ncal-ontology.html#ncal-Event"/>
+    <keyword type="" name="ncal:fbtype" link="ncal-properties.html#ncal-fbtype"/>
+    <keyword type="" name="ncal:summaryAltRep" link="ncal-properties.html#ncal-summaryAltRep"/>
+    <keyword type="" name="ncal:resourcesAltRep" link="ncal-properties.html#ncal-resourcesAltRep"/>
+    <keyword type="" name="ncal:bydayModifier" link="ncal-properties.html#ncal-bydayModifier"/>
+    <keyword type="" name="ncal:date" link="ncal-properties.html#ncal-date"/>
+    <keyword type="" name="ncal:cutype" link="ncal-properties.html#ncal-cutype"/>
+    <keyword type="" name="ncal:byday" link="ncal-properties.html#ncal-byday"/>
+    <keyword type="" name="ncal:triggerDuration" link="ncal-properties.html#ncal-triggerDuration"/>
+    <keyword type="" name="ncal:fmttype" link="ncal-properties.html#ncal-fmttype"/>
+    <keyword type="" name="ncal:exdate" link="ncal-properties.html#ncal-exdate"/>
+    <keyword type="" name="ncal:repeat" link="ncal-properties.html#ncal-repeat"/>
+    <keyword type="" name="ncal:action" link="ncal-properties.html#ncal-action"/>
+    <keyword type="" name="ncal:commentAltRep" link="ncal-properties.html#ncal-commentAltRep"/>
+    <keyword type="" name="ncal:rrule" link="ncal-properties.html#ncal-rrule"/>
+    <keyword type="" name="ncal:locationAltRep" link="ncal-properties.html#ncal-locationAltRep"/>
+    <keyword type="" name="ncal:exrule" link="ncal-properties.html#ncal-exrule"/>
+    <keyword type="" name="ncal:rdate" link="ncal-properties.html#ncal-rdate"/>
+    <keyword type="" name="ncal:attendee" link="ncal-properties.html#ncal-attendee"/>
+    <keyword type="" name="ncal:freebusy" link="ncal-properties.html#ncal-freebusy"/>
+    <keyword type="" name="ncal:byminute" link="ncal-properties.html#ncal-byminute"/>
+    <keyword type="" name="ncal:tzid" link="ncal-properties.html#ncal-tzid"/>
+    <keyword type="" name="ncal:summary" link="ncal-properties.html#ncal-summary"/>
+    <keyword type="" name="ncal:interval" link="ncal-properties.html#ncal-interval"/>
+    <keyword type="" name="ncal:attachmentUri" link="ncal-properties.html#ncal-attachmentUri"/>
+    <keyword type="" name="ncal:bymonthday" link="ncal-properties.html#ncal-bymonthday"/>
+    <keyword type="" name="ncal:transp" link="ncal-properties.html#ncal-transp"/>
+    <keyword type="" name="ncal:partstat" link="ncal-properties.html#ncal-partstat"/>
+    <keyword type="" name="ncal:daylight" link="ncal-properties.html#ncal-daylight"/>
+    <keyword type="" name="ncal:returnStatus" link="ncal-properties.html#ncal-returnStatus"/>
+    <keyword type="" name="ncal:resources" link="ncal-properties.html#ncal-resources"/>
+    <keyword type="" name="ncal:organizer" link="ncal-properties.html#ncal-organizer"/>
+    <keyword type="" name="ncal:dtstamp" link="ncal-properties.html#ncal-dtstamp"/>
+    <keyword type="" name="ncal:todoStatus" link="ncal-properties.html#ncal-todoStatus"/>
+    <keyword type="" name="ncal:description" link="ncal-properties.html#ncal-description"/>
+    <keyword type="" name="ncal:component" link="ncal-properties.html#ncal-component"/>
+    <keyword type="" name="ncal:duration" link="ncal-properties.html#ncal-duration"/>
+    <keyword type="" name="ncal:anniversary" link="ncal-properties.html#ncal-anniversary"/>
+    <keyword type="" name="ncal:priority" link="ncal-properties.html#ncal-priority"/>
+    <keyword type="" name="ncal:periodDuration" link="ncal-properties.html#ncal-periodDuration"/>
+    <keyword type="" name="ncal:class" link="ncal-properties.html#ncal-class"/>
+    <keyword type="" name="ncal:range" link="ncal-properties.html#ncal-range"/>
+    <keyword type="" name="ncal:journalStatus" link="ncal-properties.html#ncal-journalStatus"/>
+    <keyword type="" name="ncal:role" link="ncal-properties.html#ncal-role"/>
+    <keyword type="" name="ncal:recurrenceId" link="ncal-properties.html#ncal-recurrenceId"/>
+    <keyword type="" name="ncal:location" link="ncal-properties.html#ncal-location"/>
+    <keyword type="" name="ncal:delegatedTo" link="ncal-properties.html#ncal-delegatedTo"/>
+    <keyword type="" name="ncal:byweekno" link="ncal-properties.html#ncal-byweekno"/>
+    <keyword type="" name="ncal:contact" link="ncal-properties.html#ncal-contact"/>
+    <keyword type="" name="ncal:tzurl" link="ncal-properties.html#ncal-tzurl"/>
+    <keyword type="" name="ncal:recurrenceIdDateTime" link="ncal-properties.html#ncal-recurrenceIdDateTime"/>
+    <keyword type="" name="ncal:hasAlarm" link="ncal-properties.html#ncal-hasAlarm"/>
+    <keyword type="" name="ncal:tzname" link="ncal-properties.html#ncal-tzname"/>
+    <keyword type="" name="ncal:bysetpos" link="ncal-properties.html#ncal-bysetpos"/>
+    <keyword type="" name="ncal:trigger" link="ncal-properties.html#ncal-trigger"/>
+    <keyword type="" name="ncal:byyearday" link="ncal-properties.html#ncal-byyearday"/>
+    <keyword type="" name="ncal:rsvp" link="ncal-properties.html#ncal-rsvp"/>
+    <keyword type="" name="ncal:byhour" link="ncal-properties.html#ncal-byhour"/>
+    <keyword type="" name="ncal:involvedContact" link="ncal-properties.html#ncal-involvedContact"/>
+    <keyword type="" name="ncal:periodBegin" link="ncal-properties.html#ncal-periodBegin"/>
+    <keyword type="" name="ncal:relatedToParent" link="ncal-properties.html#ncal-relatedToParent"/>
+    <keyword type="" name="ncal:birthday" link="ncal-properties.html#ncal-birthday"/>
+    <keyword type="" name="ncal:categories" link="ncal-properties.html#ncal-categories"/>
+    <keyword type="" name="ncal:count" link="ncal-properties.html#ncal-count"/>
+    <keyword type="" name="ncal:sentBy" link="ncal-properties.html#ncal-sentBy"/>
+    <keyword type="" name="ncal:prodid" link="ncal-properties.html#ncal-prodid"/>
+    <keyword type="" name="ncal:ncalTimezone" link="ncal-properties.html#ncal-ncalTimezone"/>
+    <keyword type="" name="ncal:uid" link="ncal-properties.html#ncal-uid"/>
+    <keyword type="" name="ncal:geo" link="ncal-properties.html#ncal-geo"/>
+    <keyword type="" name="ncal:version" link="ncal-properties.html#ncal-version"/>
+    <keyword type="" name="ncal:tzoffsetfrom" link="ncal-properties.html#ncal-tzoffsetfrom"/>
+    <keyword type="" name="ncal:calscale" link="ncal-properties.html#ncal-calscale"/>
+    <keyword type="" name="ncal:eventStatus" link="ncal-properties.html#ncal-eventStatus"/>
+    <keyword type="" name="ncal:dtstart" link="ncal-properties.html#ncal-dtstart"/>
+    <keyword type="" name="ncal:relatedToSibling" link="ncal-properties.html#ncal-relatedToSibling"/>
+    <keyword type="" name="ncal:encoding" link="ncal-properties.html#ncal-encoding"/>
+    <keyword type="" name="ncal:related" link="ncal-properties.html#ncal-related"/>
+    <keyword type="" name="ncal:method" link="ncal-properties.html#ncal-method"/>
+    <keyword type="" name="ncal:created" link="ncal-properties.html#ncal-created"/>
+    <keyword type="" name="ncal:attach" link="ncal-properties.html#ncal-attach"/>
+    <keyword type="" name="ncal:attachmentContent" link="ncal-properties.html#ncal-attachmentContent"/>
+    <keyword type="" name="ncal:contactAltRep" link="ncal-properties.html#ncal-contactAltRep"/>
+    <keyword type="" name="ncal:tzoffsetto" link="ncal-properties.html#ncal-tzoffsetto"/>
+    <keyword type="" name="ncal:descriptionAltRep" link="ncal-properties.html#ncal-descriptionAltRep"/>
+    <keyword type="" name="ncal:relatedToChild" link="ncal-properties.html#ncal-relatedToChild"/>
+    <keyword type="" name="ncal:freq" link="ncal-properties.html#ncal-freq"/>
+    <keyword type="" name="ncal:lastModified" link="ncal-properties.html#ncal-lastModified"/>
+    <keyword type="" name="ncal:bymonth" link="ncal-properties.html#ncal-bymonth"/>
+    <keyword type="" name="ncal:comment" link="ncal-properties.html#ncal-comment"/>
+    <keyword type="" name="ncal:statusDescription" link="ncal-properties.html#ncal-statusDescription"/>
+    <keyword type="" name="ncal:until" link="ncal-properties.html#ncal-until"/>
+    <keyword type="" name="ncal:wkst" link="ncal-properties.html#ncal-wkst"/>
+    <keyword type="" name="ncal:standard" link="ncal-properties.html#ncal-standard"/>
+    <keyword type="" name="ncal:percentComplete" link="ncal-properties.html#ncal-percentComplete"/>
+    <keyword type="" name="ncal:bysecond" link="ncal-properties.html#ncal-bysecond"/>
+    <keyword type="" name="ncal:dir" link="ncal-properties.html#ncal-dir"/>
+    <keyword type="" name="ncal:requestStatus" link="ncal-properties.html#ncal-requestStatus"/>
+    <keyword type="" name="ncal:ncalRelation" link="ncal-properties.html#ncal-ncalRelation"/>
+    <keyword type="" name="ncal:due" link="ncal-properties.html#ncal-due"/>
+    <keyword type="" name="ncal:dtend" link="ncal-properties.html#ncal-dtend"/>
+    <keyword type="" name="ncal:member" link="ncal-properties.html#ncal-member"/>
+    <keyword type="" name="ncal:bydayWeekday" link="ncal-properties.html#ncal-bydayWeekday"/>
+    <keyword type="" name="ncal:delegatedFrom" link="ncal-properties.html#ncal-delegatedFrom"/>
+    <keyword type="" name="ncal:url" link="ncal-properties.html#ncal-url"/>
+    <keyword type="" name="ncal:triggerDateTime" link="ncal-properties.html#ncal-triggerDateTime"/>
+    <keyword type="" name="ncal:completed" link="ncal-properties.html#ncal-completed"/>
+    <keyword type="" name="ncal:dateTime" link="ncal-properties.html#ncal-dateTime"/>
+    <keyword type="" name="ncal:requestStatusData" link="ncal-properties.html#ncal-requestStatusData"/>
+    <keyword type="" name="ncal:periodEnd" link="ncal-properties.html#ncal-periodEnd"/>
+    <keyword type="" name="ncal:sequence" link="ncal-properties.html#ncal-sequence"/>
+    <keyword type="" name="scal:AttendeeRole" link="scal-ontology.html#scal-AttendeeRole"/>
+    <keyword type="" name="scal:CalendarAlarm" link="scal-ontology.html#scal-CalendarAlarm"/>
+    <keyword type="" name="scal:Event" link="scal-ontology.html#scal-Event"/>
+    <keyword type="" name="scal:Journal" link="scal-ontology.html#scal-Journal"/>
+    <keyword type="" name="scal:RecurrenceRule" link="scal-ontology.html#scal-RecurrenceRule"/>
+    <keyword type="" name="scal:CalendarItem" link="scal-ontology.html#scal-CalendarItem"/>
+    <keyword type="" name="scal:TransparencyValues" link="scal-ontology.html#scal-TransparencyValues"/>
+    <keyword type="" name="scal:Todo" link="scal-ontology.html#scal-Todo"/>
+    <keyword type="" name="scal:RSVPValues" link="scal-ontology.html#scal-RSVPValues"/>
+    <keyword type="" name="scal:TodoStatus" link="scal-ontology.html#scal-TodoStatus"/>
+    <keyword type="" name="scal:TimePoint" link="scal-ontology.html#scal-TimePoint"/>
+    <keyword type="" name="scal:AttendanceStatus" link="scal-ontology.html#scal-AttendanceStatus"/>
+    <keyword type="" name="scal:AccessLevel" link="scal-ontology.html#scal-AccessLevel"/>
+    <keyword type="" name="scal:Attendee" link="scal-ontology.html#scal-Attendee"/>
+    <keyword type="" name="scal:JournalStatus" link="scal-ontology.html#scal-JournalStatus"/>
+    <keyword type="" name="scal:CalendarUserType" link="scal-ontology.html#scal-CalendarUserType"/>
+    <keyword type="" name="scal:Calendar" link="scal-ontology.html#scal-Calendar"/>
+    <keyword type="" name="scal:EventStatus" link="scal-ontology.html#scal-EventStatus"/>
+    <keyword type="" name="scal:contact" link="scal-properties.html#scal-contact"/>
+    <keyword type="" name="scal:attendeeContact" link="scal-properties.html#scal-attendeeContact"/>
+    <keyword type="" name="scal:isAllDay" link="scal-properties.html#scal-isAllDay"/>
+    <keyword type="" name="scal:member" link="scal-properties.html#scal-member"/>
+    <keyword type="" name="scal:rrule" link="scal-properties.html#scal-rrule"/>
+    <keyword type="" name="scal:start" link="scal-properties.html#scal-start"/>
+    <keyword type="" name="scal:rsvp" link="scal-properties.html#scal-rsvp"/>
+    <keyword type="" name="scal:calendarUserType" link="scal-properties.html#scal-calendarUserType"/>
+    <keyword type="" name="scal:sent-by" link="scal-properties.html#scal-sent-by"/>
+    <keyword type="" name="scal:resources" link="scal-properties.html#scal-resources"/>
+    <keyword type="" name="scal:textLocation" link="scal-properties.html#scal-textLocation"/>
+    <keyword type="" name="scal:priority" link="scal-properties.html#scal-priority"/>
+    <keyword type="" name="scal:percentComplete" link="scal-properties.html#scal-percentComplete"/>
+    <keyword type="" name="scal:TimeZone" link="scal-properties.html#scal-TimeZone"/>
+    <keyword type="" name="scal:alarmAttendee" link="scal-properties.html#scal-alarmAttendee"/>
+    <keyword type="" name="scal:recurrenceStartDate" link="scal-properties.html#scal-recurrenceStartDate"/>
+    <keyword type="" name="scal:delegated-from" link="scal-properties.html#scal-delegated-from"/>
+    <keyword type="" name="scal:access" link="scal-properties.html#scal-access"/>
+    <keyword type="" name="scal:attendeeRole" link="scal-properties.html#scal-attendeeRole"/>
+    <keyword type="" name="scal:transparency" link="scal-properties.html#scal-transparency"/>
+    <keyword type="" name="scal:dateTime" link="scal-properties.html#scal-dateTime"/>
+    <keyword type="" name="scal:rdate" link="scal-properties.html#scal-rdate"/>
+    <keyword type="" name="scal:completed" link="scal-properties.html#scal-completed"/>
+    <keyword type="" name="scal:journalStatus" link="scal-properties.html#scal-journalStatus"/>
+    <keyword type="" name="scal:belongsToCalendar" link="scal-properties.html#scal-belongsToCalendar"/>
+    <keyword type="" name="scal:exceptionRDate" link="scal-properties.html#scal-exceptionRDate"/>
+    <keyword type="" name="scal:anniversary" link="scal-properties.html#scal-anniversary"/>
+    <keyword type="" name="scal:attendanceStatus" link="scal-properties.html#scal-attendanceStatus"/>
+    <keyword type="" name="scal:alarmOffset" link="scal-properties.html#scal-alarmOffset"/>
+    <keyword type="" name="scal:eventStatus" link="scal-properties.html#scal-eventStatus"/>
+    <keyword type="" name="scal:delegated-to" link="scal-properties.html#scal-delegated-to"/>
+    <keyword type="" name="scal:due" link="scal-properties.html#scal-due"/>
+    <keyword type="" name="scal:attendee" link="scal-properties.html#scal-attendee"/>
+    <keyword type="" name="scal:end" link="scal-properties.html#scal-end"/>
+    <keyword type="" name="scal:recurrencePattern" link="scal-properties.html#scal-recurrencePattern"/>
+    <keyword type="" name="scal:exception" link="scal-properties.html#scal-exception"/>
+    <keyword type="" name="scal:calendarItemAlarm" link="scal-properties.html#scal-calendarItemAlarm"/>
+    <keyword type="" name="scal:todoStatus" link="scal-properties.html#scal-todoStatus"/>
+    <keyword type="" name="scal:attachment" link="scal-properties.html#scal-attachment"/>
+    <keyword type="" name="scal:birthday" link="scal-properties.html#scal-birthday"/>
+    <keyword type="" name="nmm:Artist" link="nmm-classes.html#nmm-Artist"/>
+    <keyword type="" name="nmm:Flash" link="nmm-classes.html#nmm-Flash"/>
+    <keyword type="" name="nmm:AnalogRadio" link="nmm-classes.html#nmm-AnalogRadio"/>
+    <keyword type="" name="nmm:Video" link="nmm-classes.html#nmm-Video"/>
+    <keyword type="" name="nmm:ImageList" link="nmm-classes.html#nmm-ImageList"/>
+    <keyword type="" name="nmm:MusicPiece" link="nmm-classes.html#nmm-MusicPiece"/>
+    <keyword type="" name="nmm:MusicAlbum" link="nmm-classes.html#nmm-MusicAlbum"/>
+    <keyword type="" name="nmm:Playlist" link="nmm-classes.html#nmm-Playlist"/>
+    <keyword type="" name="nmm:WhiteBalance" link="nmm-classes.html#nmm-WhiteBalance"/>
+    <keyword type="" name="nmm:Photo" link="nmm-classes.html#nmm-Photo"/>
+    <keyword type="" name="nmm:RadioModulation" link="nmm-classes.html#nmm-RadioModulation"/>
+    <keyword type="" name="nmm:DigitalRadio" link="nmm-classes.html#nmm-DigitalRadio"/>
+    <keyword type="" name="nmm:RadioStation" link="nmm-classes.html#nmm-RadioStation"/>
+    <keyword type="" name="nmm:SynchronizedText" link="nmm-classes.html#nmm-SynchronizedText"/>
+    <keyword type="" name="nmm:MusicAlbumDisc" link="nmm-classes.html#nmm-MusicAlbumDisc"/>
+    <keyword type="" name="nmm:MeteringMode" link="nmm-classes.html#nmm-MeteringMode"/>
+    <keyword type="" name="nmm:streamingBitrate" link="nmm-properties.html#nmm-streamingBitrate"/>
+    <keyword type="" name="nmm:whiteBalance" link="nmm-properties.html#nmm-whiteBalance"/>
+    <keyword type="" name="nmm:musicAlbumDisc" link="nmm-properties.html#nmm-musicAlbumDisc"/>
+    <keyword type="" name="nmm:lyrics" link="nmm-properties.html#nmm-lyrics"/>
+    <keyword type="" name="nmm:musicCDIdentifier" link="nmm-properties.html#nmm-musicCDIdentifier"/>
+    <keyword type="" name="nmm:leadActor" link="nmm-properties.html#nmm-leadActor"/>
+    <keyword type="" name="nmm:focalLength" link="nmm-properties.html#nmm-focalLength"/>
+    <keyword type="" name="nmm:albumDuration" link="nmm-properties.html#nmm-albumDuration"/>
+    <keyword type="" name="nmm:setNumber" link="nmm-properties.html#nmm-setNumber"/>
+    <keyword type="" name="nmm:isSeries" link="nmm-properties.html#nmm-isSeries"/>
+    <keyword type="" name="nmm:category" link="nmm-properties.html#nmm-category"/>
+    <keyword type="" name="nmm:synopsis" link="nmm-properties.html#nmm-synopsis"/>
+    <keyword type="" name="nmm:frequency" link="nmm-properties.html#nmm-frequency"/>
+    <keyword type="" name="nmm:skipCounter" link="nmm-properties.html#nmm-skipCounter"/>
+    <keyword type="" name="nmm:carrier" link="nmm-properties.html#nmm-carrier"/>
+    <keyword type="" name="nmm:modulation" link="nmm-properties.html#nmm-modulation"/>
+    <keyword type="" name="nmm:isForHearingImpaired" link="nmm-properties.html#nmm-isForHearingImpaired"/>
+    <keyword type="" name="nmm:isContentEncrypted" link="nmm-properties.html#nmm-isContentEncrypted"/>
+    <keyword type="" name="nmm:composer" link="nmm-properties.html#nmm-composer"/>
+    <keyword type="" name="nmm:albumTrackCount" link="nmm-properties.html#nmm-albumTrackCount"/>
+    <keyword type="" name="nmm:director" link="nmm-properties.html#nmm-director"/>
+    <keyword type="" name="nmm:isoSpeed" link="nmm-properties.html#nmm-isoSpeed"/>
+    <keyword type="" name="nmm:albumTitle" link="nmm-properties.html#nmm-albumTitle"/>
+    <keyword type="" name="nmm:exposureTime" link="nmm-properties.html#nmm-exposureTime"/>
+    <keyword type="" name="nmm:dlnaProfile" link="nmm-properties.html#nmm-dlnaProfile"/>
+    <keyword type="" name="nmm:meteringMode" link="nmm-properties.html#nmm-meteringMode"/>
+    <keyword type="" name="nmm:radioPTY" link="nmm-properties.html#nmm-radioPTY"/>
+    <keyword type="" name="nmm:fnumber" link="nmm-properties.html#nmm-fnumber"/>
+    <keyword type="" name="nmm:MPAARating" link="nmm-properties.html#nmm-MPAARating"/>
+    <keyword type="" name="nmm:episodeNumber" link="nmm-properties.html#nmm-episodeNumber"/>
+    <keyword type="" name="nmm:isColorCorrected" link="nmm-properties.html#nmm-isColorCorrected"/>
+    <keyword type="" name="nmm:runTime" link="nmm-properties.html#nmm-runTime"/>
+    <keyword type="" name="nmm:producedBy" link="nmm-properties.html#nmm-producedBy"/>
+    <keyword type="" name="nmm:hasSubtitle" link="nmm-properties.html#nmm-hasSubtitle"/>
+    <keyword type="" name="nmm:albumArtist" link="nmm-properties.html#nmm-albumArtist"/>
+    <keyword type="" name="nmm:genre" link="nmm-properties.html#nmm-genre"/>
+    <keyword type="" name="nmm:performer" link="nmm-properties.html#nmm-performer"/>
+    <keyword type="" name="nmm:albumPeakGain" link="nmm-properties.html#nmm-albumPeakGain"/>
+    <keyword type="" name="nmm:uPnPShared" link="nmm-properties.html#nmm-uPnPShared"/>
+    <keyword type="" name="nmm:protocol" link="nmm-properties.html#nmm-protocol"/>
+    <keyword type="" name="nmm:radioIcon" link="nmm-properties.html#nmm-radioIcon"/>
+    <keyword type="" name="nmm:flash" link="nmm-properties.html#nmm-flash"/>
+    <keyword type="" name="nmm:albumDiscAlbum" link="nmm-properties.html#nmm-albumDiscAlbum"/>
+    <keyword type="" name="nmm:beatsPerMinute" link="nmm-properties.html#nmm-beatsPerMinute"/>
+    <keyword type="" name="nmm:lyricist" link="nmm-properties.html#nmm-lyricist"/>
+    <keyword type="" name="nmm:videoAlbum" link="nmm-properties.html#nmm-videoAlbum"/>
+    <keyword type="" name="nmm:artistName" link="nmm-properties.html#nmm-artistName"/>
+    <keyword type="" name="nmm:dlnaMime" link="nmm-properties.html#nmm-dlnaMime"/>
+    <keyword type="" name="nmm:albumGain" link="nmm-properties.html#nmm-albumGain"/>
+    <keyword type="" name="nmm:musicAlbum" link="nmm-properties.html#nmm-musicAlbum"/>
+    <keyword type="" name="nmm:trackNumber" link="nmm-properties.html#nmm-trackNumber"/>
+    <keyword type="" name="nmm:season" link="nmm-properties.html#nmm-season"/>
+    <keyword type="" name="nmm:internationalStandardRecordingCode" link="nmm-properties.html#nmm-internationalStandardRecordingCode"/>
+    <keyword type="" name="nmm:isCropped" link="nmm-properties.html#nmm-isCropped"/>
+    <keyword type="" name="nmm:subtitle" link="nmm-properties.html#nmm-subtitle"/>
+    <keyword type="" name="nmm:alternativeMedia" link="nmm-properties.html#nmm-alternativeMedia"/>
+    <keyword type="" name="nmm:encoding" link="nmm-properties.html#nmm-encoding"/>
+    <keyword type="" name="mto:SyncTransfer" link="mto-ontology.html#mto-SyncTransfer"/>
+    <keyword type="" name="mto:TransferElement" link="mto-ontology.html#mto-TransferElement"/>
+    <keyword type="" name="mto:DownloadTransfer" link="mto-ontology.html#mto-DownloadTransfer"/>
+    <keyword type="" name="mto:UploadTransfer" link="mto-ontology.html#mto-UploadTransfer"/>
+    <keyword type="" name="mto:Transfer" link="mto-ontology.html#mto-Transfer"/>
+    <keyword type="" name="mto:State" link="mto-ontology.html#mto-State"/>
+    <keyword type="" name="mto:TransferMethod" link="mto-ontology.html#mto-TransferMethod"/>
+    <keyword type="" name="mto:transferState" link="mto-properties.html#mto-transferState"/>
+    <keyword type="" name="mto:destination" link="mto-properties.html#mto-destination"/>
+    <keyword type="" name="mto:transferList" link="mto-properties.html#mto-transferList"/>
+    <keyword type="" name="mto:transferPrivacyLevel" link="mto-properties.html#mto-transferPrivacyLevel"/>
+    <keyword type="" name="mto:method" link="mto-properties.html#mto-method"/>
+    <keyword type="" name="mto:state" link="mto-properties.html#mto-state"/>
+    <keyword type="" name="mto:created" link="mto-properties.html#mto-created"/>
+    <keyword type="" name="mto:agent" link="mto-properties.html#mto-agent"/>
+    <keyword type="" name="mto:source" link="mto-properties.html#mto-source"/>
+    <keyword type="" name="mto:starter" link="mto-properties.html#mto-starter"/>
+    <keyword type="" name="mto:account" link="mto-properties.html#mto-account"/>
+    <keyword type="" name="mto:transferCategory" link="mto-properties.html#mto-transferCategory"/>
+    <keyword type="" name="mto:completedTime" link="mto-properties.html#mto-completedTime"/>
+    <keyword type="" name="mto:startedTime" link="mto-properties.html#mto-startedTime"/>
+    <keyword type="" name="" link="mfo-ontology.html#mfo-graphical-overview"/>
+    <keyword type="" name="mfo:FeedElement" link="mfo-classes.html#mfo-FeedElement"/>
+    <keyword type="" name="mfo:Action" link="mfo-classes.html#mfo-Action"/>
+    <keyword type="" name="mfo:FeedSettings" link="mfo-classes.html#mfo-FeedSettings"/>
+    <keyword type="" name="mfo:Enclosure" link="mfo-classes.html#mfo-Enclosure"/>
+    <keyword type="" name="mfo:FeedMessage" link="mfo-classes.html#mfo-FeedMessage"/>
+    <keyword type="" name="mfo:FeedChannel" link="mfo-classes.html#mfo-FeedChannel"/>
+    <keyword type="" name="mfo:FeedType" link="mfo-classes.html#mfo-FeedType"/>
+    <keyword type="" name="mfo:totalCount" link="mfo-properties.html#mfo-totalCount"/>
+    <keyword type="" name="mfo:expiryInterval" link="mfo-properties.html#mfo-expiryInterval"/>
+    <keyword type="" name="mfo:name" link="mfo-properties.html#mfo-name"/>
+    <keyword type="" name="mfo:updateInterval" link="mfo-properties.html#mfo-updateInterval"/>
+    <keyword type="" name="mfo:action" link="mfo-properties.html#mfo-action"/>
+    <keyword type="" name="mfo:downloadPath" link="mfo-properties.html#mfo-downloadPath"/>
+    <keyword type="" name="mfo:localLink" link="mfo-properties.html#mfo-localLink"/>
+    <keyword type="" name="mfo:unreadCount" link="mfo-properties.html#mfo-unreadCount"/>
+    <keyword type="" name="mfo:maxSize" link="mfo-properties.html#mfo-maxSize"/>
+    <keyword type="" name="mfo:type" link="mfo-properties.html#mfo-type"/>
+    <keyword type="" name="mfo:image" link="mfo-properties.html#mfo-image"/>
+    <keyword type="" name="mfo:downloadedTime" link="mfo-properties.html#mfo-downloadedTime"/>
+    <keyword type="" name="mfo:feedSettings" link="mfo-properties.html#mfo-feedSettings"/>
+    <keyword type="" name="mfo:groupDefault" link="mfo-properties.html#mfo-groupDefault"/>
+    <keyword type="" name="mfo:optional" link="mfo-properties.html#mfo-optional"/>
+    <keyword type="" name="mfo:updatedTime" link="mfo-properties.html#mfo-updatedTime"/>
+    <keyword type="" name="mfo:enclosureList" link="mfo-properties.html#mfo-enclosureList"/>
+    <keyword type="" name="mfo:remoteLink" link="mfo-properties.html#mfo-remoteLink"/>
+    <keyword type="" name="mfo:downloadFlag" link="mfo-properties.html#mfo-downloadFlag"/>
+    <keyword type="" name="mtp:ScanType" link="mtp-ontology.html#mtp-ScanType"/>
+    <keyword type="" name="mtp:scantype" link="mtp-properties.html#mtp-scantype"/>
+    <keyword type="" name="mtp:credits" link="mtp-properties.html#mtp-credits"/>
+    <keyword type="" name="mtp:creator" link="mtp-properties.html#mtp-creator"/>
+    <keyword type="" name="mtp:hidden" link="mtp-properties.html#mtp-hidden"/>
+    <keyword type="" name="mtp:fourCC" link="mtp-properties.html#mtp-fourCC"/>
+    <keyword type="" name="mtp:waveformat" link="mtp-properties.html#mtp-waveformat"/>
+    <keyword type="" name="slo:Route" link="slo-ontology.html#slo-Route"/>
+    <keyword type="" name="slo:GeoLocation" link="slo-ontology.html#slo-GeoLocation"/>
+    <keyword type="" name="slo:LandmarkCategory" link="slo-ontology.html#slo-LandmarkCategory"/>
+    <keyword type="" name="slo:Landmark" link="slo-ontology.html#slo-Landmark"/>
+    <keyword type="" name="slo:iconUrl" link="slo-properties.html#slo-iconUrl"/>
+    <keyword type="" name="slo:boundingLatitudeMin" link="slo-properties.html#slo-boundingLatitudeMin"/>
+    <keyword type="" name="slo:boundingLongitudeMin" link="slo-properties.html#slo-boundingLongitudeMin"/>
+    <keyword type="" name="slo:horizontalAccuracy" link="slo-properties.html#slo-horizontalAccuracy"/>
+    <keyword type="" name="slo:altitude" link="slo-properties.html#slo-altitude"/>
+    <keyword type="" name="slo:hasContact" link="slo-properties.html#slo-hasContact"/>
+    <keyword type="" name="slo:belongsToCategory" link="slo-properties.html#slo-belongsToCategory"/>
+    <keyword type="" name="slo:timestamp" link="slo-properties.html#slo-timestamp"/>
+    <keyword type="" name="slo:latitude" link="slo-properties.html#slo-latitude"/>
+    <keyword type="" name="slo:postalAddress" link="slo-properties.html#slo-postalAddress"/>
+    <keyword type="" name="slo:isRemovable" link="slo-properties.html#slo-isRemovable"/>
+    <keyword type="" name="slo:radius" link="slo-properties.html#slo-radius"/>
+    <keyword type="" name="slo:routeDetails" link="slo-properties.html#slo-routeDetails"/>
+    <keyword type="" name="slo:location" link="slo-properties.html#slo-location"/>
+    <keyword type="" name="slo:startTime" link="slo-properties.html#slo-startTime"/>
+    <keyword type="" name="slo:categoryIconUrl" link="slo-properties.html#slo-categoryIconUrl"/>
+    <keyword type="" name="slo:verticalAccuracy" link="slo-properties.html#slo-verticalAccuracy"/>
+    <keyword type="" name="slo:boundingLatitudeMax" link="slo-properties.html#slo-boundingLatitudeMax"/>
+    <keyword type="" name="slo:endTime" link="slo-properties.html#slo-endTime"/>
+    <keyword type="" name="slo:longitude" link="slo-properties.html#slo-longitude"/>
+    <keyword type="" name="slo:boundingLongitudeMax" link="slo-properties.html#slo-boundingLongitudeMax"/>
+    <keyword type="" name="tracker:Volume" link="tracker-ontology.html#tracker-Volume"/>
+    <keyword type="" name="tracker:tagRelatedTo" link="tracker-properties.html#tracker-tagRelatedTo"/>
+    <keyword type="" name="tracker:mountPoint" link="tracker-properties.html#tracker-mountPoint"/>
+    <keyword type="" name="tracker:isRemovable" link="tracker-properties.html#tracker-isRemovable"/>
+    <keyword type="" name="tracker:notify" link="tracker-properties.html#tracker-notify"/>
+    <keyword type="" name="tracker:forceJournal" link="tracker-properties.html#tracker-forceJournal"/>
+    <keyword type="" name="tracker:isMounted" link="tracker-properties.html#tracker-isMounted"/>
+    <keyword type="" name="tracker:isDefaultTag" link="tracker-properties.html#tracker-isDefaultTag"/>
+    <keyword type="" name="tracker:isOptical" link="tracker-properties.html#tracker-isOptical"/>
+    <keyword type="" name="tracker:available" link="tracker-properties.html#tracker-available"/>
+    <keyword type="" name="tracker:unmountDate" link="tracker-properties.html#tracker-unmountDate"/>
+    <keyword type="" name="tracker:writeback" link="tracker-properties.html#tracker-writeback"/>
+    <keyword type="" name="maemo:SoftwareWidget" link="maemo-ontology.html#maemo-SoftwareWidget"/>
+    <keyword type="" name="maemo:PostalAddress" link="maemo-ontology.html#maemo-PostalAddress"/>
+    <keyword type="" name="maemo:SoftwareApplet" link="maemo-ontology.html#maemo-SoftwareApplet"/>
+    <keyword type="" name="maemo:ControlPanelApplet" link="maemo-ontology.html#maemo-ControlPanelApplet"/>
+    <keyword type="" name="maemo:DesktopBookmark" link="maemo-ontology.html#maemo-DesktopBookmark"/>
+    <keyword type="" name="maemo:localPhoneNumber" link="maemo-properties.html#maemo-localPhoneNumber"/>
+    <keyword type="" name="maemo:contactVideoRingtone" link="maemo-properties.html#maemo-contactVideoRingtone"/>
+    <keyword type="" name="maemo:contactGroupVibrationRingtone" link="maemo-properties.html#maemo-contactGroupVibrationRingtone"/>
+    <keyword type="" name="maemo:contactAudioRingtone" link="maemo-properties.html#maemo-contactAudioRingtone"/>
+    <keyword type="" name="maemo:contactVibrationRingtone" link="maemo-properties.html#maemo-contactVibrationRingtone"/>
+    <keyword type="" name="maemo:relevance" link="maemo-properties.html#maemo-relevance"/>
+    <keyword type="" name="maemo:webhistoryThumbnail" link="maemo-properties.html#maemo-webhistoryThumbnail"/>
+    <keyword type="" name="maemo:contactGroupVideoRingtone" link="maemo-properties.html#maemo-contactGroupVideoRingtone"/>
+    <keyword type="" name="maemo:bookmarkThumbnail" link="maemo-properties.html#maemo-bookmarkThumbnail"/>
+    <keyword type="" name="maemo:remoteMediaArt" link="maemo-properties.html#maemo-remoteMediaArt"/>
+    <keyword type="" name="maemo:contactGroupAudioRingtone" link="maemo-properties.html#maemo-contactGroupAudioRingtone"/>
+  </functions>
+</book>

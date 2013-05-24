@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TrackerNetworkProvider</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Miner Library Reference Manual">
+<link rel="up" href="ch05.html" title="Base abstract providers for network/password/etc control">
+<link rel="prev" href="ch05.html" title="Base abstract providers for network/password/etc control">
+<link rel="next" href="libtracker-miner-TrackerPasswordProvider.html" title="TrackerPasswordProvider">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch05.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch05.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Miner Library Reference Manual</th>
+<td><a accesskey="n" href="libtracker-miner-TrackerPasswordProvider.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libtracker-miner-TrackerNetworkProvider.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libtracker-miner-TrackerNetworkProvider.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libtracker-miner-TrackerNetworkProvider"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libtracker-miner-TrackerNetworkProvider.top_of_page"></a>TrackerNetworkProvider</span></h2>
+<p>TrackerNetworkProvider — Network status interface for cross platform backends</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libtracker-miner-TrackerNetworkProvider.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;libtracker-miner/tracker-miner.h&gt;
+
+typedef             <a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProvider" title="TrackerNetworkProvider">TrackerNetworkProvider</a>;
+                    <a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProviderIface" title="TrackerNetworkProviderIface">TrackerNetworkProviderIface</a>;
+enum                <a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProviderStatus" title="enum TrackerNetworkProviderStatus">TrackerNetworkProviderStatus</a>;
+<a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProvider" title="TrackerNetworkProvider"><span class="returnvalue">TrackerNetworkProvider</span></a> * <a class="link" href="libtracker-miner-TrackerNetworkProvider.html#tracker-network-provider-get" title="tracker_network_provider_get ()">tracker_network_provider_get</a>   (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libtracker-miner-TrackerNetworkProvider.html#tracker-network-provider-get-name" title="tracker_network_provider_get_name ()">tracker_network_provider_get_name</a>   (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProvider" title="TrackerNetworkProvider"><span class="type">TrackerNetworkProvider</span></a> *provider</code></em>);
+<a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProviderStatus" title="enum TrackerNetworkProviderStatus"><span class="returnvalue">TrackerNetworkProviderStatus</span></a> <a class="link" href="libtracker-miner-TrackerNetworkProvider.html#tracker-network-provider-get-status" title="tracker_network_provider_get_status ()">tracker_network_provider_get_status</a>
+                                                        (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProvider" title="TrackerNetworkProvider"><span class="type">TrackerNetworkProvider</span></a> *provider</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libtracker-miner-TrackerNetworkProvider.description"></a><h2>Description</h2>
+<p>
+The <a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProvider" title="TrackerNetworkProvider"><span class="type">TrackerNetworkProvider</span></a> allows different backends to be written for
+retrieving network connectivity status information. This can be used to
+avoid heavy transfers when on a slow connection, or on a connection where
+costs may apply. Currently, there are two implementations. The
+NetworkManager one uses NetworkManager, and the Dummy one will always expose
+the network as connected, no matter what the connectivity status actually
+is.
+</p>
+</div>
+<div class="refsect1">
+<a name="libtracker-miner-TrackerNetworkProvider.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="TrackerNetworkProvider"></a><h3>TrackerNetworkProvider</h3>
+<pre class="programlisting">typedef struct TrackerNetworkProvider TrackerNetworkProvider;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TrackerNetworkProviderIface"></a><h3>TrackerNetworkProviderIface</h3>
+<pre class="programlisting">typedef struct {
+	GTypeInterface parent_iface;
+
+	TrackerNetworkProviderStatus (* get_status) (TrackerNetworkProvider *provider);
+} TrackerNetworkProviderIface;
+</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="TrackerNetworkProviderIface.parent-iface"></a>parent_iface</code></em>;</span></p></td>
+<td>parent object interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="TrackerNetworkProviderIface.get-status"></a>get_status</code></em> ()</span></p></td>
+<td>get the network status</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TrackerNetworkProviderStatus"></a><h3>enum TrackerNetworkProviderStatus</h3>
+<pre class="programlisting">typedef enum {
+	TRACKER_NETWORK_PROVIDER_DISCONNECTED,
+	TRACKER_NETWORK_PROVIDER_UNKNOWN,
+	TRACKER_NETWORK_PROVIDER_GPRS,
+	TRACKER_NETWORK_PROVIDER_EDGE,
+	TRACKER_NETWORK_PROVIDER_3G,
+	TRACKER_NETWORK_PROVIDER_LAN
+} TrackerNetworkProviderStatus;
+</pre>
+<p>
+Enumerates the different types of connections that the device might
+use when connected to internet. Note that not all providers might
+provide this information.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="TRACKER-NETWORK-PROVIDER-DISCONNECTED:CAPS"></a><span class="term"><code class="literal">TRACKER_NETWORK_PROVIDER_DISCONNECTED</code></span></p></td>
+<td>Network is disconnected
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-NETWORK-PROVIDER-UNKNOWN:CAPS"></a><span class="term"><code class="literal">TRACKER_NETWORK_PROVIDER_UNKNOWN</code></span></p></td>
+<td>Network status is unknown
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-NETWORK-PROVIDER-GPRS:CAPS"></a><span class="term"><code class="literal">TRACKER_NETWORK_PROVIDER_GPRS</code></span></p></td>
+<td>Network is connected over a GPRS
+connection
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-NETWORK-PROVIDER-EDGE:CAPS"></a><span class="term"><code class="literal">TRACKER_NETWORK_PROVIDER_EDGE</code></span></p></td>
+<td>Network is connected over an EDGE
+connection
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-NETWORK-PROVIDER-3G:CAPS"></a><span class="term"><code class="literal">TRACKER_NETWORK_PROVIDER_3G</code></span></p></td>
+<td>Network is connected over a 3G or
+faster (HSDPA, UMTS, ...) connection
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-NETWORK-PROVIDER-LAN:CAPS"></a><span class="term"><code class="literal">TRACKER_NETWORK_PROVIDER_LAN</code></span></p></td>
+<td>Network is connected over a local
+network connection. This can be ethernet, wifi, etc.
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-network-provider-get"></a><h3>tracker_network_provider_get ()</h3>
+<pre class="programlisting"><a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProvider" title="TrackerNetworkProvider"><span class="returnvalue">TrackerNetworkProvider</span></a> * tracker_network_provider_get   (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+This function <span class="emphasis"><em>MUST</em></span> be defined by the implementation of
+TrackerNetworkProvider.
+</p>
+<p>
+For example, tracker-network-provider-network-manager.c should include this
+function for a NetworkManager implementation.
+</p>
+<p>
+Only one implementation can exist at once.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProvider" title="TrackerNetworkProvider"><code class="literal">TrackerNetworkProvider</code></a>.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-network-provider-get-name"></a><h3>tracker_network_provider_get_name ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             tracker_network_provider_get_name   (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProvider" title="TrackerNetworkProvider"><span class="type">TrackerNetworkProvider</span></a> *provider</code></em>);</pre>
+<p>
+At the moment there are only two providers, "Dummy" and
+"NetworkManager". Either of these is what will be returned unless new
+providers are written.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>provider</code></em> :</span></p></td>
+<td>a TrackerNetworkProvider</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a newly allocated string representing the name
+which must be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-network-provider-get-status"></a><h3>tracker_network_provider_get_status ()</h3>
+<pre class="programlisting"><a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProviderStatus" title="enum TrackerNetworkProviderStatus"><span class="returnvalue">TrackerNetworkProviderStatus</span></a> tracker_network_provider_get_status
+                                                        (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProvider" title="TrackerNetworkProvider"><span class="type">TrackerNetworkProvider</span></a> *provider</code></em>);</pre>
+<p>
+This function calls the network provider's "get_status" implementation.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>provider</code></em> :</span></p></td>
+<td>a TrackerNetworkProvider</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a TrackerNetworkProviderStatus decribing the current network
+status.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

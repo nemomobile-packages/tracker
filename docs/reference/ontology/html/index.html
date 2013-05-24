@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Tracker Ontology Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="next" href="ontology.html" title="Part I. Overview">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="book">
+<div class="titlepage">
+<div>
+<div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">Tracker Ontology Reference Manual</p></th></tr></table></div>
+<div><p class="releaseinfo">
+	  for Tracker 0.14.4
+.
+	  The latest version of this documentation can be found on-line at
+	  <a class="ulink" href="http://library.gnome.org/devel/ontology/unstable" target="_top">
+		http://library.gnome.org/devel/ontology/unstable
+	  </a>.
+	</p></div>
+</div>
+<hr>
+</div>
+<div class="toc"><dl>
+<dt><span class="part"><a href="ontology.html">I. Overview</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="xsd-ontology.html">XML schema (XSD): Basic types definitions (int, double,...)</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="xsd-ontology.html#xsd-explanation">Overview</a></span></dt>
+<dt><span class="section"><a href="xsd-classes.html">XSD Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="xsd-properties.html">XSD Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="rdf-ontology.html">Resource Description Framework (RDF): Core RDF classes to keep the internal consistency of the ontology</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="rdf-ontology.html#rdf-classes">RDF Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="rdf-properties.html">RDF Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="dc-ontology.html">Dublin Core metadata (DC): Common superproperties for documents</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="dc-ontology.html#dc-classes">DC Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="dc-properties.html">DC Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="nie-ontology.html">Nepomuk Information Element (NIE): Top classes in the ontology. Almost everything else is subclass of these.</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="nie-ontology.html#nie-explanation">Overview</a></span></dt>
+<dt><span class="section"><a href="nie-classes.html">NIE Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="nie-properties.html">NIE Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="nao-ontology.html">Nepomuk Annotation Ontology (NAO): Tags, ratings and other common annotations to all classes</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="nao-ontology.html#nao-classes">NAO Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="nao-properties.html">NAO Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="nfo-ontology.html">Nepomuk File Ontology (NFO): About files and other desktop resources.</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="nfo-ontology.html#nfo-classes">NFO Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="nfo-properties.html">NFO Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="nco-ontology.html">Nepomuk Contacts Ontology (NCO): All about contacts. Rough equivalent of the VCARD standard.</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="nco-ontology.html#nco-explanation">Overview</a></span></dt>
+<dt><span class="section"><a href="nco-classes.html">NCO Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="nco-properties.html">NCO Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="nmo-ontology.html">Nepomuk Messaging Ontology (NMO): Model for messages and communications, including Email, SMS, MMS and phone calls</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="nmo-ontology.html#nmo-explanation">Overview</a></span></dt>
+<dt><span class="section"><a href="nmo-classes.html">NMO Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="nmo-properties.html">NMO Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ncal-ontology.html">Nepomuk Calendar Ontology (NCAL): Automatic translation of the ICAL standard into ontology. Too complex for our taste. Please check SCAL</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ncal-ontology.html#ncal-classes">NCAL Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="ncal-properties.html">NCAL Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="scal-ontology.html">Simplified Calendar Ontology (SCAL): Simple and efficient ontology to represent calendar information (events, ToDos, recurrency rules...)</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="scal-ontology.html#scal-classes">SCAL Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="scal-properties.html">SCAL Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="nmm-ontology.html">Nepomuk MultiMedia (NMM): Description of multimedia objects like Music, Video and Images</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="nmm-ontology.html#nmm-explanation">Overview</a></span></dt>
+<dt><span class="section"><a href="nmm-classes.html">NMM Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="nmm-properties.html">NMM Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="mto-ontology.html">Maemo Transfer Ontology (MTO): Representation of download and upload operations in the system</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="mto-ontology.html#mto-classes">MTO Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="mto-properties.html">MTO Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="mfo-ontology.html">Maemo Feeds Ontology (MFO): Model for feeds and alike online streams</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="mfo-ontology.html#mfo-explanation">Overview</a></span></dt>
+<dt><span class="section"><a href="mfo-classes.html">MFO Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="mfo-properties.html">MFO Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="mtp-ontology.html">Multimetida Transfer Protocol (MTP) Ontology: Extra properties to add MTP information to the objects in the ontology</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="mtp-ontology.html#mtp-classes">MTP Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="mtp-properties.html">MTP Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="slo-ontology.html">Simplified Maemo Location Ontology (SLO) (experimental/for testing): Simpler, faster, better ontology for locations and landmarks</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="slo-ontology.html#slo-classes">SLO Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="slo-properties.html">SLO Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="tracker-ontology.html">Tracker-specific annotations Ontology: Internal tracker properties</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="tracker-ontology.html#tracker-classes">TRACKER Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="tracker-properties.html">TRACKER Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="maemo-ontology.html">Maemo-specific classes: Some maemo/meego specific properties</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="maemo-ontology.html#maemo-classes">MAEMO Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="maemo-properties.html">MAEMO Ontology Properties</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="fts-properties.html">Full-text indexed properties in the ontology</a></span></dt>
+</dl></dd>
+<dt><span class="part"><a href="ontology-notation-description.html">II. Notation</a></span></dt>
+<dt><span class="part"><a href="ontology-graphs.html">III. The big picture</a></span></dt>
+</dl></div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

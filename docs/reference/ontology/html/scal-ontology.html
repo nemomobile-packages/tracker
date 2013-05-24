@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Simplified Calendar Ontology (SCAL): Simple and efficient ontology to represent calendar information (events, ToDos, recurrency rules...)</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="up" href="ontology.html" title="Part I. Overview">
+<link rel="prev" href="ncal-properties.html" title="NCAL Ontology Properties">
+<link rel="next" href="scal-properties.html" title="SCAL Ontology Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="ncal-properties.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ontology.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Ontology Reference Manual</th>
+<td><a accesskey="n" href="scal-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="scal-ontology"></a>Simplified Calendar Ontology (SCAL): Simple and efficient ontology to represent calendar information (events, ToDos, recurrency rules...)</h2></div></div></div>
+<div class="toc"><dl>
+<dt><span class="section"><a href="scal-ontology.html#scal-classes">SCAL Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="scal-properties.html">SCAL Ontology Properties</a></span></dt>
+</dl></div>
+<dt><span class="term">Authors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">Tracker Developers</li></ul></div></dd>
+<dt><span class="term">Editors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">Tracker Developers</li></ul></div></dd>
+<dt><span class="term">Upstream:</span></dt>
+<dd><p>Not available</p></dd>
+<dt><span class="term">ChangeLog:</span></dt>
+<dd><p><a class="ulink" href="http://git.gnome.org/cgit/tracker/log/data/ontologies/36-scal.ontology" target="_top">Tracker changes</a></p></dd>
+<dt><span class="term">Copyright:</span></dt>
+<dd><p>© 2009, 2010 <a class="ulink" href="http://www.nokia.com/" target="_top">Nokia</a></p></dd>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="scal-classes"></a>SCAL Ontology Classes</h2></div></div></div>
+<div class="refsect2">
+<a name="scal-AttendeeRole"></a><h3>scal:AttendeeRole</h3>
+<p>Predefined set of instances: chain, req-participant...</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-attendeeRole" title="scal:attendeeRole">scal:attendeeRole</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+scal:attendee-role-non-participant, scal:attendee-role-opt-participant, scal:attendee-role-req-participant, scal:attendee-role-chair, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-CalendarAlarm"></a><h3>scal:CalendarAlarm</h3>
+<p>An alam according to the ical definition</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-alarmAttendee" title="scal:alarmAttendee">scal:alarmAttendee</a>, <a class="link" href="scal-properties.html#scal-alarmOffset" title="scal:alarmOffset">scal:alarmOffset</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-calendarItemAlarm" title="scal:calendarItemAlarm">scal:calendarItemAlarm</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-Event"></a><h3>scal:Event</h3>
+<p>An Event according the ical definition</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-ontology.html#scal-CalendarItem" title="scal:CalendarItem">scal:CalendarItem</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-eventStatus" title="scal:eventStatus">scal:eventStatus</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-anniversary" title="scal:anniversary">scal:anniversary</a>, <a class="link" href="scal-properties.html#scal-birthday" title="scal:birthday">scal:birthday</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-Journal"></a><h3>scal:Journal</h3>
+<p>A Journal entry according to the ical definition</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-ontology.html#scal-CalendarItem" title="scal:CalendarItem">scal:CalendarItem</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-journalStatus" title="scal:journalStatus">scal:journalStatus</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-RecurrenceRule"></a><h3>scal:RecurrenceRule</h3>
+<p>Representation of repeating patterns</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-exception" title="scal:exception">scal:exception</a>, <a class="link" href="scal-properties.html#scal-recurrenceStartDate" title="scal:recurrenceStartDate">scal:recurrenceStartDate</a>, <a class="link" href="scal-properties.html#scal-recurrencePattern" title="scal:recurrencePattern">scal:recurrencePattern</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-rrule" title="scal:rrule">scal:rrule</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-CalendarItem"></a><h3>scal:CalendarItem</h3>
+<p>Superclass of the calendar entities</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-ontology.html#scal-Journal" title="scal:Journal">scal:Journal</a>, <a class="link" href="scal-ontology.html#scal-Todo" title="scal:Todo">scal:Todo</a>, <a class="link" href="scal-ontology.html#scal-Event" title="scal:Event">scal:Event</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-exceptionRDate" title="scal:exceptionRDate">scal:exceptionRDate</a>, <a class="link" href="scal-properties.html#scal-rdate" title="scal:rdate">scal:rdate</a>, <a class="link" href="scal-properties.html#scal-rrule" title="scal:rrule">scal:rrule</a>, <a class="link" href="scal-properties.html#scal-attachment" title="scal:attachment">scal:attachment</a>, <a class="link" href="scal-properties.html#scal-priority" title="scal:priority">scal:priority</a>, <a class="link" href="scal-properties.html#scal-isAllDay" title="scal:isAllDay">scal:isAllDay</a>, <a class="link" href="scal-properties.html#scal-end" title="scal:end">scal:end</a>, <a class="link" href="scal-properties.html#scal-start" title="scal:start">scal:start</a>, <a class="link" href="scal-properties.html#scal-access" title="scal:access">scal:access</a>, <a class="link" href="scal-properties.html#scal-calendarItemAlarm" title="scal:calendarItemAlarm">scal:calendarItemAlarm</a>, <a class="link" href="scal-properties.html#scal-contact" title="scal:contact">scal:contact</a>, <a class="link" href="scal-properties.html#scal-attendee" title="scal:attendee">scal:attendee</a>, <a class="link" href="scal-properties.html#scal-transparency" title="scal:transparency">scal:transparency</a>, <a class="link" href="scal-properties.html#scal-resources" title="scal:resources">scal:resources</a>, <a class="link" href="scal-properties.html#scal-textLocation" title="scal:textLocation">scal:textLocation</a>, <a class="link" href="scal-properties.html#scal-belongsToCalendar" title="scal:belongsToCalendar">scal:belongsToCalendar</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-TransparencyValues"></a><h3>scal:TransparencyValues</h3>
+<p>Predefined instances of time transparency for the calendar items</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-transparency" title="scal:transparency">scal:transparency</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+scal:transparency-opaque, scal:transparency-transparent, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-Todo"></a><h3>scal:Todo</h3>
+<p>A ToDo according the ical definition</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-ontology.html#scal-CalendarItem" title="scal:CalendarItem">scal:CalendarItem</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-percentComplete" title="scal:percentComplete">scal:percentComplete</a>, <a class="link" href="scal-properties.html#scal-completed" title="scal:completed">scal:completed</a>, <a class="link" href="scal-properties.html#scal-due" title="scal:due">scal:due</a>, <a class="link" href="scal-properties.html#scal-todoStatus" title="scal:todoStatus">scal:todoStatus</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-RSVPValues"></a><h3>scal:RSVPValues</h3>
+<p>Predefined set of instances: Yes/No (not boolean to allow undefined values)</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-rsvp" title="scal:rsvp">scal:rsvp</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+scal:rsvp-value-false, scal:rsvp-value-true, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-TodoStatus"></a><h3>scal:TodoStatus</h3>
+<p>Predefined instances of status for todos</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-todoStatus" title="scal:todoStatus">scal:todoStatus</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+scal:todo-status-cancelled, scal:todo-status-in-process, scal:todo-status-completed, scal:todo-status-needs-action, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-TimePoint"></a><h3>scal:TimePoint</h3>
+<p>Point in time</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-TimeZone" title="scal:TimeZone">scal:TimeZone</a>, <a class="link" href="scal-properties.html#scal-dateTime" title="scal:dateTime">scal:dateTime</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-recurrenceStartDate" title="scal:recurrenceStartDate">scal:recurrenceStartDate</a>, <a class="link" href="scal-properties.html#scal-end" title="scal:end">scal:end</a>, <a class="link" href="scal-properties.html#scal-start" title="scal:start">scal:start</a>, <a class="link" href="scal-properties.html#scal-completed" title="scal:completed">scal:completed</a>, <a class="link" href="scal-properties.html#scal-due" title="scal:due">scal:due</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-AttendanceStatus"></a><h3>scal:AttendanceStatus</h3>
+<p>Predefined set of instances: needs-action, accepted...</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-attendanceStatus" title="scal:attendanceStatus">scal:attendanceStatus</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+scal:attendance-in-process, scal:attendance-completed, scal:attendance-delegated, scal:attendance-tentative, scal:attendance-declined, scal:attendance-accepted, scal:attendance-needs-action, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-AccessLevel"></a><h3>scal:AccessLevel</h3>
+<p>Access classification for a calendar item: public, private or confidential. Use the predefined instances in the ontology</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-access" title="scal:access">scal:access</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+scal:access-level-confidential, scal:access-level-public, scal:access-level-private, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-Attendee"></a><h3>scal:Attendee</h3>
+<p>Contact related with a calendar item</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-sent-by" title="scal:sent-by">scal:sent-by</a>, <a class="link" href="scal-properties.html#scal-delegated-from" title="scal:delegated-from">scal:delegated-from</a>, <a class="link" href="scal-properties.html#scal-delegated-to" title="scal:delegated-to">scal:delegated-to</a>, <a class="link" href="scal-properties.html#scal-member" title="scal:member">scal:member</a>, <a class="link" href="scal-properties.html#scal-calendarUserType" title="scal:calendarUserType">scal:calendarUserType</a>, <a class="link" href="scal-properties.html#scal-rsvp" title="scal:rsvp">scal:rsvp</a>, <a class="link" href="scal-properties.html#scal-attendeeContact" title="scal:attendeeContact">scal:attendeeContact</a>, <a class="link" href="scal-properties.html#scal-attendeeRole" title="scal:attendeeRole">scal:attendeeRole</a>, <a class="link" href="scal-properties.html#scal-attendanceStatus" title="scal:attendanceStatus">scal:attendanceStatus</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-alarmAttendee" title="scal:alarmAttendee">scal:alarmAttendee</a>, <a class="link" href="scal-properties.html#scal-contact" title="scal:contact">scal:contact</a>, <a class="link" href="scal-properties.html#scal-attendee" title="scal:attendee">scal:attendee</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-JournalStatus"></a><h3>scal:JournalStatus</h3>
+<p>Predefined instances of status for journals</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-journalStatus" title="scal:journalStatus">scal:journalStatus</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+scal:journal-status-cancelled, scal:journal-status-in-process, scal:journal-status-completed, scal:journal-status-needs-action, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-CalendarUserType"></a><h3>scal:CalendarUserType</h3>
+<p>Predefined set of instance for calendar user types</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-calendarUserType" title="scal:calendarUserType">scal:calendarUserType</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+scal:cutype-unknown, scal:cutype-resource, scal:cutype-room, scal:cutype-group, scal:cutype-individual, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-Calendar"></a><h3>scal:Calendar</h3>
+<p>Group calendar items</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-belongsToCalendar" title="scal:belongsToCalendar">scal:belongsToCalendar</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="scal-EventStatus"></a><h3>scal:EventStatus</h3>
+<p>Predefined instances of status for events</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="scal-properties.html#scal-eventStatus" title="scal:eventStatus">scal:eventStatus</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+scal:event-status-cancelled, scal:event-status-confirmed, scal:event-status-tentative, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

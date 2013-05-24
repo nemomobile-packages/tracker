@@ -1,0 +1,49 @@
+<!-- ##### SECTION Title ##### -->
+tracker-guarantee
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION tracker_guarantee_date_from_file_mtime ##### -->
+<para>
+
+</para>
+
+@metadata: 
+@key: 
+@current_value: 
+@uri: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_guarantee_title_from_file ##### -->
+<para>
+
+</para>
+
+@metadata: 
+@key: 
+@current_value: 
+@uri: 
+@p_new_value: 
+@Returns: 
+
+

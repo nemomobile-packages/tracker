@@ -1,0 +1,130 @@
+<!-- ##### SECTION Title ##### -->
+tracker-extract-info
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT TrackerExtractInfo ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION tracker_extract_info_new ##### -->
+<para>
+
+</para>
+
+@file: 
+@mimetype: 
+@graph: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_info_ref ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_info_unref ##### -->
+<para>
+
+</para>
+
+@info: 
+
+
+<!-- ##### FUNCTION tracker_extract_info_get_preupdate_builder ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_info_get_postupdate_builder ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_info_get_metadata_builder ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_info_get_where_clause ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_info_set_where_clause ##### -->
+<para>
+
+</para>
+
+@info: 
+@where: 
+
+
+<!-- ##### FUNCTION tracker_extract_info_get_file ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_info_get_mimetype ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_info_get_graph ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+

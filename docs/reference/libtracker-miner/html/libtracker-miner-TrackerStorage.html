@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TrackerStorage</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Miner Library Reference Manual">
+<link rel="up" href="ch06.html" title="Utilities">
+<link rel="prev" href="libtracker-miner-Enumerations.html" title="Enumerations">
+<link rel="next" href="libtracker-miner-Media-art-management.html" title="Media art management">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libtracker-miner-Enumerations.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch06.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Miner Library Reference Manual</th>
+<td><a accesskey="n" href="libtracker-miner-Media-art-management.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libtracker-miner-TrackerStorage.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libtracker-miner-TrackerStorage.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libtracker-miner-TrackerStorage"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libtracker-miner-TrackerStorage.top_of_page"></a>TrackerStorage</span></h2>
+<p>TrackerStorage — Removable storage and mount point convenience API</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libtracker-miner-TrackerStorage.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;libtracker-miner/tracker-miner.h&gt;
+
+struct              <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage">TrackerStorage</a>;
+struct              <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorageClass" title="struct TrackerStorageClass">TrackerStorageClass</a>;
+enum                <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorageType" title="enum TrackerStorageType">TrackerStorageType</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *            <a class="link" href="libtracker-miner-TrackerStorage.html#tracker-storage-get-device-roots" title="tracker_storage_get_device_roots ()">tracker_storage_get_device_roots</a>    (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a> *storage</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorageType" title="enum TrackerStorageType"><span class="type">TrackerStorageType</span></a> type</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> exact_match</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *            <a class="link" href="libtracker-miner-TrackerStorage.html#tracker-storage-get-device-uuids" title="tracker_storage_get_device_uuids ()">tracker_storage_get_device_uuids</a>    (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a> *storage</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorageType" title="enum TrackerStorageType"><span class="type">TrackerStorageType</span></a> type</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> exact_match</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="libtracker-miner-TrackerStorage.html#tracker-storage-get-mount-point-for-uuid" title="tracker_storage_get_mount_point_for_uuid ()">tracker_storage_get_mount_point_for_uuid</a>
+                                                        (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a> *storage</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uuid</code></em>);
+<a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorageType" title="enum TrackerStorageType"><span class="returnvalue">TrackerStorageType</span></a>  <a class="link" href="libtracker-miner-TrackerStorage.html#tracker-storage-get-type-for-uuid" title="tracker_storage_get_type_for_uuid ()">tracker_storage_get_type_for_uuid</a>   (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a> *storage</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uuid</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="libtracker-miner-TrackerStorage.html#tracker-storage-get-uuid-for-file" title="tracker_storage_get_uuid_for_file ()">tracker_storage_get_uuid_for_file</a>   (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a> *storage</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>);
+<a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="returnvalue">TrackerStorage</span></a> *    <a class="link" href="libtracker-miner-TrackerStorage.html#tracker-storage-new" title="tracker_storage_new ()">tracker_storage_new</a>                 (<em class="parameter"><code><span class="type">void</span></code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libtracker-miner-TrackerStorage.description"></a><h2>Description</h2>
+<p>
+This API is a convenience to to be able to keep track of volumes
+which are mounted and also the type of removable media available.
+The API is built upon the top of GIO's <a href="http://library.gnome.org/devel/gio/unstable/GMount.html"><span class="type">GMount</span></a>, <a href="http://library.gnome.org/devel/gio/unstable/GDrive.html"><span class="type">GDrive</span></a> and <a href="http://library.gnome.org/devel/gio/unstable/GVolume.html"><span class="type">GVolume</span></a> API.
+</p>
+</div>
+<div class="refsect1">
+<a name="libtracker-miner-TrackerStorage.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="TrackerStorage"></a><h3>struct TrackerStorage</h3>
+<pre class="programlisting">struct TrackerStorage {
+	GObject parent;
+};
+</pre>
+<p>
+A storage API for using mount points and devices
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a> <em class="structfield"><code><a name="TrackerStorage.parent"></a>parent</code></em>;</span></p></td>
+<td>parent object</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TrackerStorageClass"></a><h3>struct TrackerStorageClass</h3>
+<pre class="programlisting">struct TrackerStorageClass {
+	GObjectClass parent_class;
+};
+</pre>
+<p>
+A storage class for <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="TrackerStorageClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>parent object class</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TrackerStorageType"></a><h3>enum TrackerStorageType</h3>
+<pre class="programlisting">typedef enum {
+	TRACKER_STORAGE_REMOVABLE = 1 &lt;&lt; 0,
+	TRACKER_STORAGE_OPTICAL   = 1 &lt;&lt; 1
+} TrackerStorageType;
+</pre>
+<p>
+Flags specifying properties of the type of storage.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="TRACKER-STORAGE-REMOVABLE:CAPS"></a><span class="term"><code class="literal">TRACKER_STORAGE_REMOVABLE</code></span></p></td>
+<td>Storage is a removable media
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-STORAGE-OPTICAL:CAPS"></a><span class="term"><code class="literal">TRACKER_STORAGE_OPTICAL</code></span></p></td>
+<td>Storage is an optical disc
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-storage-get-device-roots"></a><h3>tracker_storage_get_device_roots ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *            tracker_storage_get_device_roots    (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a> *storage</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorageType" title="enum TrackerStorageType"><span class="type">TrackerStorageType</span></a> type</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> exact_match</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>storage</code></em> :</span></p></td>
+<td>A <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>A <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorageType" title="enum TrackerStorageType"><span class="type">TrackerStorageType</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>exact_match</code></em> :</span></p></td>
+<td>if all devices should exactly match the types</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> of strings
+containing the root directories for devices with <em class="parameter"><code>type</code></em> based on
+<em class="parameter"><code>exact_match</code></em>. Each element must be freed using <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> and the
+list itself through <a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free"><code class="function">g_slist_free()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-storage-get-device-uuids"></a><h3>tracker_storage_get_device_uuids ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *            tracker_storage_get_device_uuids    (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a> *storage</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorageType" title="enum TrackerStorageType"><span class="type">TrackerStorageType</span></a> type</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> exact_match</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>storage</code></em> :</span></p></td>
+<td>A <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>A <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorageType" title="enum TrackerStorageType"><span class="type">TrackerStorageType</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>exact_match</code></em> :</span></p></td>
+<td>if all devices should exactly match the types</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> of
+strings containing the UUID for devices with <em class="parameter"><code>type</code></em> based
+on <em class="parameter"><code>exact_match</code></em>. Each element must be freed using <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>
+and the list itself through <a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free"><code class="function">g_slist_free()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-storage-get-mount-point-for-uuid"></a><h3>tracker_storage_get_mount_point_for_uuid ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       tracker_storage_get_mount_point_for_uuid
+                                                        (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a> *storage</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uuid</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>storage</code></em> :</span></p></td>
+<td>A <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uuid</code></em> :</span></p></td>
+<td>A string pointer to the UUID for the <a href="http://library.gnome.org/devel/gio/unstable/GVolume.html"><code class="literal">GVolume</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The mount point for <em class="parameter"><code>uuid</code></em>, this should not be freed.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-storage-get-type-for-uuid"></a><h3>tracker_storage_get_type_for_uuid ()</h3>
+<pre class="programlisting"><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorageType" title="enum TrackerStorageType"><span class="returnvalue">TrackerStorageType</span></a>  tracker_storage_get_type_for_uuid   (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a> *storage</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uuid</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>storage</code></em> :</span></p></td>
+<td>A <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uuid</code></em> :</span></p></td>
+<td>A string pointer to the UUID for the <a href="http://library.gnome.org/devel/gio/unstable/GVolume.html"><code class="literal">GVolume</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The type flags for <em class="parameter"><code>uuid</code></em>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-storage-get-uuid-for-file"></a><h3>tracker_storage_get_uuid_for_file ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       tracker_storage_get_uuid_for_file   (<em class="parameter"><code><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a> *storage</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>);</pre>
+<p>
+Returns the UUID of the removable device for <em class="parameter"><code>file</code></em>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>storage</code></em> :</span></p></td>
+<td>A <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file</code></em> :</span></p></td>
+<td>a file</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>Returns the UUID of the removable device for <em class="parameter"><code>file</code></em>, this
+should not be freed.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-storage-new"></a><h3>tracker_storage_new ()</h3>
+<pre class="programlisting"><a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="returnvalue">TrackerStorage</span></a> *    tracker_storage_new                 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Creates a new instance of <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The newly created <a class="link" href="libtracker-miner-TrackerStorage.html#TrackerStorage" title="struct TrackerStorage"><span class="type">TrackerStorage</span></a>.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

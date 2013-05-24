@@ -1,0 +1,62 @@
+<!-- ##### SECTION Title ##### -->
+Utilities
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION tracker_sparql_get_uuid_urn ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_escape_string ##### -->
+<para>
+
+</para>
+
+@literal: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_escape_uri_printf ##### -->
+<para>
+
+</para>
+
+@format: 
+@...: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_escape_uri_vprintf ##### -->
+<para>
+
+</para>
+
+@format: 
+@args: 
+@Returns: 
+
+

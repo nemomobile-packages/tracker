@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<chapter id='fts-properties'>
+<title>Full-text indexed properties in the ontology</title>
+<table frame='all'>
+  <colspec colname='Property'/>
+  <colspec colname='Weigth'/>
+
+  <thead>
+   <tr>
+     <td>Property</td>
+     <td>Weigth</td>
+   </tr>
+  </thead>
+
+<tbody>
+<tr>
+  <td>
+<link linkend='nmo-messageSubject'>nmo:messageSubject</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nmm-category'>nmm:category</link>,   </td>
+  <td>4</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nmm-albumTitle'>nmm:albumTitle</link>,   </td>
+  <td>6</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nmm-genre'>nmm:genre</link>,   </td>
+  <td>4</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nmm-artistName'>nmm:artistName</link>,   </td>
+  <td>6</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nfo-tableOfContents'>nfo:tableOfContents</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nfo-fontFamily'>nfo:fontFamily</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nfo-fileName'>nfo:fileName</link>,   </td>
+  <td>7</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nfo-genre'>nfo:genre</link>,   </td>
+  <td>4</td>
+</tr>
+<tr>
+  <td>
+<link linkend='ncal-summary'>ncal:summary</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='ncal-description'>ncal:description</link>,   </td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>
+<link linkend='ncal-location'>ncal:location</link>,   </td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>
+<link linkend='ncal-contact'>ncal:contact</link>,   </td>
+  <td>4</td>
+</tr>
+<tr>
+  <td>
+<link linkend='ncal-comment'>ncal:comment</link>,   </td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nao-prefLabel'>nao:prefLabel</link>,   </td>
+  <td>10</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nao-description'>nao:description</link>,   </td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nie-keyword'>nie:keyword</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nie-comment'>nie:comment</link>,   </td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nie-subject'>nie:subject</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nie-description'>nie:description</link>,   </td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nie-plainTextContent'>nie:plainTextContent</link>,   </td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nie-title'>nie:title</link>,   </td>
+  <td>10</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nid3-title'>nid3:title</link>,   </td>
+  <td>10</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nid3-contentType'>nid3:contentType</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nid3-albumTitle'>nid3:albumTitle</link>,   </td>
+  <td>10</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-imID'>nco:imID</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-imNickname'>nco:imNickname</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-region'>nco:region</link>,   </td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-country'>nco:country</link>,   </td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-streetAddress'>nco:streetAddress</link>,   </td>
+  <td>6</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-nameAdditional'>nco:nameAdditional</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-role'>nco:role</link>,   </td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-contactGroupName'>nco:contactGroupName</link>,   </td>
+  <td>4</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-title'>nco:title</link>,   </td>
+  <td>10</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-note'>nco:note</link>,   </td>
+  <td>4</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-locality'>nco:locality</link>,   </td>
+  <td>4</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-district'>nco:district</link>,   </td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-nameFamily'>nco:nameFamily</link>,   </td>
+  <td>4</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-extendedAddress'>nco:extendedAddress</link>,   </td>
+  <td>6</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-emailAddress'>nco:emailAddress</link>,   </td>
+  <td>4</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-postalcode'>nco:postalcode</link>,   </td>
+  <td>6</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-nameGiven'>nco:nameGiven</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-nickname'>nco:nickname</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-hobby'>nco:hobby</link>,   </td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-department'>nco:department</link>,   </td>
+  <td>4</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-phoneNumber'>nco:phoneNumber</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-pobox'>nco:pobox</link>,   </td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-fullname'>nco:fullname</link>,   </td>
+  <td>6</td>
+</tr>
+<tr>
+  <td>
+<link linkend='nco-county'>nco:county</link>,   </td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>
+<link linkend='mtp-creator'>mtp:creator</link>,   </td>
+  <td>3</td>
+</tr>
+</tbody></table></chapter>

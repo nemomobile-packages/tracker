@@ -1,0 +1,242 @@
+<!-- ##### SECTION Title ##### -->
+TrackerMiner
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO TRACKER_MINER_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO TRACKER_MINER_ERROR_DOMAIN ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### STRUCT TrackerMiner ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL TrackerMiner::ignore-next-update ##### -->
+<para>
+
+</para>
+
+@trackerminer: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL TrackerMiner::paused ##### -->
+<para>
+
+</para>
+
+@trackerminer: the object which received the signal.
+
+<!-- ##### SIGNAL TrackerMiner::progress ##### -->
+<para>
+
+</para>
+
+@trackerminer: the object which received the signal.
+@arg1: 
+@arg2: 
+@arg3: 
+
+<!-- ##### SIGNAL TrackerMiner::resumed ##### -->
+<para>
+
+</para>
+
+@trackerminer: the object which received the signal.
+
+<!-- ##### SIGNAL TrackerMiner::started ##### -->
+<para>
+
+</para>
+
+@trackerminer: the object which received the signal.
+
+<!-- ##### SIGNAL TrackerMiner::stopped ##### -->
+<para>
+
+</para>
+
+@trackerminer: the object which received the signal.
+
+<!-- ##### ARG TrackerMiner:name ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TrackerMiner:progress ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TrackerMiner:remaining-time ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG TrackerMiner:status ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT TrackerMinerClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+@started: 
+@stopped: 
+@paused: 
+@resumed: 
+@progress: 
+@ignore_next_update: 
+
+<!-- ##### FUNCTION tracker_miner_error_quark ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_get_connection ##### -->
+<para>
+
+</para>
+
+@miner: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_get_dbus_connection ##### -->
+<para>
+
+</para>
+
+@miner: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_get_dbus_full_name ##### -->
+<para>
+
+</para>
+
+@miner: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_get_dbus_full_path ##### -->
+<para>
+
+</para>
+
+@miner: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_get_n_pause_reasons ##### -->
+<para>
+
+</para>
+
+@miner: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_ignore_next_update ##### -->
+<para>
+
+</para>
+
+@miner: 
+@urls: 
+
+
+<!-- ##### FUNCTION tracker_miner_is_paused ##### -->
+<para>
+
+</para>
+
+@miner: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_is_started ##### -->
+<para>
+
+</para>
+
+@miner: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_pause ##### -->
+<para>
+
+</para>
+
+@miner: 
+@reason: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_resume ##### -->
+<para>
+
+</para>
+
+@miner: 
+@cookie: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_miner_start ##### -->
+<para>
+
+</para>
+
+@miner: 
+
+
+<!-- ##### FUNCTION tracker_miner_stop ##### -->
+<para>
+
+</para>
+
+@miner: 
+
+

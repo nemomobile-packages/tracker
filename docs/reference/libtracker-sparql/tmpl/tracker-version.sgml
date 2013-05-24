@@ -1,0 +1,75 @@
+<!-- ##### SECTION Title ##### -->
+Version Information
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### VARIABLE tracker_major_version ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### VARIABLE tracker_minor_version ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### VARIABLE tracker_micro_version ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### VARIABLE tracker_binary_age ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### VARIABLE tracker_interface_age ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION tracker_check_version ##### -->
+<para>
+
+</para>
+
+@required_major: 
+@required_minor: 
+@required_micro: 
+@Returns: 
+
+
+<!-- ##### MACRO TRACKER_CHECK_VERSION ##### -->
+<para>
+
+</para>
+
+@major: 
+@minor: 
+@micro: 
+
+

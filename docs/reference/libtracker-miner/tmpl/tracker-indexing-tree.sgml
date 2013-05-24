@@ -1,0 +1,217 @@
+<!-- ##### SECTION Title ##### -->
+TrackerIndexingTree
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT TrackerIndexingTree ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL TrackerIndexingTree::directory-added ##### -->
+<para>
+
+</para>
+
+@trackerindexingtree: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL TrackerIndexingTree::directory-removed ##### -->
+<para>
+
+</para>
+
+@trackerindexingtree: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL TrackerIndexingTree::directory-updated ##### -->
+<para>
+
+</para>
+
+@trackerindexingtree: the object which received the signal.
+@arg1: 
+
+<!-- ##### ARG TrackerIndexingTree:filter-hidden ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT TrackerIndexingTreeClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+@directory_added: 
+@directory_removed: 
+@directory_updated: 
+
+<!-- ##### FUNCTION tracker_indexing_tree_add ##### -->
+<para>
+
+</para>
+
+@tree: 
+@directory: 
+@flags: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_add_filter ##### -->
+<para>
+
+</para>
+
+@tree: 
+@filter: 
+@glob_string: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_clear_filters ##### -->
+<para>
+
+</para>
+
+@tree: 
+@type: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_file_is_indexable ##### -->
+<para>
+
+</para>
+
+@tree: 
+@file: 
+@file_type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_file_is_root ##### -->
+<para>
+
+</para>
+
+@tree: 
+@file: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_file_matches_filter ##### -->
+<para>
+
+</para>
+
+@tree: 
+@type: 
+@file: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_get_default_policy ##### -->
+<para>
+
+</para>
+
+@tree: 
+@filter: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_get_filter_hidden ##### -->
+<para>
+
+</para>
+
+@tree: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_get_root ##### -->
+<para>
+
+</para>
+
+@tree: 
+@file: 
+@directory_flags: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_list_roots ##### -->
+<para>
+
+</para>
+
+@tree: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_parent_is_indexable ##### -->
+<para>
+
+</para>
+
+@tree: 
+@parent: 
+@children: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_remove ##### -->
+<para>
+
+</para>
+
+@tree: 
+@directory: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_set_default_policy ##### -->
+<para>
+
+</para>
+
+@tree: 
+@filter: 
+@policy: 
+
+
+<!-- ##### FUNCTION tracker_indexing_tree_set_filter_hidden ##### -->
+<para>
+
+</para>
+
+@tree: 
+@filter_hidden: 
+
+

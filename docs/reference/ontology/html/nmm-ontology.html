@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Nepomuk MultiMedia (NMM): Description of multimedia objects like Music, Video and Images</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="up" href="ontology.html" title="Part I. Overview">
+<link rel="prev" href="scal-properties.html" title="SCAL Ontology Properties">
+<link rel="next" href="nmm-classes.html" title="NMM Ontology Classes">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="scal-properties.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ontology.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Ontology Reference Manual</th>
+<td><a accesskey="n" href="nmm-classes.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="nmm-ontology"></a>Nepomuk MultiMedia (NMM): Description of multimedia objects like Music, Video and Images</h2></div></div></div>
+<div class="toc"><dl>
+<dt><span class="section"><a href="nmm-ontology.html#nmm-explanation">Overview</a></span></dt>
+<dt><span class="section"><a href="nmm-classes.html">NMM Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="nmm-properties.html">NMM Ontology Properties</a></span></dt>
+</dl></div>
+<dt><span class="term">Authors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">Urho Konttori &lt;urho.konttori@nokia.com&gt;</li></ul></div></dd>
+<dt><span class="term">Editors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">Ivan Frade &lt;ivan.frade@nokia.com&gt;</li>
+<li class="listitem">Urho Konttori &lt;urho.konttori@nokia.com&gt;</li>
+</ul></div></dd>
+<dt><span class="term">Upstream:</span></dt>
+<dd><p>Not available</p></dd>
+<dt><span class="term">ChangeLog:</span></dt>
+<dd><p><a class="ulink" href="http://git.gnome.org/cgit/tracker/log/data/ontologies/38-nmm.ontology" target="_top">Tracker changes</a></p></dd>
+<dt><span class="term">Copyright:</span></dt>
+<dd><p>© 2009, 2010 <a class="ulink" href="http://www.nokia.com/" target="_top">Nokia</a></p></dd>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="nmm-explanation"></a>Overview</h2></div></div></div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="idp25591616"></a>Introduction</h3></div></div></div>
+<p>This ontology extends NIE (Nepomuk Information Element ontology) and NFO (Nepomuk File Ontology) into the domains of multimedia, including Images, Videos, Music and Radio, and includes a couple of properties to support uPnP sharing.</p>
+<p>This ontology replaces/complements NID3 and NEXIF. Those ontologies are a direct map of the respective metadata standards, which makes very difficult to map cleanly other standards (like gstreamer metadata, mp4, ogg, and so on). Besides, those ontologies contain a lot of very low level technical information that is useless to the average user of the desktop.</p>
+<p>Our approach in NMM is to keep the minimum properties that make sense for the user, and are present in all (or almost all) specific metadata formats. A profesional photographer (or musician) who needs more fine-grained details for its documents, is free to add also nID3 information or other extensions to the ontology.</p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="idp25594544"></a>Images domain</h3></div></div></div>
+<p>The core of images in NMM ontology is the class <a class="link" href="nmm-classes.html#nmm-Photo" title="nmm:Photo">nmm:Photo.</a> It is (through a long hierarchy) a <a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, an interpretation of some bytes. It has properties to store the basic information (camera, metering mode, white balance, flash), and inherits from <a class="link" href="nfo-ontology.html#nfo-Image" title="nfo:Image">nfo:Image</a> orientation (<a class="link" href="nfo-properties.html#nfo-orientation" title="nfo:orientation">nfo:orientation</a>) and resolution (<a class="link" href="nfo-properties.html#nfo-verticalResolution" title="nfo:verticalResolution">nfo:verticalResolution</a> and <a class="link" href="nfo-properties.html#nfo-horizontalResolution" title="nfo:horizontalResolution">nfo:horizontalResolution</a>).</p>
+<p>Note that for tags, nie:keywords (from nie:InformationElement) can be used, or the <a class="link" href="nao-ontology.html" title="Nepomuk Annotation Ontology (NAO): Tags, ratings and other common annotations to all classes">NAO</a> ontology.</p>
+<div class="figure">
+<a name="nmm-image-graph"></a><p class="title"><b>Figure 4. Graphical Overview (images domain)</b></p>
+<div class="figure-contents">
+<div><img src="images-overview.png" alt="Graphical Overview (images domain)"></div>
+<p>Notation defined <a class="link" href="ontology-notation-description.html#ontology-notation" title="Figure 8. Notation for ontology description">in this page</a></p>
+</div>
+</div>
+<br class="figure-break">
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="idp25606096"></a>Music domain</h3></div></div></div>
+<div class="figure">
+<a name="nmm-music-graph"></a><p class="title"><b>Figure 5. Graphical Overview (music domain)</b></p>
+<div class="figure-contents">
+<div><img src="music-overview.png" alt="Graphical Overview (music domain)"></div>
+<p>Notation defined <a class="link" href="ontology-notation-description.html#ontology-notation" title="Figure 8. Notation for ontology description">in this page</a></p>
+</div>
+</div>
+<br class="figure-break">
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="idp25610800"></a>Radio domain</h3></div></div></div>
+<p>NMM includes classes and properties to represent analog and digital radio stations. There is a class <a class="link" href="nmm-classes.html#nmm-RadioStation" title="nmm:RadioStation">nmm:RadioStation</a> on the <a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a> side of the ontology, representing what the user sees about that station (genre via PTY codes, icon, plus title inherited from nie:InformationElement)</p>
+<p>A <a class="link" href="nmm-classes.html#nmm-RadioStation" title="nmm:RadioStation">nmm:RadioStation</a> can have one or more <a class="link" href="nmm-properties.html#nmm-carrier" title="nmm:carrier">nmm:carrier</a> properties representing the different frequencies (or links when it is digitial) it can be tuned. This property links the station with <a class="link" href="nfo-ontology.html#nfo-MediaStream" title="nfo:MediaStream">nfo:MediaStream</a>, but usually it will point to one of the subclasses: <a class="link" href="nmm-classes.html#nmm-DigitalRadio" title="nmm:DigitalRadio">nmm:DigitalRadio</a> (if digital) or <a class="link" href="nmm-classes.html#nmm-AnalogRadio" title="nmm:AnalogRadio">nmm:AnalogRadio</a> (if analog). An analog station has properties as modulation and frequency, while the digial station has streaming bitrate, encoding or protocol.</p>
+<p>Note that nfo:MediaStream refers to a flux of bytes/data, and it is on the <a class="link" href="nie-classes.html#nie-DataObject" title="nie:DataObject">nie:DataObject</a> side of the ontology</p>
+<div class="figure">
+<a name="nmm-radio-graph"></a><p class="title"><b>Figure 6. Graphical Overview (radio domain)</b></p>
+<div class="figure-contents">
+<div><img src="radio-overview.png" alt="Graphical Overview (radio domain)"></div>
+<p>Notation defined <a class="link" href="ontology-notation-description.html#ontology-notation" title="Figure 8. Notation for ontology description">in this page</a></p>
+</div>
+</div>
+<br class="figure-break">
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

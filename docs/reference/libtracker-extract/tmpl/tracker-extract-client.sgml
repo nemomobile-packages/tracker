@@ -1,0 +1,56 @@
+<!-- ##### SECTION Title ##### -->
+tracker-extract-client
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION tracker_extract_client_get_metadata ##### -->
+<para>
+
+</para>
+
+@file: 
+@mime_type: 
+@graph: 
+@cancellable: 
+@callback: 
+@user_data: 
+
+
+<!-- ##### FUNCTION tracker_extract_client_get_metadata_finish ##### -->
+<para>
+
+</para>
+
+@file: 
+@res: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_extract_client_cancel_for_prefix ##### -->
+<para>
+
+</para>
+
+@prefix: 
+
+

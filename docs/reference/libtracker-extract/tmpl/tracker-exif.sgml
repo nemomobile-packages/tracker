@@ -1,0 +1,89 @@
+<!-- ##### SECTION Title ##### -->
+tracker-exif
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT TrackerExifData ##### -->
+<para>
+
+</para>
+
+@y_dimension: 
+@x_dimension: 
+@image_width: 
+@document_name: 
+@time: 
+@time_original: 
+@artist: 
+@user_comment: 
+@description: 
+@make: 
+@model: 
+@orientation: 
+@exposure_time: 
+@fnumber: 
+@flash: 
+@focal_length: 
+@iso_speed_ratings: 
+@metering_mode: 
+@white_balance: 
+@copyright: 
+@software: 
+@x_resolution: 
+@y_resolution: 
+@resolution_unit: 
+@gps_altitude: 
+@gps_latitude: 
+@gps_longitude: 
+@gps_direction: 
+
+<!-- ##### FUNCTION tracker_exif_new ##### -->
+<para>
+
+</para>
+
+@buffer: 
+@len: 
+@uri: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_exif_free ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION tracker_exif_read ##### -->
+<para>
+
+</para>
+
+@buffer: 
+@len: 
+@uri: 
+@data: 
+@Returns: 
+
+

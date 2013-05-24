@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Resource Description Framework (RDF): Core RDF classes to keep the internal consistency of the ontology</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="up" href="ontology.html" title="Part I. Overview">
+<link rel="prev" href="xsd-properties.html" title="XSD Ontology Properties">
+<link rel="next" href="rdf-properties.html" title="RDF Ontology Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="xsd-properties.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ontology.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Ontology Reference Manual</th>
+<td><a accesskey="n" href="rdf-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="rdf-ontology"></a>Resource Description Framework (RDF): Core RDF classes to keep the internal consistency of the ontology</h2></div></div></div>
+<div class="toc"><dl>
+<dt><span class="section"><a href="rdf-ontology.html#rdf-classes">RDF Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="rdf-properties.html">RDF Ontology Properties</a></span></dt>
+</dl></div>
+<dt><span class="term">Authors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">W3C</li></ul></div></dd>
+<dt><span class="term">Editors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">Tracker developers (translation into turtle)</li></ul></div></dd>
+<dt><span class="term">Upstream:</span></dt>
+<dd><p>Not available</p></dd>
+<dt><span class="term">ChangeLog:</span></dt>
+<dd><p><a class="ulink" href="http://git.gnome.org/cgit/tracker/log/data/ontologies/11-rdf.ontology" target="_top">Tracker changes</a></p></dd>
+<dt><span class="term">Copyright:</span></dt>
+<dd><p>© 2009, 2010 <a class="ulink" href="http://www.nokia.com/" target="_top">Nokia</a></p></dd>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="rdf-classes"></a>RDF Ontology Classes</h2></div></div></div>
+<div class="refsect2">
+<a name="rdf-Class"></a><h3>rdf:Class</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-ontology.html#rdf-Resource" title="rdf:Resource">rdf:Resource</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-properties.html#tracker-domainIndex" title="tracker:domainIndex">tracker:domainIndex</a>, <a class="link" href="rdf-properties.html#rdf-subClassOf" title="rdf:subClassOf">rdf:subClassOf</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-properties.html#rdf-range" title="rdf:range">rdf:range</a>, <a class="link" href="rdf-properties.html#rdf-subClassOf" title="rdf:subClassOf">rdf:subClassOf</a>, <a class="link" href="rdf-properties.html#rdf-type" title="rdf:type">rdf:type</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rdf-Literal"></a><h3>rdf:Literal</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-ontology.html#rdf-Resource" title="rdf:Resource">rdf:Resource</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rdf-Resource"></a><h3>rdf:Resource</h3>
+<p>All resources</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-ontology.html#tracker-Ontology" title="tracker:Ontology">tracker:Ontology</a>, <a class="link" href="rdf-ontology.html#tracker-Namespace" title="tracker:Namespace">tracker:Namespace</a>, <a class="link" href="rdf-ontology.html#rdf-Literal" title="rdf:Literal">rdf:Literal</a>, <a class="link" href="rdf-ontology.html#rdf-Property" title="rdf:Property">rdf:Property</a>, <a class="link" href="rdf-ontology.html#rdf-Class" title="rdf:Class">rdf:Class</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-properties.html#tracker-damaged" title="tracker:damaged">tracker:damaged</a>, <a class="link" href="rdf-properties.html#tracker-modified" title="tracker:modified">tracker:modified</a>, <a class="link" href="rdf-properties.html#tracker-added" title="tracker:added">tracker:added</a>, <a class="link" href="rdf-properties.html#rdf-label" title="rdf:label">rdf:label</a>, <a class="link" href="rdf-properties.html#rdf-comment" title="rdf:comment">rdf:comment</a>, <a class="link" href="rdf-properties.html#rdf-type" title="rdf:type">rdf:type</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-properties.html#rdf-domain" title="rdf:domain">rdf:domain</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-Namespace"></a><h3>tracker:Namespace</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-ontology.html#rdf-Resource" title="rdf:Resource">rdf:Resource</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-properties.html#tracker-prefix" title="tracker:prefix">tracker:prefix</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-Ontology"></a><h3>tracker:Ontology</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-ontology.html#rdf-Resource" title="rdf:Resource">rdf:Resource</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rdf-Property"></a><h3>rdf:Property</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-ontology.html#rdf-Resource" title="rdf:Resource">rdf:Resource</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-properties.html#tracker-defaultValue" title="tracker:defaultValue">tracker:defaultValue</a>, <a class="link" href="rdf-properties.html#tracker-weight" title="tracker:weight">tracker:weight</a>, <a class="link" href="rdf-properties.html#tracker-transient" title="tracker:transient">tracker:transient</a>, <a class="link" href="rdf-properties.html#tracker-fulltextNoLimit" title="tracker:fulltextNoLimit">tracker:fulltextNoLimit</a>, <a class="link" href="rdf-properties.html#tracker-fulltextIndexed" title="tracker:fulltextIndexed">tracker:fulltextIndexed</a>, <a class="link" href="rdf-properties.html#tracker-secondaryIndex" title="tracker:secondaryIndex">tracker:secondaryIndex</a>, <a class="link" href="rdf-properties.html#tracker-indexed" title="tracker:indexed">tracker:indexed</a>, <a class="link" href="rdf-properties.html#rdf-range" title="rdf:range">rdf:range</a>, <a class="link" href="rdf-properties.html#rdf-domain" title="rdf:domain">rdf:domain</a>, <a class="link" href="rdf-properties.html#rdf-subPropertyOf" title="rdf:subPropertyOf">rdf:subPropertyOf</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="rdf-properties.html#tracker-secondaryIndex" title="tracker:secondaryIndex">tracker:secondaryIndex</a>, <a class="link" href="rdf-properties.html#tracker-domainIndex" title="tracker:domainIndex">tracker:domainIndex</a>, <a class="link" href="rdf-properties.html#rdf-subPropertyOf" title="rdf:subPropertyOf">rdf:subPropertyOf</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TrackerSparqlCursor</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker SPARQL Library Reference Manual">
+<link rel="up" href="libtracker-sparql-reference.html" title="Part II. Reference">
+<link rel="prev" href="TrackerSparqlConnection.html" title="TrackerSparqlConnection">
+<link rel="next" href="libtracker-sparql-Utilities.html" title="Utilities">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="TrackerSparqlConnection.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="libtracker-sparql-reference.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker SPARQL Library Reference Manual</th>
+<td><a accesskey="n" href="libtracker-sparql-Utilities.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#TrackerSparqlCursor.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#TrackerSparqlCursor.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#TrackerSparqlCursor.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#TrackerSparqlCursor.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="TrackerSparqlCursor"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="TrackerSparqlCursor.top_of_page"></a>TrackerSparqlCursor</span></h2>
+<p>TrackerSparqlCursor — Iteration of the query results</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="TrackerSparqlCursor.stability-level"></a><h2>Stability Level</h2>
+Stable, unless otherwise indicated
+</div>
+<div class="refsynopsisdiv">
+<a name="TrackerSparqlCursor.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;tracker-sparql.h&gt;
+
+struct              <a class="link" href="TrackerSparqlCursor.html#TrackerSparqlCursor-struct" title="struct TrackerSparqlCursor">TrackerSparqlCursor</a>;
+enum                <a class="link" href="TrackerSparqlCursor.html#TrackerSparqlValueType" title="enum TrackerSparqlValueType">TrackerSparqlValueType</a>;
+<a class="link" href="TrackerSparqlConnection.html" title="TrackerSparqlConnection"><span class="returnvalue">TrackerSparqlConnection</span></a> * <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-get-connection" title="tracker_sparql_cursor_get_connection ()">tracker_sparql_cursor_get_connection</a>
+                                                        (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-get-n-columns" title="tracker_sparql_cursor_get_n_columns ()">tracker_sparql_cursor_get_n_columns</a> (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-get-string" title="tracker_sparql_cursor_get_string ()">tracker_sparql_cursor_get_string</a>    (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> *length</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-get-boolean" title="tracker_sparql_cursor_get_boolean ()">tracker_sparql_cursor_get_boolean</a>   (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-get-double" title="tracker_sparql_cursor_get_double ()">tracker_sparql_cursor_get_double</a>    (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);
+<span class="returnvalue">gint64</span>              <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-get-integer" title="tracker_sparql_cursor_get_integer ()">tracker_sparql_cursor_get_integer</a>   (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);
+<a class="link" href="TrackerSparqlCursor.html#TrackerSparqlValueType" title="enum TrackerSparqlValueType"><span class="returnvalue">TrackerSparqlValueType</span></a> <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-get-value-type" title="tracker_sparql_cursor_get_value_type ()">tracker_sparql_cursor_get_value_type</a>
+                                                        (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-get-variable-name" title="tracker_sparql_cursor_get_variable_name ()">tracker_sparql_cursor_get_variable_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-close" title="tracker_sparql_cursor_close ()">tracker_sparql_cursor_close</a>         (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-is-bound" title="tracker_sparql_cursor_is_bound ()">tracker_sparql_cursor_is_bound</a>      (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-next" title="tracker_sparql_cursor_next ()">tracker_sparql_cursor_next</a>          (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-next-async" title="tracker_sparql_cursor_next_async ()">tracker_sparql_cursor_next_async</a>    (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-next-finish" title="tracker_sparql_cursor_next_finish ()">tracker_sparql_cursor_next_finish</a>   (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-rewind" title="tracker_sparql_cursor_rewind ()">tracker_sparql_cursor_rewind</a>        (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="TrackerSparqlCursor.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----TrackerSparqlCursor
+</pre>
+</div>
+<div class="refsect1">
+<a name="TrackerSparqlCursor.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="TrackerSparqlCursor.html#TrackerSparqlCursor--connection" title='The "connection" property'>connection</a>"               <a class="link" href="TrackerSparqlConnection.html" title="TrackerSparqlConnection"><span class="type">TrackerSparqlConnection</span></a>*  : Read / Write
+  "<a class="link" href="TrackerSparqlCursor.html#TrackerSparqlCursor--n-columns" title='The "n-columns" property'>n-columns</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="TrackerSparqlCursor.description"></a><h2>Description</h2>
+<p>
+</p>
+<p>
+<a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> is an object which provides methods to iterate the
+results of a query to the Tracker Store.
+</p>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="TrackerSparqlCursor.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="TrackerSparqlCursor-struct"></a><h3>struct TrackerSparqlCursor</h3>
+<pre class="programlisting">struct TrackerSparqlCursor;</pre>
+<p>
+The <span class="structname">TrackerSparqlCursor</span> object represents an
+iterator of results.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TrackerSparqlValueType"></a><h3>enum TrackerSparqlValueType</h3>
+<pre class="programlisting">typedef enum {
+	TRACKER_SPARQL_VALUE_TYPE_UNBOUND,
+	TRACKER_SPARQL_VALUE_TYPE_URI,
+	TRACKER_SPARQL_VALUE_TYPE_STRING,
+	TRACKER_SPARQL_VALUE_TYPE_INTEGER,
+	TRACKER_SPARQL_VALUE_TYPE_DOUBLE,
+	TRACKER_SPARQL_VALUE_TYPE_DATETIME,
+	TRACKER_SPARQL_VALUE_TYPE_BLANK_NODE,
+	TRACKER_SPARQL_VALUE_TYPE_BOOLEAN
+} TrackerSparqlValueType;
+</pre>
+<p>
+Enumeration with the possible types of the cursor's cells
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="TRACKER-SPARQL-VALUE-TYPE-UNBOUND:CAPS"></a><span class="term"><code class="literal">TRACKER_SPARQL_VALUE_TYPE_UNBOUND</code></span></p></td>
+<td>Unbound value type
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-SPARQL-VALUE-TYPE-URI:CAPS"></a><span class="term"><code class="literal">TRACKER_SPARQL_VALUE_TYPE_URI</code></span></p></td>
+<td>Uri value type, rdfs:Resource
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-SPARQL-VALUE-TYPE-STRING:CAPS"></a><span class="term"><code class="literal">TRACKER_SPARQL_VALUE_TYPE_STRING</code></span></p></td>
+<td>String value type, xsd:string
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-SPARQL-VALUE-TYPE-INTEGER:CAPS"></a><span class="term"><code class="literal">TRACKER_SPARQL_VALUE_TYPE_INTEGER</code></span></p></td>
+<td>Integer value type, xsd:integer
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-SPARQL-VALUE-TYPE-DOUBLE:CAPS"></a><span class="term"><code class="literal">TRACKER_SPARQL_VALUE_TYPE_DOUBLE</code></span></p></td>
+<td>Double value type, xsd:double
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-SPARQL-VALUE-TYPE-DATETIME:CAPS"></a><span class="term"><code class="literal">TRACKER_SPARQL_VALUE_TYPE_DATETIME</code></span></p></td>
+<td>Datetime value type, xsd:dateTime
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-SPARQL-VALUE-TYPE-BLANK-NODE:CAPS"></a><span class="term"><code class="literal">TRACKER_SPARQL_VALUE_TYPE_BLANK_NODE</code></span></p></td>
+<td>Blank node value type
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-SPARQL-VALUE-TYPE-BOOLEAN:CAPS"></a><span class="term"><code class="literal">TRACKER_SPARQL_VALUE_TYPE_BOOLEAN</code></span></p></td>
+<td>Boolean value type, xsd:boolean
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-get-connection"></a><h3>tracker_sparql_cursor_get_connection ()</h3>
+<pre class="programlisting"><a class="link" href="TrackerSparqlConnection.html" title="TrackerSparqlConnection"><span class="returnvalue">TrackerSparqlConnection</span></a> * tracker_sparql_cursor_get_connection
+                                                        (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the <a class="link" href="TrackerSparqlConnection.html" title="TrackerSparqlConnection"><span class="type">TrackerSparqlConnection</span></a> associated with this
+<a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>. The returned object must not be unreferenced
+by the caller.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-get-n-columns"></a><h3>tracker_sparql_cursor_get_n_columns ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                tracker_sparql_cursor_get_n_columns (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>);</pre>
+<p>
+This method should only be called after a successful
+<a class="link" href="TrackerSparqlCursor.html#tracker-sparql-cursor-next" title="tracker_sparql_cursor_next ()"><code class="function">tracker_sparql_cursor_next()</code></a>; otherwise its return value
+will be undefined.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> representing the number of columns available in the
+results to iterate.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-get-string"></a><h3>tracker_sparql_cursor_get_string ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       tracker_sparql_cursor_get_string    (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> *length</code></em>);</pre>
+<p>
+Retrieves a string representation of the data in the current
+row in <em class="parameter"><code>column</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>column</code></em> :</span></p></td>
+<td>column number to retrieve (first one is 0)</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>length</code></em> :</span></p></td>
+<td>length of the returned string</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a string which must not be freed. <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned if
+the column is not in the [0,<span class="type">n_columns</span>] range.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-get-boolean"></a><h3>tracker_sparql_cursor_get_boolean ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_sparql_cursor_get_boolean   (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);</pre>
+<p>
+Retrieve a boolean for the current row in <em class="parameter"><code>column</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>column</code></em> :</span></p></td>
+<td>column number to retrieve (first one is 0)</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-get-double"></a><h3>tracker_sparql_cursor_get_double ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             tracker_sparql_cursor_get_double    (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);</pre>
+<p>
+Retrieve a double for the current row in <em class="parameter"><code>column</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>column</code></em> :</span></p></td>
+<td>column number to retrieve (first one is 0)</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a double.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-get-integer"></a><h3>tracker_sparql_cursor_get_integer ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint64</span>              tracker_sparql_cursor_get_integer   (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);</pre>
+<p>
+Retrieve an integer for the current row in <em class="parameter"><code>column</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>column</code></em> :</span></p></td>
+<td>column number to retrieve (first one is 0)</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <span class="type">gint64</span>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-get-value-type"></a><h3>tracker_sparql_cursor_get_value_type ()</h3>
+<pre class="programlisting"><a class="link" href="TrackerSparqlCursor.html#TrackerSparqlValueType" title="enum TrackerSparqlValueType"><span class="returnvalue">TrackerSparqlValueType</span></a> tracker_sparql_cursor_get_value_type
+                                                        (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);</pre>
+<p>
+The data type bound to the current row in <em class="parameter"><code>column</code></em> is returned.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>column</code></em> :</span></p></td>
+<td>column number to retrieve (first one is 0)</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html#TrackerSparqlValueType" title="enum TrackerSparqlValueType"><span class="type">TrackerSparqlValueType</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-get-variable-name"></a><h3>tracker_sparql_cursor_get_variable_name ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       tracker_sparql_cursor_get_variable_name
+                                                        (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);</pre>
+<p>
+Retrieves the variable name for the current row in <em class="parameter"><code>column</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>column</code></em> :</span></p></td>
+<td>column number to retrieve (first one is 0)</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a string which must not be freed.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-close"></a><h3>tracker_sparql_cursor_close ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_sparql_cursor_close         (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>);</pre>
+<p>
+Closes the iterator, making it invalid.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-is-bound"></a><h3>tracker_sparql_cursor_is_bound ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_sparql_cursor_is_bound      (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> column</code></em>);</pre>
+<p>
+If the current row and <em class="parameter"><code>column</code></em> are bound to a value, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> is returned.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>column</code></em> :</span></p></td>
+<td>column number to retrieve (first one is 0)</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-next"></a><h3>tracker_sparql_cursor_next ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_sparql_cursor_next          (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Iterates to the next result. This is completely synchronous and
+it may block.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> used to cancel the operation</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> for error reporting.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if no more results found, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-next-async"></a><h3>tracker_sparql_cursor_next_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_sparql_cursor_next_async    (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-next-finish"></a><h3>tracker_sparql_cursor_next_finish ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_sparql_cursor_next_finish   (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Finishes the asynchronous iteration to the next result.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> with the result of the operation</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> for error reporting.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if no more results found, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-sparql-cursor-rewind"></a><h3>tracker_sparql_cursor_rewind ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_sparql_cursor_rewind        (<em class="parameter"><code><a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a> *self</code></em>);</pre>
+<p>
+Resets the iterator to point back to the first result.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TrackerSparqlCursor.html" title="TrackerSparqlCursor"><span class="type">TrackerSparqlCursor</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="TrackerSparqlCursor.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="TrackerSparqlCursor--connection"></a><h3>The <code class="literal">"connection"</code> property</h3>
+<pre class="programlisting">  "connection"               <a class="link" href="TrackerSparqlConnection.html" title="TrackerSparqlConnection"><span class="type">TrackerSparqlConnection</span></a>*  : Read / Write</pre>
+<p>
+The <a class="link" href="TrackerSparqlConnection.html" title="TrackerSparqlConnection"><span class="type">TrackerSparqlConnection</span></a> used to retrieve the results.
+</p>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TrackerSparqlCursor--n-columns"></a><h3>The <code class="literal">"n-columns"</code> property</h3>
+<pre class="programlisting">  "n-columns"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read</pre>
+<p>n-columns.</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

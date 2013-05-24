@@ -1,0 +1,974 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>NCO Ontology Classes</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="up" href="nco-ontology.html" title="Nepomuk Contacts Ontology (NCO): All about contacts. Rough equivalent of the VCARD standard.">
+<link rel="prev" href="nco-ontology.html" title="Nepomuk Contacts Ontology (NCO): All about contacts. Rough equivalent of the VCARD standard.">
+<link rel="next" href="nco-properties.html" title="NCO Ontology Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="nco-ontology.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="nco-ontology.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Ontology Reference Manual</th>
+<td><a accesskey="n" href="nco-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="nco-classes"></a>NCO Ontology Classes</h2></div></div></div>
+<div class="refsect2">
+<a name="nco-IMAccount"></a><h3>nco:IMAccount</h3>
+<p>An account in an Instant Messaging system. This refers to IM accounts of the user 'me'.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-imEnabled" title="nco:imEnabled">nco:imEnabled</a>, <a class="link" href="nco-properties.html#nco-imDisplayName" title="nco:imDisplayName">nco:imDisplayName</a>, <a class="link" href="nco-properties.html#nco-imAccountType" title="nco:imAccountType">nco:imAccountType</a>, <a class="link" href="nco-properties.html#nco-imAccountAddress" title="nco:imAccountAddress">nco:imAccountAddress</a>, <a class="link" href="nco-properties.html#nco-hasIMContact" title="nco:hasIMContact">nco:hasIMContact</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-PcsNumber"></a><h3>nco:PcsNumber</h3>
+<p>Personal Communication Services Number. A class inspired by the TYPE=pcs parameter of the TEL property defined in RFC 2426 sec. 3.3.1</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-VoicePhoneNumber" title="nco:VoicePhoneNumber">nco:VoicePhoneNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-PersonContact"></a><h3>nco:PersonContact</h3>
+<p>A Contact that denotes a Person. A person can have multiple Affiliations.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-Contact" title="nco:Contact">nco:Contact</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-hasAffiliation" title="nco:hasAffiliation">nco:hasAffiliation</a>, <a class="link" href="nco-properties.html#nco-gender" title="nco:gender">nco:gender</a>, <a class="link" href="nco-properties.html#nco-hobby" title="nco:hobby">nco:hobby</a>, <a class="link" href="nco-properties.html#nco-nameHonorificPrefix" title="nco:nameHonorificPrefix">nco:nameHonorificPrefix</a>, <a class="link" href="nco-properties.html#nco-nameHonorificSuffix" title="nco:nameHonorificSuffix">nco:nameHonorificSuffix</a>, <a class="link" href="nco-properties.html#nco-nameAdditional" title="nco:nameAdditional">nco:nameAdditional</a>, <a class="link" href="nco-properties.html#nco-nameGiven" title="nco:nameGiven">nco:nameGiven</a>, <a class="link" href="nco-properties.html#nco-nameFamily" title="nco:nameFamily">nco:nameFamily</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nco:default-contact-me, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-VoicePhoneNumber"></a><h3>nco:VoicePhoneNumber</h3>
+<p>A telephone number with voice communication capabilities. Class inspired by the TYPE=voice parameter of the TEL property defined in RFC 2426 sec. 3.3.1</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-PhoneNumber" title="nco:PhoneNumber">nco:PhoneNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-CellPhoneNumber" title="nco:CellPhoneNumber">nco:CellPhoneNumber</a>, <a class="link" href="nco-classes.html#nco-PcsNumber" title="nco:PcsNumber">nco:PcsNumber</a>, <a class="link" href="nco-classes.html#nco-CarPhoneNumber" title="nco:CarPhoneNumber">nco:CarPhoneNumber</a>, <a class="link" href="nco-classes.html#nco-IsdnNumber" title="nco:IsdnNumber">nco:IsdnNumber</a>, <a class="link" href="nco-classes.html#nco-VideoTelephoneNumber" title="nco:VideoTelephoneNumber">nco:VideoTelephoneNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-voiceMail" title="nco:voiceMail">nco:voiceMail</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-MessagingNumber"></a><h3>nco:MessagingNumber</h3>
+<p>A number that can accept textual messages.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-PhoneNumber" title="nco:PhoneNumber">nco:PhoneNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-CellPhoneNumber" title="nco:CellPhoneNumber">nco:CellPhoneNumber</a>, <a class="link" href="nco-classes.html#nco-PagerNumber" title="nco:PagerNumber">nco:PagerNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-BbsNumber"></a><h3>nco:BbsNumber</h3>
+<p>A Bulletin Board System (BBS) phone number. Inspired by the (TYPE=bbsl) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-ModemNumber" title="nco:ModemNumber">nco:ModemNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-Gender"></a><h3>nco:Gender</h3>
+<p>Gender. Instances of this class may include male and female.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-gender" title="nco:gender">nco:gender</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nco:gender-other, nco:gender-female, nco:gender-male, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-ContactMedium"></a><h3>nco:ContactMedium</h3>
+<p>A superclass for all contact media - ways to contact an entity represented by a Contact instance. Some of the subclasses of this class (the various kinds of telephone numbers and postal addresses) have been inspired by the values of the TYPE parameter of ADR and TEL properties defined in RFC 2426 sec. 3.2.1. and 3.3.1 respectively. Each value is represented by an appropriate subclass with two major exceptions TYPE=home and TYPE=work. They are to be expressed by the roles these contact media are attached to i.e. contact media with TYPE=home parameter are to be attached to the default role (nco:Contact or nco:PersonContact), whereas media with TYPE=work parameter should be attached to nco:Affiliation or nco:OrganizationContact.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-PostalAddress" title="nco:PostalAddress">nco:PostalAddress</a>, <a class="link" href="nco-classes.html#nco-PhoneNumber" title="nco:PhoneNumber">nco:PhoneNumber</a>, <a class="link" href="nco-classes.html#nco-IMAddress" title="nco:IMAddress">nco:IMAddress</a>, <a class="link" href="nco-classes.html#nco-EmailAddress" title="nco:EmailAddress">nco:EmailAddress</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-contactMediumComment" title="nco:contactMediumComment">nco:contactMediumComment</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-hasContactMedium" title="nco:hasContactMedium">nco:hasContactMedium</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-CellPhoneNumber"></a><h3>nco:CellPhoneNumber</h3>
+<p>A cellular phone number. Inspired by the (TYPE=cell) parameter of the TEL property as defined in RFC 2426 sec  3.3.1. Usually a cellular phone can accept voice calls as well as textual messages (SMS), therefore this class has two superclasses.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-VoicePhoneNumber" title="nco:VoicePhoneNumber">nco:VoicePhoneNumber</a>, <a class="link" href="nco-classes.html#nco-MessagingNumber" title="nco:MessagingNumber">nco:MessagingNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-Role"></a><h3>nco:Role</h3>
+<p>A role played by a contact. Contacts that denote people, can have many roles (e.g. see the hasAffiliation property and Affiliation class). Contacts that denote Organizations or other Agents usually have one role.  Each role can introduce additional contact media.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-Contact" title="nco:Contact">nco:Contact</a>, <a class="link" href="nco-classes.html#nco-Affiliation" title="nco:Affiliation">nco:Affiliation</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-video" title="nco:video">nco:video</a>, <a class="link" href="nco-properties.html#nco-hasIMAddress" title="nco:hasIMAddress">nco:hasIMAddress</a>, <a class="link" href="nco-properties.html#nco-hasPostalAddress" title="nco:hasPostalAddress">nco:hasPostalAddress</a>, <a class="link" href="nco-properties.html#nco-blogUrl" title="nco:blogUrl">nco:blogUrl</a>, <a class="link" href="nco-properties.html#nco-foafUrl" title="nco:foafUrl">nco:foafUrl</a>, <a class="link" href="nco-properties.html#nco-hasEmailAddress" title="nco:hasEmailAddress">nco:hasEmailAddress</a>, <a class="link" href="nco-properties.html#nco-websiteUrl" title="nco:websiteUrl">nco:websiteUrl</a>, <a class="link" href="nco-properties.html#nco-hasPhoneNumber" title="nco:hasPhoneNumber">nco:hasPhoneNumber</a>, <a class="link" href="nco-properties.html#nco-url" title="nco:url">nco:url</a>, <a class="link" href="nco-properties.html#nco-hasContactMedium" title="nco:hasContactMedium">nco:hasContactMedium</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-IsdnNumber"></a><h3>nco:IsdnNumber</h3>
+<p>An ISDN phone number. Inspired by the (TYPE=isdn) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-VoicePhoneNumber" title="nco:VoicePhoneNumber">nco:VoicePhoneNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-ContactList"></a><h3>nco:ContactList</h3>
+<p>A contact list, this class represents an addressbook or a contact list of an IM application. Contacts inside a contact list can belong to contact groups.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-containsContact" title="nco:containsContact">nco:containsContact</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-VideoTelephoneNumber"></a><h3>nco:VideoTelephoneNumber</h3>
+<p>A Video telephone number. A class inspired by the TYPE=video parameter of the TEL property defined in RFC 2426 sec. 3.3.1</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-VoicePhoneNumber" title="nco:VoicePhoneNumber">nco:VoicePhoneNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-DomesticDeliveryAddress"></a><h3>nco:DomesticDeliveryAddress</h3>
+<p>Domestic Delivery Addresse. Class inspired by TYPE=dom parameter of the ADR property defined in RFC 2426 sec. 3.2.1</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-PostalAddress" title="nco:PostalAddress">nco:PostalAddress</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-FaxNumber"></a><h3>nco:FaxNumber</h3>
+<p>A fax number. Inspired by the (TYPE=fax) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-PhoneNumber" title="nco:PhoneNumber">nco:PhoneNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-OrganizationContact"></a><h3>nco:OrganizationContact</h3>
+<p>A Contact that denotes on Organization.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-Contact" title="nco:Contact">nco:Contact</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-logo" title="nco:logo">nco:logo</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-org" title="nco:org">nco:org</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-PhoneNumber"></a><h3>nco:PhoneNumber</h3>
+<p>A telephone number.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-ContactMedium" title="nco:ContactMedium">nco:ContactMedium</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-FaxNumber" title="nco:FaxNumber">nco:FaxNumber</a>, <a class="link" href="nco-classes.html#nco-VoicePhoneNumber" title="nco:VoicePhoneNumber">nco:VoicePhoneNumber</a>, <a class="link" href="nco-classes.html#nco-MessagingNumber" title="nco:MessagingNumber">nco:MessagingNumber</a>, <a class="link" href="nco-classes.html#nco-ModemNumber" title="nco:ModemNumber">nco:ModemNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-phoneNumber" title="nco:phoneNumber">nco:phoneNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-hasPhoneNumber" title="nco:hasPhoneNumber">nco:hasPhoneNumber</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-IMAddress"></a><h3>nco:IMAddress</h3>
+<p>An instant messaging address such as xmpp:foo@bar.com.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-ContactMedium" title="nco:ContactMedium">nco:ContactMedium</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-imAddressAuthStatusTo" title="nco:imAddressAuthStatusTo">nco:imAddressAuthStatusTo</a>, <a class="link" href="nco-properties.html#nco-imAddressAuthStatusFrom" title="nco:imAddressAuthStatusFrom">nco:imAddressAuthStatusFrom</a>, <a class="link" href="nco-properties.html#nco-imCapability" title="nco:imCapability">nco:imCapability</a>, <a class="link" href="nco-properties.html#nco-presenceLastModified" title="nco:presenceLastModified">nco:presenceLastModified</a>, <a class="link" href="nco-properties.html#nco-imPresence" title="nco:imPresence">nco:imPresence</a>, <a class="link" href="nco-properties.html#nco-imStatusMessage" title="nco:imStatusMessage">nco:imStatusMessage</a>, <a class="link" href="nco-properties.html#nco-imProtocol" title="nco:imProtocol">nco:imProtocol</a>, <a class="link" href="nco-properties.html#nco-imAvatar" title="nco:imAvatar">nco:imAvatar</a>, <a class="link" href="nco-properties.html#nco-imNickname" title="nco:imNickname">nco:imNickname</a>, <a class="link" href="nco-properties.html#nco-imID" title="nco:imID">nco:imID</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-hasIMAddress" title="nco:hasIMAddress">nco:hasIMAddress</a>, <a class="link" href="nco-properties.html#nco-imAccountAddress" title="nco:imAccountAddress">nco:imAccountAddress</a>, <a class="link" href="nco-properties.html#nco-hasIMContact" title="nco:hasIMContact">nco:hasIMContact</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-PresenceStatus"></a><h3>nco:PresenceStatus</h3>
+<p>Predefined set of status level instances</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-imPresence" title="nco:imPresence">nco:imPresence</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nco:presence-status-error, nco:presence-status-unknown, nco:presence-status-busy, nco:presence-status-hidden, nco:presence-status-extended-away, nco:presence-status-away, nco:presence-status-available, nco:presence-status-offline, nco:presence-status-unset, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-PostalAddress"></a><h3>nco:PostalAddress</h3>
+<p>A postal address. A class aggregating the various parts of a value for the 'ADR' property as defined in RFC 2426 Sec. 3.2.1.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-ContactMedium" title="nco:ContactMedium">nco:ContactMedium</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-DomesticDeliveryAddress" title="nco:DomesticDeliveryAddress">nco:DomesticDeliveryAddress</a>, <a class="link" href="nco-classes.html#nco-InternationalDeliveryAddress" title="nco:InternationalDeliveryAddress">nco:InternationalDeliveryAddress</a>, <a class="link" href="nco-classes.html#nco-ParcelDeliveryAddress" title="nco:ParcelDeliveryAddress">nco:ParcelDeliveryAddress</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-pobox" title="nco:pobox">nco:pobox</a>, <a class="link" href="nco-properties.html#nco-district" title="nco:district">nco:district</a>, <a class="link" href="nco-properties.html#nco-county" title="nco:county">nco:county</a>, <a class="link" href="nco-properties.html#nco-locality" title="nco:locality">nco:locality</a>, <a class="link" href="nco-properties.html#nco-postalcode" title="nco:postalcode">nco:postalcode</a>, <a class="link" href="nco-properties.html#nco-streetAddress" title="nco:streetAddress">nco:streetAddress</a>, <a class="link" href="nco-properties.html#nco-addressLocation" title="nco:addressLocation">nco:addressLocation</a>, <a class="link" href="nco-properties.html#nco-extendedAddress" title="nco:extendedAddress">nco:extendedAddress</a>, <a class="link" href="nco-properties.html#nco-country" title="nco:country">nco:country</a>, <a class="link" href="nco-properties.html#nco-region" title="nco:region">nco:region</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-hasPostalAddress" title="nco:hasPostalAddress">nco:hasPostalAddress</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-EmailAddress"></a><h3>nco:EmailAddress</h3>
+<p>An email address. The recommended best practice is to use mailto: uris for instances of this class.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-ContactMedium" title="nco:ContactMedium">nco:ContactMedium</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-emailAddress" title="nco:emailAddress">nco:emailAddress</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-hasEmailAddress" title="nco:hasEmailAddress">nco:hasEmailAddress</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-CarPhoneNumber"></a><h3>nco:CarPhoneNumber</h3>
+<p>A car phone number. Inspired by the (TYPE=car) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-VoicePhoneNumber" title="nco:VoicePhoneNumber">nco:VoicePhoneNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-AuthorizationStatus"></a><h3>nco:AuthorizationStatus</h3>
+<p>Predefined instances to indicate the auth status: yes, no, requested</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-imAddressAuthStatusTo" title="nco:imAddressAuthStatusTo">nco:imAddressAuthStatusTo</a>, <a class="link" href="nco-properties.html#nco-imAddressAuthStatusFrom" title="nco:imAddressAuthStatusFrom">nco:imAddressAuthStatusFrom</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nco:predefined-auth-status-requested, nco:predefined-auth-status-no, nco:predefined-auth-status-yes, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-ModemNumber"></a><h3>nco:ModemNumber</h3>
+<p>A modem phone number. Inspired by the (TYPE=modem) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-PhoneNumber" title="nco:PhoneNumber">nco:PhoneNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-BbsNumber" title="nco:BbsNumber">nco:BbsNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-ContactGroup"></a><h3>nco:ContactGroup</h3>
+<p>A group of Contacts. Could be used to express a group in an addressbook or on a contact list of an IM application. One contact can belong to many groups.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-contactGroupName" title="nco:contactGroupName">nco:contactGroupName</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-belongsToGroup" title="nco:belongsToGroup">nco:belongsToGroup</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-ContactListDataObject"></a><h3>nco:ContactListDataObject</h3>
+<p>An entity occuring on a contact list (usually interpreted as an nco:Contact)</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-DataObject" title="nie:DataObject">nie:DataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-containsContact" title="nco:containsContact">nco:containsContact</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-ParcelDeliveryAddress"></a><h3>nco:ParcelDeliveryAddress</h3>
+<p>Parcel Delivery Addresse. Class inspired by TYPE=parcel parameter of the ADR property defined in RFC 2426 sec. 3.2.1</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-PostalAddress" title="nco:PostalAddress">nco:PostalAddress</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-IMCapability"></a><h3>nco:IMCapability</h3>
+<p>Features of a certain IM connection (depends on the IMAccount implementation used by the Contact)</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-imCapability" title="nco:imCapability">nco:imCapability</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nco:im-capability-dbus-tubes, nco:im-capability-stream-tubes, nco:im-capability-file-transfers, nco:im-capability-upgrading-calls, nco:im-capability-video-calls, nco:im-capability-audio-calls, nco:im-capability-media-calls, nco:im-capability-text-chat, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-PagerNumber"></a><h3>nco:PagerNumber</h3>
+<p>A pager phone number. Inspired by the (TYPE=pager) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-MessagingNumber" title="nco:MessagingNumber">nco:MessagingNumber</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-Affiliation"></a><h3>nco:Affiliation</h3>
+<p>Aggregates three properties defined in RFC2426. Originally all three were attached directly to a person. One person could have only one title and one role within one organization. This class is intended to lift this limitation.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-Role" title="nco:Role">nco:Role</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-role" title="nco:role">nco:role</a>, <a class="link" href="nco-properties.html#nco-title" title="nco:title">nco:title</a>, <a class="link" href="nco-properties.html#nco-org" title="nco:org">nco:org</a>, <a class="link" href="nco-properties.html#nco-department" title="nco:department">nco:department</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-hasAffiliation" title="nco:hasAffiliation">nco:hasAffiliation</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-InternationalDeliveryAddress"></a><h3>nco:InternationalDeliveryAddress</h3>
+<p>International Delivery Addresse. Class inspired by TYPE=intl parameter of the ADR property defined in RFC 2426 sec. 3.2.1</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-PostalAddress" title="nco:PostalAddress">nco:PostalAddress</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nco-Contact"></a><h3>nco:Contact</h3>
+<p>A Contact. A piece of data that can provide means to identify or communicate with an entity.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-Role" title="nco:Role">nco:Role</a>, <a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-PersonContact" title="nco:PersonContact">nco:PersonContact</a>, <a class="link" href="nco-classes.html#nco-OrganizationContact" title="nco:OrganizationContact">nco:OrganizationContact</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-sound" title="nco:sound">nco:sound</a>, <a class="link" href="nco-properties.html#nco-belongsToGroup" title="nco:belongsToGroup">nco:belongsToGroup</a>, <a class="link" href="nco-properties.html#nco-birthDate" title="nco:birthDate">nco:birthDate</a>, <a class="link" href="nco-properties.html#nco-photo" title="nco:photo">nco:photo</a>, <a class="link" href="nco-properties.html#nco-representative" title="nco:representative">nco:representative</a>, <a class="link" href="nco-properties.html#nco-note" title="nco:note">nco:note</a>, <a class="link" href="nco-properties.html#nco-nickname" title="nco:nickname">nco:nickname</a>, <a class="link" href="nco-properties.html#nco-hasLocation" title="nco:hasLocation">nco:hasLocation</a>, <a class="link" href="nco-properties.html#nco-contactLocalUID" title="nco:contactLocalUID">nco:contactLocalUID</a>, <a class="link" href="nco-properties.html#nco-contactUID" title="nco:contactUID">nco:contactUID</a>, <a class="link" href="nco-properties.html#nco-key" title="nco:key">nco:key</a>, <a class="link" href="nco-properties.html#nco-fullname" title="nco:fullname">nco:fullname</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-properties.html#nco-representative" title="nco:representative">nco:representative</a>, <a class="link" href="nco-properties.html#nco-publisher" title="nco:publisher">nco:publisher</a>, <a class="link" href="nco-properties.html#nco-creator" title="nco:creator">nco:creator</a>, <a class="link" href="nco-properties.html#nco-contributor" title="nco:contributor">nco:contributor</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

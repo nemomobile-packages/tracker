@@ -1,0 +1,73 @@
+<!-- ##### SECTION Title ##### -->
+tracker-iptc
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT TrackerIptcData ##### -->
+<para>
+
+</para>
+
+@keywords: 
+@date_created: 
+@byline: 
+@credit: 
+@copyright_notice: 
+@image_orientation: 
+@byline_title: 
+@city: 
+@state: 
+@sublocation: 
+@country_name: 
+@contact: 
+
+<!-- ##### FUNCTION tracker_iptc_new ##### -->
+<para>
+
+</para>
+
+@buffer: 
+@len: 
+@uri: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_iptc_free ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION tracker_iptc_read ##### -->
+<para>
+
+</para>
+
+@buffer: 
+@len: 
+@uri: 
+@data: 
+@Returns: 
+
+

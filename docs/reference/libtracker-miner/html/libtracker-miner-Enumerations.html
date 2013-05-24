@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Enumerations</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Miner Library Reference Manual">
+<link rel="up" href="ch06.html" title="Utilities">
+<link rel="prev" href="ch06.html" title="Utilities">
+<link rel="next" href="libtracker-miner-TrackerStorage.html" title="TrackerStorage">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch06.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch06.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Miner Library Reference Manual</th>
+<td><a accesskey="n" href="libtracker-miner-TrackerStorage.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libtracker-miner-Enumerations.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libtracker-miner-Enumerations.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libtracker-miner-Enumerations"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libtracker-miner-Enumerations.top_of_page"></a>Enumerations</span></h2>
+<p>Enumerations — Common enumerations</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libtracker-miner-Enumerations.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;libtracker-miner/tracker-miner-enums.h&gt;
+
+enum                <a class="link" href="libtracker-miner-Enumerations.html#TrackerDirectoryFlags" title="enum TrackerDirectoryFlags">TrackerDirectoryFlags</a>;
+enum                <a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterPolicy" title="enum TrackerFilterPolicy">TrackerFilterPolicy</a>;
+enum                <a class="link" href="libtracker-miner-Enumerations.html#TrackerFilterType" title="enum TrackerFilterType">TrackerFilterType</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="libtracker-miner-Enumerations.description"></a><h2>Description</h2>
+<p>
+Common enumeration types used in libtracker-miner.
+</p>
+</div>
+<div class="refsect1">
+<a name="libtracker-miner-Enumerations.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="TrackerDirectoryFlags"></a><h3>enum TrackerDirectoryFlags</h3>
+<pre class="programlisting">typedef enum {
+	TRACKER_DIRECTORY_FLAG_NONE        = 0,
+	TRACKER_DIRECTORY_FLAG_RECURSE     = 1 &lt;&lt; 1,
+	TRACKER_DIRECTORY_FLAG_CHECK_MTIME = 1 &lt;&lt; 2,
+	TRACKER_DIRECTORY_FLAG_MONITOR     = 1 &lt;&lt; 3,
+	TRACKER_DIRECTORY_FLAG_IGNORE      = 1 &lt;&lt; 4,
+	TRACKER_DIRECTORY_FLAG_PRESERVE    = 1 &lt;&lt; 5
+} TrackerDirectoryFlags;
+</pre>
+<p>
+Flags used when adding a new directory to be indexed in the <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="TRACKER-DIRECTORY-FLAG-NONE:CAPS"></a><span class="term"><code class="literal">TRACKER_DIRECTORY_FLAG_NONE</code></span></p></td>
+<td>No flags.
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-DIRECTORY-FLAG-RECURSE:CAPS"></a><span class="term"><code class="literal">TRACKER_DIRECTORY_FLAG_RECURSE</code></span></p></td>
+<td>Should recurse in the directory.
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-DIRECTORY-FLAG-CHECK-MTIME:CAPS"></a><span class="term"><code class="literal">TRACKER_DIRECTORY_FLAG_CHECK_MTIME</code></span></p></td>
+<td>Should check mtimes of items in the directory.
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-DIRECTORY-FLAG-MONITOR:CAPS"></a><span class="term"><code class="literal">TRACKER_DIRECTORY_FLAG_MONITOR</code></span></p></td>
+<td>Should setup monitors in the items found in the directory.
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-DIRECTORY-FLAG-IGNORE:CAPS"></a><span class="term"><code class="literal">TRACKER_DIRECTORY_FLAG_IGNORE</code></span></p></td>
+<td>Should ignore the directory contents.
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-DIRECTORY-FLAG-PRESERVE:CAPS"></a><span class="term"><code class="literal">TRACKER_DIRECTORY_FLAG_PRESERVE</code></span></p></td>
+<td>Should preserve items in the directory even if the directory gets removed.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TrackerFilterPolicy"></a><h3>enum TrackerFilterPolicy</h3>
+<pre class="programlisting">typedef enum {
+	TRACKER_FILTER_POLICY_DENY,
+	TRACKER_FILTER_POLICY_ACCEPT
+} TrackerFilterPolicy;
+</pre>
+<p>
+Flags used when defining default filter policy in the <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="TRACKER-FILTER-POLICY-DENY:CAPS"></a><span class="term"><code class="literal">TRACKER_FILTER_POLICY_DENY</code></span></p></td>
+<td>Items matching the filter will be skipped.
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-FILTER-POLICY-ACCEPT:CAPS"></a><span class="term"><code class="literal">TRACKER_FILTER_POLICY_ACCEPT</code></span></p></td>
+<td>Items matching the filter will be accepted.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TrackerFilterType"></a><h3>enum TrackerFilterType</h3>
+<pre class="programlisting">typedef enum {
+	TRACKER_FILTER_FILE,
+	TRACKER_FILTER_DIRECTORY,
+	TRACKER_FILTER_PARENT_DIRECTORY
+} TrackerFilterType;
+</pre>
+<p>
+Flags used when adding a new filter in the <a class="link" href="TrackerIndexingTree.html" title="TrackerIndexingTree"><span class="type">TrackerIndexingTree</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="TRACKER-FILTER-FILE:CAPS"></a><span class="term"><code class="literal">TRACKER_FILTER_FILE</code></span></p></td>
+<td>All files matching this filter will be filtered out.
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-FILTER-DIRECTORY:CAPS"></a><span class="term"><code class="literal">TRACKER_FILTER_DIRECTORY</code></span></p></td>
+<td>All directories matching this filter will be filtered out.
+</td>
+</tr>
+<tr>
+<td><p><a name="TRACKER-FILTER-PARENT-DIRECTORY:CAPS"></a><span class="term"><code class="literal">TRACKER_FILTER_PARENT_DIRECTORY</code></span></p></td>
+<td>All files in directories matching this filter will be filtered out.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

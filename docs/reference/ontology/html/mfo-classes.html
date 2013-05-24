@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFO Ontology Classes</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="up" href="mfo-ontology.html" title="Maemo Feeds Ontology (MFO): Model for feeds and alike online streams">
+<link rel="prev" href="mfo-ontology.html" title="Maemo Feeds Ontology (MFO): Model for feeds and alike online streams">
+<link rel="next" href="mfo-properties.html" title="MFO Ontology Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="mfo-ontology.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="mfo-ontology.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Ontology Reference Manual</th>
+<td><a accesskey="n" href="mfo-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="mfo-classes"></a>MFO Ontology Classes</h2></div></div></div>
+<div class="refsect2">
+<a name="mfo-FeedElement"></a><h3>mfo:FeedElement</h3>
+<p>Superclass for all elements related with feeds, to provide common configuration options</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-classes.html#mfo-Enclosure" title="mfo:Enclosure">mfo:Enclosure</a>, <a class="link" href="mfo-classes.html#mfo-FeedMessage" title="mfo:FeedMessage">mfo:FeedMessage</a>, <a class="link" href="mfo-classes.html#mfo-FeedChannel" title="mfo:FeedChannel">mfo:FeedChannel</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-properties.html#mfo-feedSettings" title="mfo:feedSettings">mfo:feedSettings</a>, <a class="link" href="mfo-properties.html#mfo-image" title="mfo:image">mfo:image</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mfo-Action"></a><h3>mfo:Action</h3>
+<p>class with a restricted set of actions</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-properties.html#mfo-action" title="mfo:action">mfo:action</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+mfo:refresh-now, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mfo-FeedSettings"></a><h3>mfo:FeedSettings</h3>
+<p>Represents settings applied to a feed channel or a feed entry. How often it is updated, through which connection type it is delivered, when data expires and so on</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-properties.html#mfo-maxSize" title="mfo:maxSize">mfo:maxSize</a>, <a class="link" href="mfo-properties.html#mfo-downloadFlag" title="mfo:downloadFlag">mfo:downloadFlag</a>, <a class="link" href="mfo-properties.html#mfo-downloadPath" title="mfo:downloadPath">mfo:downloadPath</a>, <a class="link" href="mfo-properties.html#mfo-expiryInterval" title="mfo:expiryInterval">mfo:expiryInterval</a>, <a class="link" href="mfo-properties.html#mfo-updateInterval" title="mfo:updateInterval">mfo:updateInterval</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-properties.html#mfo-feedSettings" title="mfo:feedSettings">mfo:feedSettings</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mfo-Enclosure"></a><h3>mfo:Enclosure</h3>
+<p>Represents an enclosure of a feed message</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-classes.html#mfo-FeedElement" title="mfo:FeedElement">mfo:FeedElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-properties.html#mfo-optional" title="mfo:optional">mfo:optional</a>, <a class="link" href="mfo-properties.html#mfo-localLink" title="mfo:localLink">mfo:localLink</a>, <a class="link" href="mfo-properties.html#mfo-groupDefault" title="mfo:groupDefault">mfo:groupDefault</a>, <a class="link" href="mfo-properties.html#mfo-remoteLink" title="mfo:remoteLink">mfo:remoteLink</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-properties.html#mfo-enclosureList" title="mfo:enclosureList">mfo:enclosureList</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mfo-FeedMessage"></a><h3>mfo:FeedMessage</h3>
+<p>Represents feed entry on top of Nepomuk Messaging Ontology's message. May have enclosures attached and certain settings that allow deviation from feed channel's setup</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-classes.html#mfo-FeedElement" title="mfo:FeedElement">mfo:FeedElement</a>, <a class="link" href="nmo-classes.html#nmo-Message" title="nmo:Message">nmo:Message</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-properties.html#mfo-enclosureList" title="mfo:enclosureList">mfo:enclosureList</a>, <a class="link" href="mfo-properties.html#mfo-downloadedTime" title="mfo:downloadedTime">mfo:downloadedTime</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mfo-FeedChannel"></a><h3>mfo:FeedChannel</h3>
+<p>Represents feed channel transfer, typically a download of RSS or ATOM. It is also a communication channel of Nepomuk Messaging Ontology so that feed sources could be treated as message sources</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-classes.html#mfo-FeedElement" title="mfo:FeedElement">mfo:FeedElement</a>, <a class="link" href="nmo-classes.html#nmo-CommunicationChannel" title="nmo:CommunicationChannel">nmo:CommunicationChannel</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-properties.html#mfo-type" title="mfo:type">mfo:type</a>, <a class="link" href="mfo-properties.html#mfo-action" title="mfo:action">mfo:action</a>, <a class="link" href="mfo-properties.html#mfo-totalCount" title="mfo:totalCount">mfo:totalCount</a>, <a class="link" href="mfo-properties.html#mfo-unreadCount" title="mfo:unreadCount">mfo:unreadCount</a>, <a class="link" href="mfo-properties.html#mfo-updatedTime" title="mfo:updatedTime">mfo:updatedTime</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mfo-FeedType"></a><h3>mfo:FeedType</h3>
+<p>class with a restricted set of feed types</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-properties.html#mfo-name" title="mfo:name">mfo:name</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mfo-properties.html#mfo-type" title="mfo:type">mfo:type</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

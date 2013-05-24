@@ -1,0 +1,268 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Define if we disable the journal */
+#undef DISABLE_JOURNAL
+
+/* Include functional tests in the installation */
+#undef DIST_FUNCTIONAL_TESTS
+
+/* Define to 1 if translation of program messages to the user's native
+   language is requested. */
+#undef ENABLE_NLS
+
+/* Use new evolution-shell API */
+#undef EVOLUTION_SHELL_2_91
+
+/* Use new evolution-shell API */
+#undef EVOLUTION_SHELL_3_2
+
+/* Use new evolution-shell API */
+#undef EVOLUTION_SHELL_3_3_5
+
+/* The gettext translation domain */
+#undef GETTEXT_PACKAGE
+
+/* Define that GStreamer Decodebin2 should be used */
+#undef GSTREAMER_BACKEND_DECODEBIN2
+
+/* Define that GStreamer Discoverer should be used */
+#undef GSTREAMER_BACKEND_DISCOVERER
+
+/* Define that GUPnP-DLNA should be used */
+#undef GSTREAMER_BACKEND_GUPNP_DLNA
+
+/* Define that GStreamer Tagreadbin should be used */
+#undef GSTREAMER_BACKEND_TAGREADBIN
+
+/* Guarantee existence of certain metadata */
+#undef GUARANTEE_METADATA
+
+/* Define to 1 if you have the MacOS X function CFLocaleCopyCurrent in the
+   CoreFoundation framework. */
+#undef HAVE_CFLOCALECOPYCURRENT
+
+/* Define to 1 if you have the MacOS X function CFPreferencesCopyAppValue in
+   the CoreFoundation framework. */
+#undef HAVE_CFPREFERENCESCOPYAPPVALUE
+
+/* Define if the GNU dcgettext() function is already present or preinstalled.
+   */
+#undef HAVE_DCGETTEXT
+
+/* Define to 1 if you have the declaration of `posix_fadvise', and to 0 if you
+   don't. */
+#undef HAVE_DECL_POSIX_FADVISE
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* Enca language detection aid */
+#undef HAVE_ENCA
+
+/* Define if we have exempi */
+#undef HAVE_EXEMPI
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* Define if we have GdkPixbuf */
+#undef HAVE_GDKPIXBUF
+
+/* Define to 1 if you have the `getline' function. */
+#undef HAVE_GETLINE
+
+/* Define if the GNU gettext() function is already present or preinstalled. */
+#undef HAVE_GETTEXT
+
+/* Define if we have Gnome Keyring for password storage */
+#undef HAVE_GNOME_KEYRING
+
+/* Define if we have GStreamer */
+#undef HAVE_GSTREAMER
+
+/* Define if we have HAL */
+#undef HAVE_HAL
+
+/* Define if you have the iconv() function and it works. */
+#undef HAVE_ICONV
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define if we have libcue */
+#undef HAVE_LIBCUE
+
+/* Define if we have libexif */
+#undef HAVE_LIBEXIF
+
+/* Define if we have libflac */
+#undef HAVE_LIBFLAC
+
+/* Define if we have libgif */
+#undef HAVE_LIBGIF
+
+/* Define if we have libgsf */
+#undef HAVE_LIBGSF
+
+/* Define if we have libgxps */
+#undef HAVE_LIBGXPS
+
+/* libicu Unicode support library */
+#undef HAVE_LIBICU
+
+/* Define if we have libiptcdata */
+#undef HAVE_LIBIPTCDATA
+
+/* Define if we have libjpeg */
+#undef HAVE_LIBJPEG
+
+/* Define if we have libosinfo */
+#undef HAVE_LIBOSINFO
+
+/* Define to 1 if you have the `sqlite3' library (-lsqlite3). */
+#undef HAVE_LIBSQLITE3
+
+/* Define if we have libstreamanalyzer */
+#undef HAVE_LIBSTREAMANALYZER
+
+/* Define if we have libtiff */
+#undef HAVE_LIBTIFF
+
+/* libunistring Unicode support library */
+#undef HAVE_LIBUNISTRING
+
+/* Define if we have libvorbis */
+#undef HAVE_LIBVORBIS
+
+/* Define if we have Libxine */
+#undef HAVE_LIBXINE
+
+/* Define if we have libxml2 */
+#undef HAVE_LIBXML2
+
+/* Define to 1 if you have the <linux/unistd.h> header file. */
+#undef HAVE_LINUX_UNISTD_H
+
+/* Define if we enable Maemo specific features */
+#undef HAVE_MAEMO
+
+/* Define if we have meegotouch */
+#undef HAVE_MEEGOTOUCH
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define if we have NetworkManager for network status detection */
+#undef HAVE_NETWORK_MANAGER
+
+/* Define if we have poppler-glib */
+#undef HAVE_POPPLER
+
+/* Define to 1 if you have the `posix_fadvise' function. */
+#undef HAVE_POSIX_FADVISE
+
+/* Define if we have Qt */
+#undef HAVE_QT
+
+/* Define to 1 if you have the <sqlite3.h> header file. */
+#undef HAVE_SQLITE3_H
+
+/* Define to 1 if you have the `statvfs64' function. */
+#undef HAVE_STATVFS64
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the <sys/statvfs.h> header file. */
+#undef HAVE_SYS_STATVFS_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#undef HAVE_SYS_TIME_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define if we have Totem PL parser */
+#undef HAVE_TOTEM_PL_PARSER
+
+/* Define to 0 if tracker FTS is not compiled */
+#undef HAVE_TRACKER_FTS
+
+/* Define to 0 if tracker-needle is not compiled */
+#undef HAVE_TRACKER_NEEDLE
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define if we have GLib unit test framework */
+#undef HAVE_UNIT_TEST
+
+/* Define if we have UPOWER */
+#undef HAVE_UPOWER
+
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#undef LT_OBJDIR
+
+/* Define to 1 if your C compiler doesn't accept -c and -o together. */
+#undef NO_MINUS_C_MINUS_O
+
+/* Define if we are on win32 */
+#undef OS_WIN32
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the home page for this package. */
+#undef PACKAGE_URL
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Define to the Tracker binary age */
+#undef TRACKER_BINARY_AGE
+
+/* Define to the Tracker interface age */
+#undef TRACKER_INTERFACE_AGE
+
+/* Define to the Tracker major version */
+#undef TRACKER_MAJOR_VERSION
+
+/* Define to the Tracker micro version */
+#undef TRACKER_MICRO_VERSION
+
+/* Define to the Tracker minor version */
+#undef TRACKER_MINOR_VERSION
+
+/* Define that Tracker will try to use external generic media players */
+#undef USING_EXTERNAL_GENERIC_MEDIA_PLAYER
+
+/* Unzip ps.gz files */
+#undef USING_UNZIPPSFILES
+
+/* Defined for compilers not supporting __FUNCTION__ */
+#undef __FUNCTION__

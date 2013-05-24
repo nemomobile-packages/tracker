@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Maemo Transfer Ontology (MTO): Representation of download and upload operations in the system</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="up" href="ontology.html" title="Part I. Overview">
+<link rel="prev" href="nmm-properties.html" title="NMM Ontology Properties">
+<link rel="next" href="mto-properties.html" title="MTO Ontology Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="nmm-properties.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ontology.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Ontology Reference Manual</th>
+<td><a accesskey="n" href="mto-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="mto-ontology"></a>Maemo Transfer Ontology (MTO): Representation of download and upload operations in the system</h2></div></div></div>
+<div class="toc"><dl>
+<dt><span class="section"><a href="mto-ontology.html#mto-classes">MTO Ontology Classes</a></span></dt>
+<dt><span class="section"><a href="mto-properties.html">MTO Ontology Properties</a></span></dt>
+</dl></div>
+<dt><span class="term">Authors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">Divya Subramanian &lt;divya.subramanian@sasken.com&gt;</li>
+<li class="listitem">Ivan Frade &lt;ivan.frade@nokia.com&gt;</li>
+</ul></div></dd>
+<dt><span class="term">Editors:</span></dt>
+<dd><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">Ivan Frade &lt;ivan.frade@nokia.com&gt;</li></ul></div></dd>
+<dt><span class="term">Upstream:</span></dt>
+<dd><p>Not available</p></dd>
+<dt><span class="term">ChangeLog:</span></dt>
+<dd><p><a class="ulink" href="http://git.gnome.org/cgit/tracker/log/data/ontologies/39-mto.ontology" target="_top">Tracker changes</a></p></dd>
+<dt><span class="term">Copyright:</span></dt>
+<dd><p>© 2009, 2010 <a class="ulink" href="http://www.nokia.com/" target="_top">Nokia</a></p></dd>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="mto-classes"></a>MTO Ontology Classes</h2></div></div></div>
+<div class="refsect2">
+<a name="mto-SyncTransfer"></a><h3>mto:SyncTransfer</h3>
+<p>Handles synchronization between the device and some server (a computer, or a website)</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="mto-ontology.html#mto-Transfer" title="mto:Transfer">mto:Transfer</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mto-TransferElement"></a><h3>mto:TransferElement</h3>
+<p>Gives information about the transfer of a single element - typically a file. The properties in this class would need to be changed if it has to handle sync elements as well</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mto-properties.html#mto-state" title="mto:state">mto:state</a>, <a class="link" href="mto-properties.html#mto-completedTime" title="mto:completedTime">mto:completedTime</a>, <a class="link" href="mto-properties.html#mto-startedTime" title="mto:startedTime">mto:startedTime</a>, <a class="link" href="mto-properties.html#mto-destination" title="mto:destination">mto:destination</a>, <a class="link" href="mto-properties.html#mto-source" title="mto:source">mto:source</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mto-properties.html#mto-transferList" title="mto:transferList">mto:transferList</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mto-DownloadTransfer"></a><h3>mto:DownloadTransfer</h3>
+<p>Handles transfers of files outside the device into the device. This class will only refer to files downloaded from a website or recieved using BlueTooth etc. Files recieved with messages are not considered here. Those would be handled seperately using nmo:Message</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="mto-ontology.html#mto-Transfer" title="mto:Transfer">mto:Transfer</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mto-UploadTransfer"></a><h3>mto:UploadTransfer</h3>
+<p>Handles transfers of files/data present on the device to some place outside the device. Upload methods include uploading to a website, sending via BlueTooth etc. </p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="mto-ontology.html#mto-Transfer" title="mto:Transfer">mto:Transfer</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mto-properties.html#mto-transferCategory" title="mto:transferCategory">mto:transferCategory</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mto-Transfer"></a><h3>mto:Transfer</h3>
+<p>Represent a single transfer task, which could have multiple transfer elements</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="mto-ontology.html#mto-SyncTransfer" title="mto:SyncTransfer">mto:SyncTransfer</a>, <a class="link" href="mto-ontology.html#mto-DownloadTransfer" title="mto:DownloadTransfer">mto:DownloadTransfer</a>, <a class="link" href="mto-ontology.html#mto-UploadTransfer" title="mto:UploadTransfer">mto:UploadTransfer</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mto-properties.html#mto-transferPrivacyLevel" title="mto:transferPrivacyLevel">mto:transferPrivacyLevel</a>, <a class="link" href="mto-properties.html#mto-agent" title="mto:agent">mto:agent</a>, <a class="link" href="mto-properties.html#mto-starter" title="mto:starter">mto:starter</a>, <a class="link" href="mto-properties.html#mto-account" title="mto:account">mto:account</a>, <a class="link" href="mto-properties.html#mto-transferList" title="mto:transferList">mto:transferList</a>, <a class="link" href="mto-properties.html#mto-created" title="mto:created">mto:created</a>, <a class="link" href="mto-properties.html#mto-method" title="mto:method">mto:method</a>, <a class="link" href="mto-properties.html#mto-transferState" title="mto:transferState">mto:transferState</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mto-State"></a><h3>mto:State</h3>
+<p>Class with a restricted set of instances to enumarate transfer methods</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mto-properties.html#mto-transferState" title="mto:transferState">mto:transferState</a>, <a class="link" href="mto-properties.html#mto-state" title="mto:state">mto:state</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+mto:state-error, mto:state-pending, mto:state-done, mto:state-cancelled, mto:state-paused, mto:state-active, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mto-TransferMethod"></a><h3>mto:TransferMethod</h3>
+<p>Class with a restricted set of instances to enumarate transfer methods</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="mto-properties.html#mto-method" title="mto:method">mto:method</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+mto:transfer-method-web, mto:transfer-method-bluetooth, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Media art management</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Miner Library Reference Manual">
+<link rel="up" href="ch06.html" title="Utilities">
+<link rel="prev" href="libtracker-miner-TrackerStorage.html" title="TrackerStorage">
+<link rel="next" href="libtracker-miner-Thumbnailer-management.html" title="Thumbnailer management">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libtracker-miner-TrackerStorage.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch06.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Miner Library Reference Manual</th>
+<td><a accesskey="n" href="libtracker-miner-Thumbnailer-management.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libtracker-miner-Media-art-management.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libtracker-miner-Media-art-management.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libtracker-miner-Media-art-management"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libtracker-miner-Media-art-management.top_of_page"></a>Media art management</span></h2>
+<p>Media art management — Media art request and management.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libtracker-miner-Media-art-management.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;libtracker-miner/tracker-media-art.h&gt;
+
+<span class="returnvalue">void</span>                <a class="link" href="libtracker-miner-Media-art-management.html#tracker-media-art-execute-queue" title="tracker_media_art_execute_queue ()">tracker_media_art_execute_queue</a>     (<em class="parameter"><code><a href="http://library.gnome.org/devel/libtracker-sparql/unstable/TrackerSparqlConnection.html"><span class="type">TrackerSparqlConnection</span></a> *connection</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libtracker-miner-Media-art-management.html#tracker-media-art-queue-removal" title="tracker_media_art_queue_removal ()">tracker_media_art_queue_removal</a>     (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libtracker-miner-Media-art-management.description"></a><h2>Description</h2>
+<p>
+This is a convenience API using D-Bus to talk to the media management service.
+</p>
+</div>
+<div class="refsect1">
+<a name="libtracker-miner-Media-art-management.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="tracker-media-art-execute-queue"></a><h3>tracker_media_art_execute_queue ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_media_art_execute_queue     (<em class="parameter"><code><a href="http://library.gnome.org/devel/libtracker-sparql/unstable/TrackerSparqlConnection.html"><span class="type">TrackerSparqlConnection</span></a> *connection</code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-media-art-queue-removal"></a><h3>tracker_media_art_queue_removal ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_media_art_queue_removal     (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>);</pre>
+<p>
+Adds a new request to tell the media art subsystem that <em class="parameter"><code>uri</code></em> was removed.
+Stored requests can be processed with <a class="link" href="libtracker-miner-Media-art-management.html#tracker-media-art-execute-queue" title="tracker_media_art_execute_queue ()"><code class="function">tracker_media_art_execute_queue()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>URI of the file</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mime_type</code></em> :</span></p></td>
+<td>mime-type of the file</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if successfully stored to be reported, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10.4</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

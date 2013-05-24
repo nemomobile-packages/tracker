@@ -1,0 +1,107 @@
+<!-- ##### SECTION Title ##### -->
+TrackerStorage
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT TrackerStorage ##### -->
+<para>
+
+</para>
+
+@parent: 
+
+<!-- ##### STRUCT TrackerStorageClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+
+<!-- ##### ENUM TrackerStorageType ##### -->
+<para>
+
+</para>
+
+@TRACKER_STORAGE_REMOVABLE: 
+@TRACKER_STORAGE_OPTICAL: 
+
+<!-- ##### FUNCTION tracker_storage_get_device_roots ##### -->
+<para>
+
+</para>
+
+@storage: 
+@type: 
+@exact_match: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_storage_get_device_uuids ##### -->
+<para>
+
+</para>
+
+@storage: 
+@type: 
+@exact_match: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_storage_get_mount_point_for_uuid ##### -->
+<para>
+
+</para>
+
+@storage: 
+@uuid: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_storage_get_type_for_uuid ##### -->
+<para>
+
+</para>
+
+@storage: 
+@uuid: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_storage_get_uuid_for_file ##### -->
+<para>
+
+</para>
+
+@storage: 
+@file: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_storage_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+

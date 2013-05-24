@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>NMO Ontology Classes</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="up" href="nmo-ontology.html" title="Nepomuk Messaging Ontology (NMO): Model for messages and communications, including Email, SMS, MMS and phone calls">
+<link rel="prev" href="nmo-ontology.html" title="Nepomuk Messaging Ontology (NMO): Model for messages and communications, including Email, SMS, MMS and phone calls">
+<link rel="next" href="nmo-properties.html" title="NMO Ontology Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="nmo-ontology.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="nmo-ontology.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Ontology Reference Manual</th>
+<td><a accesskey="n" href="nmo-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="nmo-classes"></a>NMO Ontology Classes</h2></div></div></div>
+<div class="refsect2">
+<a name="nmo-IMMessage"></a><h3>nmo:IMMessage</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-Message" title="nmo:Message">nmo:Message</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-Email"></a><h3>nmo:Email</h3>
+<p>Root node in a MIME Email</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-Message" title="nmo:Message">nmo:Message</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-contentMimeType" title="nmo:contentMimeType">nmo:contentMimeType</a>, <a class="link" href="nmo-properties.html#nmo-responseType" title="nmo:responseType">nmo:responseType</a>, <a class="link" href="nmo-properties.html#nmo-status" title="nmo:status">nmo:status</a>, <a class="link" href="nmo-properties.html#nmo-isRecent" title="nmo:isRecent">nmo:isRecent</a>, <a class="link" href="nmo-properties.html#nmo-isFlagged" title="nmo:isFlagged">nmo:isFlagged</a>, <a class="link" href="nmo-properties.html#nmo-hasContent" title="nmo:hasContent">nmo:hasContent</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-PermanentChannel"></a><h3>nmo:PermanentChannel</h3>
+<p>Well-known stable channel like an IRC room in a specific server. Predefined URL schema for the instances is recommended</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-CommunicationChannel" title="nmo:CommunicationChannel">nmo:CommunicationChannel</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-Attachment"></a><h3>nmo:Attachment</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Attachment" title="nfo:Attachment">nfo:Attachment</a>, <a class="link" href="nmo-classes.html#nmo-MimePart" title="nmo:MimePart">nmo:MimePart</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-MMSMessage"></a><h3>nmo:MMSMessage</h3>
+<p>An MMS message is basically a Email with different envelop. It inherits also from SMS the folders and delivery status</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-PhoneMessage" title="nmo:PhoneMessage">nmo:PhoneMessage</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-mmsHasContent" title="nmo:mmsHasContent">nmo:mmsHasContent</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-MimePart"></a><h3>nmo:MimePart</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-EmbeddedFileDataObject" title="nfo:EmbeddedFileDataObject">nfo:EmbeddedFileDataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-Attachment" title="nmo:Attachment">nmo:Attachment</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-mimeHeader" title="nmo:mimeHeader">nmo:mimeHeader</a>, <a class="link" href="nmo-properties.html#nmo-contentDisposition" title="nmo:contentDisposition">nmo:contentDisposition</a>, <a class="link" href="nmo-properties.html#nmo-contentDescription" title="nmo:contentDescription">nmo:contentDescription</a>, <a class="link" href="nmo-properties.html#nmo-contentTransferEncoding" title="nmo:contentTransferEncoding">nmo:contentTransferEncoding</a>, <a class="link" href="nmo-properties.html#nmo-contentId" title="nmo:contentId">nmo:contentId</a>, <a class="link" href="nmo-properties.html#nmo-charSet" title="nmo:charSet">nmo:charSet</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-mmsHasContent" title="nmo:mmsHasContent">nmo:mmsHasContent</a>, <a class="link" href="nmo-properties.html#nmo-hasContent" title="nmo:hasContent">nmo:hasContent</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-VOIPCall"></a><h3>nmo:VOIPCall</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-Call" title="nmo:Call">nmo:Call</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-Call"></a><h3>nmo:Call</h3>
+<p>Phone call. Voice communication with the user with somebody else.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-Message" title="nmo:Message">nmo:Message</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-VOIPCall" title="nmo:VOIPCall">nmo:VOIPCall</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-duration" title="nmo:duration">nmo:duration</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-MessageHeader"></a><h3>nmo:MessageHeader</h3>
+<p>Pairs key=value to store arbitrary message header. Note that if a property exists already in the ontology for those headers it should be used. This is just a safe guard mechanism.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-headerValue" title="nmo:headerValue">nmo:headerValue</a>, <a class="link" href="nmo-properties.html#nmo-headerName" title="nmo:headerName">nmo:headerName</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-messageHeader" title="nmo:messageHeader">nmo:messageHeader</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-Multipart"></a><h3>nmo:Multipart</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-DataContainer" title="nfo:DataContainer">nfo:DataContainer</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-partBoundary" title="nmo:partBoundary">nmo:partBoundary</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-Message"></a><h3>nmo:Message</h3>
+<p>A message. Could be an email, instant messanging message, SMS message etc.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-TextDocument" title="nfo:TextDocument">nfo:TextDocument</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-PhoneMessage" title="nmo:PhoneMessage">nmo:PhoneMessage</a>, <a class="link" href="nmo-classes.html#nmo-Call" title="nmo:Call">nmo:Call</a>, <a class="link" href="nmo-classes.html#nmo-IMMessage" title="nmo:IMMessage">nmo:IMMessage</a>, <a class="link" href="nmo-classes.html#nmo-Email" title="nmo:Email">nmo:Email</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-mmsId" title="nmo:mmsId">nmo:mmsId</a>, <a class="link" href="nmo-properties.html#nmo-mustAnswerReportRead" title="nmo:mustAnswerReportRead">nmo:mustAnswerReportRead</a>, <a class="link" href="nmo-properties.html#nmo-reportReadStatus" title="nmo:reportReadStatus">nmo:reportReadStatus</a>, <a class="link" href="nmo-properties.html#nmo-sentWithReportRead" title="nmo:sentWithReportRead">nmo:sentWithReportRead</a>, <a class="link" href="nmo-properties.html#nmo-reportDelivery" title="nmo:reportDelivery">nmo:reportDelivery</a>, <a class="link" href="nmo-properties.html#nmo-deliveryStatus" title="nmo:deliveryStatus">nmo:deliveryStatus</a>, <a class="link" href="nmo-properties.html#nmo-hasAttachment" title="nmo:hasAttachment">nmo:hasAttachment</a>, <a class="link" href="nmo-properties.html#nmo-communicationChannel" title="nmo:communicationChannel">nmo:communicationChannel</a>, <a class="link" href="nmo-properties.html#nmo-conversation" title="nmo:conversation">nmo:conversation</a>, <a class="link" href="nmo-properties.html#nmo-cc" title="nmo:cc">nmo:cc</a>, <a class="link" href="nmo-properties.html#nmo-bcc" title="nmo:bcc">nmo:bcc</a>, <a class="link" href="nmo-properties.html#nmo-to" title="nmo:to">nmo:to</a>, <a class="link" href="nmo-properties.html#nmo-sender" title="nmo:sender">nmo:sender</a>, <a class="link" href="nmo-properties.html#nmo-replyTo" title="nmo:replyTo">nmo:replyTo</a>, <a class="link" href="nmo-properties.html#nmo-receivedDate" title="nmo:receivedDate">nmo:receivedDate</a>, <a class="link" href="nmo-properties.html#nmo-messageSubject" title="nmo:messageSubject">nmo:messageSubject</a>, <a class="link" href="nmo-properties.html#nmo-messageId" title="nmo:messageId">nmo:messageId</a>, <a class="link" href="nmo-properties.html#nmo-messageHeader" title="nmo:messageHeader">nmo:messageHeader</a>, <a class="link" href="nmo-properties.html#nmo-inReplyTo" title="nmo:inReplyTo">nmo:inReplyTo</a>, <a class="link" href="nmo-properties.html#nmo-references" title="nmo:references">nmo:references</a>, <a class="link" href="nmo-properties.html#nmo-htmlMessageContent" title="nmo:htmlMessageContent">nmo:htmlMessageContent</a>, <a class="link" href="nmo-properties.html#nmo-isEmergency" title="nmo:isEmergency">nmo:isEmergency</a>, <a class="link" href="nmo-properties.html#nmo-isSent" title="nmo:isSent">nmo:isSent</a>, <a class="link" href="nmo-properties.html#nmo-isRead" title="nmo:isRead">nmo:isRead</a>, <a class="link" href="nmo-properties.html#nmo-isDraft" title="nmo:isDraft">nmo:isDraft</a>, <a class="link" href="nmo-properties.html#nmo-isDeleted" title="nmo:isDeleted">nmo:isDeleted</a>, <a class="link" href="nmo-properties.html#nmo-isAnswered" title="nmo:isAnswered">nmo:isAnswered</a>, <a class="link" href="nmo-properties.html#nmo-from" title="nmo:from">nmo:from</a>, <a class="link" href="nmo-properties.html#nmo-recipient" title="nmo:recipient">nmo:recipient</a>, <a class="link" href="nmo-properties.html#nmo-sentDate" title="nmo:sentDate">nmo:sentDate</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-inReplyTo" title="nmo:inReplyTo">nmo:inReplyTo</a>, <a class="link" href="nmo-properties.html#nmo-references" title="nmo:references">nmo:references</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-MailAccount"></a><h3>nmo:MailAccount</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-signature" title="nmo:signature">nmo:signature</a>, <a class="link" href="nmo-properties.html#nmo-fromAddress" title="nmo:fromAddress">nmo:fromAddress</a>, <a class="link" href="nmo-properties.html#nmo-accountDisplayName" title="nmo:accountDisplayName">nmo:accountDisplayName</a>, <a class="link" href="nmo-properties.html#nmo-accountName" title="nmo:accountName">nmo:accountName</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-TransientChannel"></a><h3>nmo:TransientChannel</h3>
+<p>Channel created ad-hoc for the communication like a multi chat in some systems</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-CommunicationChannel" title="nmo:CommunicationChannel">nmo:CommunicationChannel</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-Conversation"></a><h3>nmo:Conversation</h3>
+<p>A conversation. An exchange of one or multiple messages within a time frame or about a specific topic.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-conversation" title="nmo:conversation">nmo:conversation</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-CommunicationChannel"></a><h3>nmo:CommunicationChannel</h3>
+<p>A communication channel. The container for all messages between participants of a specific group or in a persistent channel.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-TransientChannel" title="nmo:TransientChannel">nmo:TransientChannel</a>, <a class="link" href="nmo-classes.html#nmo-PermanentChannel" title="nmo:PermanentChannel">nmo:PermanentChannel</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-hasParticipant" title="nmo:hasParticipant">nmo:hasParticipant</a>, <a class="link" href="nmo-properties.html#nmo-lastSuccessfulMessageDate" title="nmo:lastSuccessfulMessageDate">nmo:lastSuccessfulMessageDate</a>, <a class="link" href="nmo-properties.html#nmo-lastMessageDate" title="nmo:lastMessageDate">nmo:lastMessageDate</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-communicationChannel" title="nmo:communicationChannel">nmo:communicationChannel</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-PhoneMessageFolder"></a><h3>nmo:PhoneMessageFolder</h3>
+<p>Folder for phone message (SMS and MMS). Not a subclass of nfo:Folder because it would confuse filesystem folders</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-containsPhoneMessage" title="nmo:containsPhoneMessage">nmo:containsPhoneMessage</a>, <a class="link" href="nmo-properties.html#nmo-containsPhoneMessageFolder" title="nmo:containsPhoneMessageFolder">nmo:containsPhoneMessageFolder</a>, <a class="link" href="nmo-properties.html#nmo-phoneMessageFolderId" title="nmo:phoneMessageFolderId">nmo:phoneMessageFolderId</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-containsPhoneMessageFolder" title="nmo:containsPhoneMessageFolder">nmo:containsPhoneMessageFolder</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nmo:predefined-phone-msg-folder-myfolder, nmo:predefined-phone-msg-folder-sent, nmo:predefined-phone-msg-folder-draft, nmo:predefined-phone-msg-folder-outbox, nmo:predefined-phone-msg-folder-inbox, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-MailboxDataObject"></a><h3>nmo:MailboxDataObject</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-DataObject" title="nie:DataObject">nie:DataObject</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-SMSMessage"></a><h3>nmo:SMSMessage</h3>
+<p>Plain SMS Message</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-PhoneMessage" title="nmo:PhoneMessage">nmo:PhoneMessage</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-PhoneMessage"></a><h3>nmo:PhoneMessage</h3>
+<p>Superclass with shared properties between SMS and MMS.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-Message" title="nmo:Message">nmo:Message</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-classes.html#nmo-MMSMessage" title="nmo:MMSMessage">nmo:MMSMessage</a>, <a class="link" href="nmo-classes.html#nmo-SMSMessage" title="nmo:SMSMessage">nmo:SMSMessage</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-validityPeriod" title="nmo:validityPeriod">nmo:validityPeriod</a>, <a class="link" href="nmo-properties.html#nmo-phoneMessageId" title="nmo:phoneMessageId">nmo:phoneMessageId</a>, <a class="link" href="nmo-properties.html#nmo-encoding" title="nmo:encoding">nmo:encoding</a>, <a class="link" href="nmo-properties.html#nmo-fromVCard" title="nmo:fromVCard">nmo:fromVCard</a>, <a class="link" href="nmo-properties.html#nmo-toVCard" title="nmo:toVCard">nmo:toVCard</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-containsPhoneMessage" title="nmo:containsPhoneMessage">nmo:containsPhoneMessage</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-ReportReadStatus"></a><h3>nmo:ReportReadStatus</h3>
+<p>Predefined set of read status instances</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-reportReadStatus" title="nmo:reportReadStatus">nmo:reportReadStatus</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nmo:read-status-unknown, nmo:read-status-deleted, nmo:read-status-read, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-MailFolder"></a><h3>nmo:MailFolder</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Folder" title="nfo:Folder">nfo:Folder</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-serverUnreadCount" title="nmo:serverUnreadCount">nmo:serverUnreadCount</a>, <a class="link" href="nmo-properties.html#nmo-serverCount" title="nmo:serverCount">nmo:serverCount</a>, <a class="link" href="nmo-properties.html#nmo-folderName" title="nmo:folderName">nmo:folderName</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmo-DeliveryStatus"></a><h3>nmo:DeliveryStatus</h3>
+<p>Predefined set of delivery status instances</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmo-properties.html#nmo-deliveryStatus" title="nmo:deliveryStatus">nmo:deliveryStatus</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nmo:delivery-status-permanently-failed, nmo:delivery-status-temporarily-failed-offline, nmo:delivery-status-temporarily-failed, nmo:delivery-status-delivered, nmo:delivery-status-sent, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

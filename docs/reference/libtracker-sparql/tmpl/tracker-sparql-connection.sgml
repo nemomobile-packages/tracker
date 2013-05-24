@@ -1,0 +1,302 @@
+<!-- ##### SECTION Title ##### -->
+TrackerSparqlConnection
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### ENUM TrackerSparqlError ##### -->
+<para>
+
+</para>
+
+@TRACKER_SPARQL_ERROR_PARSE: 
+@TRACKER_SPARQL_ERROR_UNKNOWN_CLASS: 
+@TRACKER_SPARQL_ERROR_UNKNOWN_PROPERTY: 
+@TRACKER_SPARQL_ERROR_TYPE: 
+@TRACKER_SPARQL_ERROR_CONSTRAINT: 
+@TRACKER_SPARQL_ERROR_NO_SPACE: 
+@TRACKER_SPARQL_ERROR_INTERNAL: 
+@TRACKER_SPARQL_ERROR_UNSUPPORTED: 
+
+<!-- ##### STRUCT TrackerSparqlConnection ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_get ##### -->
+<para>
+
+</para>
+
+@cancellable: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_get_async ##### -->
+<para>
+
+</para>
+
+@cancellable: 
+@_callback_: 
+@_user_data_: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_get_finish ##### -->
+<para>
+
+</para>
+
+@_res_: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_get_direct ##### -->
+<para>
+
+</para>
+
+@cancellable: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_get_direct_async ##### -->
+<para>
+
+</para>
+
+@cancellable: 
+@_callback_: 
+@_user_data_: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_get_direct_finish ##### -->
+<para>
+
+</para>
+
+@_res_: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_query ##### -->
+<para>
+
+</para>
+
+@self: 
+@sparql: 
+@cancellable: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_query_async ##### -->
+<para>
+
+</para>
+
+@self: 
+@sparql: 
+@cancellable: 
+@_callback_: 
+@_user_data_: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_query_finish ##### -->
+<para>
+
+</para>
+
+@self: 
+@_res_: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_update ##### -->
+<para>
+
+</para>
+
+@self: 
+@sparql: 
+@priority: 
+@cancellable: 
+@error: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_update_async ##### -->
+<para>
+
+</para>
+
+@self: 
+@sparql: 
+@priority: 
+@cancellable: 
+@_callback_: 
+@_user_data_: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_update_finish ##### -->
+<para>
+
+</para>
+
+@self: 
+@_res_: 
+@error: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_update_array_async ##### -->
+<para>
+
+</para>
+
+@self: 
+@sparql: 
+@sparql_length1: 
+@priority: 
+@cancellable: 
+@_callback_: 
+@_user_data_: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_update_array_finish ##### -->
+<para>
+
+</para>
+
+@self: 
+@_res_: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_update_blank ##### -->
+<para>
+
+</para>
+
+@self: 
+@sparql: 
+@priority: 
+@cancellable: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_update_blank_async ##### -->
+<para>
+
+</para>
+
+@self: 
+@sparql: 
+@priority: 
+@cancellable: 
+@_callback_: 
+@_user_data_: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_update_blank_finish ##### -->
+<para>
+
+</para>
+
+@self: 
+@_res_: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_load ##### -->
+<para>
+
+</para>
+
+@self: 
+@file: 
+@cancellable: 
+@error: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_load_async ##### -->
+<para>
+
+</para>
+
+@self: 
+@file: 
+@cancellable: 
+@_callback_: 
+@_user_data_: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_load_finish ##### -->
+<para>
+
+</para>
+
+@self: 
+@_res_: 
+@error: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_statistics ##### -->
+<para>
+
+</para>
+
+@self: 
+@cancellable: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_statistics_async ##### -->
+<para>
+
+</para>
+
+@self: 
+@cancellable: 
+@_callback_: 
+@_user_data_: 
+
+
+<!-- ##### FUNCTION tracker_sparql_connection_statistics_finish ##### -->
+<para>
+
+</para>
+
+@self: 
+@_res_: 
+@error: 
+@Returns: 
+
+

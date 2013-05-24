@@ -1,0 +1,146 @@
+<!-- ##### SECTION Title ##### -->
+tracker-xmp
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT TrackerXmpData ##### -->
+<para>
+
+</para>
+
+@title: 
+@rights: 
+@creator: 
+@description: 
+@date: 
+@keywords: 
+@subject: 
+@publisher: 
+@contributor: 
+@type: 
+@format: 
+@identifier: 
+@source: 
+@language: 
+@relation: 
+@coverage: 
+@license: 
+@pdf_title: 
+@pdf_keywords: 
+@title2: 
+@time_original: 
+@artist: 
+@make: 
+@model: 
+@orientation: 
+@flash: 
+@metering_mode: 
+@exposure_time: 
+@fnumber: 
+@focal_length: 
+@iso_speed_ratings: 
+@white_balance: 
+@copyright: 
+@rating: 
+@address: 
+@country: 
+@state: 
+@city: 
+@gps_altitude: 
+@gps_altitude_ref: 
+@gps_latitude: 
+@gps_longitude: 
+@gps_direction: 
+@regions: 
+
+<!-- ##### STRUCT TrackerXmpRegion ##### -->
+<para>
+
+</para>
+
+@title: 
+@description: 
+@type: 
+@x: 
+@y: 
+@width: 
+@height: 
+@link_class: 
+@link_uri: 
+
+<!-- ##### FUNCTION tracker_xmp_new ##### -->
+<para>
+
+</para>
+
+@buffer: 
+@len: 
+@uri: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_xmp_free ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION tracker_xmp_read ##### -->
+<para>
+
+</para>
+
+@buffer: 
+@len: 
+@uri: 
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_xmp_apply ##### -->
+<para>
+
+</para>
+
+@preupdate: 
+@metadata: 
+@graph: 
+@where: 
+@uri: 
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION tracker_xmp_apply_regions ##### -->
+<para>
+
+</para>
+
+@preupdate: 
+@metadata: 
+@graph: 
+@data: 
+@Returns: 
+
+

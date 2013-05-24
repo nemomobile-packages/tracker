@@ -1,0 +1,18 @@
+[Applet Factory]
+Id=SearchBarFactory
+Location=/usr/libexec/tracker-search-bar
+Name=Search Bar
+Name[et]=Otsiriba
+Name[nds]=Sökbalken
+Name[pt]=Barra de Procura
+Description=Find your data quickly using Tracker
+
+[SearchBar]
+Name=Tracker Search Bar
+Description=Find your data quickly using Tracker
+Icon=system-search
+BonoboId=OAFIID:GNOME_SearchBar
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=tracker
+X-GNOME-Bugzilla-Component=Applet / Search Bar
+X-GNOME-Bugzilla-Version=0.14.4

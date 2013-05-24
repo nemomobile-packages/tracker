@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="Tracker Miner Library Reference Manual" link="index.html" author="" name="libtracker-miner" version="2" language="c">
+  <chapters>
+    <sub name="Overview" link="tracker-overview.html">
+      <sub name="Compiling applications" link="tracker-overview-compiling.html"/>
+    </sub>
+    <sub name="Reference" link="libtracker-miner-reference.html">
+      <sub name="Base abstract miner classes" link="ch02.html">
+        <sub name="TrackerMiner" link="TrackerMiner.html"/>
+        <sub name="TrackerMinerWeb" link="libtracker-miner-TrackerMinerWeb.html"/>
+      </sub>
+      <sub name="Miner classes for file system" link="ch03.html">
+        <sub name="TrackerMinerFS" link="TrackerMinerFS.html"/>
+        <sub name="TrackerIndexingTree" link="TrackerIndexingTree.html"/>
+      </sub>
+      <sub name="Managing miners" link="ch04.html">
+        <sub name="TrackerMinerManager" link="TrackerMinerManager.html"/>
+      </sub>
+      <sub name="Base abstract providers for network/password/etc control" link="ch05.html">
+        <sub name="TrackerNetworkProvider" link="libtracker-miner-TrackerNetworkProvider.html"/>
+        <sub name="TrackerPasswordProvider" link="libtracker-miner-TrackerPasswordProvider.html"/>
+      </sub>
+      <sub name="Utilities" link="ch06.html">
+        <sub name="Enumerations" link="libtracker-miner-Enumerations.html"/>
+        <sub name="TrackerStorage" link="libtracker-miner-TrackerStorage.html"/>
+        <sub name="Media art management" link="libtracker-miner-Media-art-management.html"/>
+        <sub name="Thumbnailer management" link="libtracker-miner-Thumbnailer-management.html"/>
+      </sub>
+    </sub>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <keyword type="macro" name="TRACKER_MINER_ERROR" link="TrackerMiner.html#TRACKER-MINER-ERROR:CAPS"/>
+    <keyword type="macro" name="TRACKER_MINER_ERROR_DOMAIN" link="TrackerMiner.html#TRACKER-MINER-ERROR-DOMAIN:CAPS"/>
+    <keyword type="struct" name="struct TrackerMiner" link="TrackerMiner.html#TrackerMiner-struct"/>
+    <keyword type="struct" name="TrackerMinerClass" link="TrackerMiner.html#TrackerMinerClass"/>
+    <keyword type="function" name="tracker_miner_error_quark ()" link="TrackerMiner.html#tracker-miner-error-quark" since="0.8"/>
+    <keyword type="function" name="tracker_miner_get_connection ()" link="TrackerMiner.html#tracker-miner-get-connection" since="0.10"/>
+    <keyword type="function" name="tracker_miner_get_dbus_connection ()" link="TrackerMiner.html#tracker-miner-get-dbus-connection" since="0.10"/>
+    <keyword type="function" name="tracker_miner_get_dbus_full_name ()" link="TrackerMiner.html#tracker-miner-get-dbus-full-name" since="0.10"/>
+    <keyword type="function" name="tracker_miner_get_dbus_full_path ()" link="TrackerMiner.html#tracker-miner-get-dbus-full-path" since="0.10"/>
+    <keyword type="function" name="tracker_miner_get_n_pause_reasons ()" link="TrackerMiner.html#tracker-miner-get-n-pause-reasons" since="0.10.5"/>
+    <keyword type="function" name="tracker_miner_ignore_next_update ()" link="TrackerMiner.html#tracker-miner-ignore-next-update" since="0.8"/>
+    <keyword type="function" name="tracker_miner_is_paused ()" link="TrackerMiner.html#tracker-miner-is-paused" since="0.10"/>
+    <keyword type="function" name="tracker_miner_is_started ()" link="TrackerMiner.html#tracker-miner-is-started" since="0.8"/>
+    <keyword type="function" name="tracker_miner_pause ()" link="TrackerMiner.html#tracker-miner-pause" since="0.8"/>
+    <keyword type="function" name="tracker_miner_resume ()" link="TrackerMiner.html#tracker-miner-resume" since="0.8"/>
+    <keyword type="function" name="tracker_miner_start ()" link="TrackerMiner.html#tracker-miner-start" since="0.8"/>
+    <keyword type="function" name="tracker_miner_stop ()" link="TrackerMiner.html#tracker-miner-stop" since="0.8"/>
+    <keyword type="property" name="The &quot;name&quot; property" link="TrackerMiner.html#TrackerMiner--name"/>
+    <keyword type="property" name="The &quot;progress&quot; property" link="TrackerMiner.html#TrackerMiner--progress"/>
+    <keyword type="property" name="The &quot;remaining-time&quot; property" link="TrackerMiner.html#TrackerMiner--remaining-time"/>
+    <keyword type="property" name="The &quot;status&quot; property" link="TrackerMiner.html#TrackerMiner--status"/>
+    <keyword type="signal" name="The &quot;ignore-next-update&quot; signal" link="TrackerMiner.html#TrackerMiner-ignore-next-update"/>
+    <keyword type="signal" name="The &quot;paused&quot; signal" link="TrackerMiner.html#TrackerMiner-paused"/>
+    <keyword type="signal" name="The &quot;progress&quot; signal" link="TrackerMiner.html#TrackerMiner-progress"/>
+    <keyword type="signal" name="The &quot;resumed&quot; signal" link="TrackerMiner.html#TrackerMiner-resumed"/>
+    <keyword type="signal" name="The &quot;started&quot; signal" link="TrackerMiner.html#TrackerMiner-started"/>
+    <keyword type="signal" name="The &quot;stopped&quot; signal" link="TrackerMiner.html#TrackerMiner-stopped"/>
+    <keyword type="macro" name="TRACKER_MINER_WEB_DBUS_INTERFACE" link="libtracker-miner-TrackerMinerWeb.html#TRACKER-MINER-WEB-DBUS-INTERFACE:CAPS"/>
+    <keyword type="macro" name="TRACKER_MINER_WEB_ERROR" link="libtracker-miner-TrackerMinerWeb.html#TRACKER-MINER-WEB-ERROR:CAPS"/>
+    <keyword type="macro" name="TRACKER_MINER_WEB_ERROR_DOMAIN" link="libtracker-miner-TrackerMinerWeb.html#TRACKER-MINER-WEB-ERROR-DOMAIN:CAPS"/>
+    <keyword type="typedef" name="TrackerMinerWeb" link="libtracker-miner-TrackerMinerWeb.html#TrackerMinerWeb"/>
+    <keyword type="struct" name="TrackerMinerWebClass" link="libtracker-miner-TrackerMinerWeb.html#TrackerMinerWebClass" since="0.8."/>
+    <keyword type="enum" name="enum TrackerMinerWebError" link="libtracker-miner-TrackerMinerWeb.html#TrackerMinerWebError" since="0.8"/>
+    <keyword type="function" name="tracker_miner_web_associate ()" link="libtracker-miner-TrackerMinerWeb.html#tracker-miner-web-associate" since="0.8"/>
+    <keyword type="function" name="tracker_miner_web_authenticate ()" link="libtracker-miner-TrackerMinerWeb.html#tracker-miner-web-authenticate" since="0.8"/>
+    <keyword type="function" name="tracker_miner_web_dissociate ()" link="libtracker-miner-TrackerMinerWeb.html#tracker-miner-web-dissociate" since="0.8"/>
+    <keyword type="function" name="tracker_miner_web_error_quark ()" link="libtracker-miner-TrackerMinerWeb.html#tracker-miner-web-error-quark" since="0.8"/>
+    <keyword type="function" name="tracker_miner_web_get_association_data ()" link="libtracker-miner-TrackerMinerWeb.html#tracker-miner-web-get-association-data" since="0.8"/>
+    <keyword type="struct" name="struct TrackerMinerFS" link="TrackerMinerFS.html#TrackerMinerFS-struct"/>
+    <keyword type="struct" name="TrackerMinerFSClass" link="TrackerMinerFS.html#TrackerMinerFSClass"/>
+    <keyword type="function" name="tracker_miner_fs_add_directory_without_parent ()" link="TrackerMinerFS.html#tracker-miner-fs-add-directory-without-parent" since="0.10"/>
+    <keyword type="function" name="tracker_miner_fs_check_directory ()" link="TrackerMinerFS.html#tracker-miner-fs-check-directory" since="0.10"/>
+    <keyword type="function" name="tracker_miner_fs_check_directory_with_priority ()" link="TrackerMinerFS.html#tracker-miner-fs-check-directory-with-priority" since="0.10"/>
+    <keyword type="function" name="tracker_miner_fs_check_file ()" link="TrackerMinerFS.html#tracker-miner-fs-check-file" since="0.10"/>
+    <keyword type="function" name="tracker_miner_fs_check_file_with_priority ()" link="TrackerMinerFS.html#tracker-miner-fs-check-file-with-priority" since="0.10"/>
+    <keyword type="function" name="tracker_miner_fs_directory_add ()" link="TrackerMinerFS.html#tracker-miner-fs-directory-add" since="0.8"/>
+    <keyword type="function" name="tracker_miner_fs_directory_remove ()" link="TrackerMinerFS.html#tracker-miner-fs-directory-remove" since="0.8"/>
+    <keyword type="function" name="tracker_miner_fs_directory_remove_full ()" link="TrackerMinerFS.html#tracker-miner-fs-directory-remove-full" since="0.10"/>
+    <keyword type="function" name="tracker_miner_fs_file_notify ()" link="TrackerMinerFS.html#tracker-miner-fs-file-notify" since="0.8"/>
+    <keyword type="function" name="tracker_miner_fs_force_mtime_checking ()" link="TrackerMinerFS.html#tracker-miner-fs-force-mtime-checking" since="0.12"/>
+    <keyword type="function" name="tracker_miner_fs_force_recheck ()" link="TrackerMinerFS.html#tracker-miner-fs-force-recheck"/>
+    <keyword type="function" name="tracker_miner_fs_get_indexing_tree ()" link="TrackerMinerFS.html#tracker-miner-fs-get-indexing-tree"/>
+    <keyword type="function" name="tracker_miner_fs_get_initial_crawling ()" link="TrackerMinerFS.html#tracker-miner-fs-get-initial-crawling"/>
+    <keyword type="function" name="tracker_miner_fs_get_mtime_checking ()" link="TrackerMinerFS.html#tracker-miner-fs-get-mtime-checking" since="0.10"/>
+    <keyword type="function" name="tracker_miner_fs_get_parent_urn ()" link="TrackerMinerFS.html#tracker-miner-fs-get-parent-urn" since="0.8"/>
+    <keyword type="function" name="tracker_miner_fs_get_throttle ()" link="TrackerMinerFS.html#tracker-miner-fs-get-throttle" since="0.8"/>
+    <keyword type="function" name="tracker_miner_fs_get_urn ()" link="TrackerMinerFS.html#tracker-miner-fs-get-urn" since="0.8"/>
+    <keyword type="function" name="tracker_miner_fs_has_items_to_process ()" link="TrackerMinerFS.html#tracker-miner-fs-has-items-to-process" since="0.10"/>
+    <keyword type="function" name="tracker_miner_fs_query_urn ()" link="TrackerMinerFS.html#tracker-miner-fs-query-urn" since="0.10"/>
+    <keyword type="function" name="tracker_miner_fs_set_initial_crawling ()" link="TrackerMinerFS.html#tracker-miner-fs-set-initial-crawling"/>
+    <keyword type="function" name="tracker_miner_fs_set_mtime_checking ()" link="TrackerMinerFS.html#tracker-miner-fs-set-mtime-checking" since="0.10"/>
+    <keyword type="function" name="tracker_miner_fs_set_throttle ()" link="TrackerMinerFS.html#tracker-miner-fs-set-throttle" since="0.8"/>
+    <keyword type="function" name="tracker_miner_fs_writeback_file ()" link="TrackerMinerFS.html#tracker-miner-fs-writeback-file" since="0.10.20"/>
+    <keyword type="function" name="tracker_miner_fs_writeback_notify ()" link="TrackerMinerFS.html#tracker-miner-fs-writeback-notify" since="0.10.20"/>
+    <keyword type="property" name="The &quot;initial-crawling&quot; property" link="TrackerMinerFS.html#TrackerMinerFS--initial-crawling"/>
+    <keyword type="property" name="The &quot;mtime-checking&quot; property" link="TrackerMinerFS.html#TrackerMinerFS--mtime-checking"/>
+    <keyword type="property" name="The &quot;processing-pool-ready-limit&quot; property" link="TrackerMinerFS.html#TrackerMinerFS--processing-pool-ready-limit"/>
+    <keyword type="property" name="The &quot;processing-pool-wait-limit&quot; property" link="TrackerMinerFS.html#TrackerMinerFS--processing-pool-wait-limit"/>
+    <keyword type="property" name="The &quot;throttle&quot; property" link="TrackerMinerFS.html#TrackerMinerFS--throttle"/>
+    <keyword type="signal" name="The &quot;finished&quot; signal" link="TrackerMinerFS.html#TrackerMinerFS-finished"/>
+    <keyword type="signal" name="The &quot;ignore-next-update-file&quot; signal" link="TrackerMinerFS.html#TrackerMinerFS-ignore-next-update-file"/>
+    <keyword type="signal" name="The &quot;process-file&quot; signal" link="TrackerMinerFS.html#TrackerMinerFS-process-file"/>
+    <keyword type="signal" name="The &quot;process-file-attributes&quot; signal" link="TrackerMinerFS.html#TrackerMinerFS-process-file-attributes"/>
+    <keyword type="signal" name="The &quot;writeback-file&quot; signal" link="TrackerMinerFS.html#TrackerMinerFS-writeback-file"/>
+    <keyword type="struct" name="struct TrackerIndexingTree" link="TrackerIndexingTree.html#TrackerIndexingTree-struct"/>
+    <keyword type="struct" name="TrackerIndexingTreeClass" link="TrackerIndexingTree.html#TrackerIndexingTreeClass"/>
+    <keyword type="function" name="tracker_indexing_tree_add ()" link="TrackerIndexingTree.html#tracker-indexing-tree-add"/>
+    <keyword type="function" name="tracker_indexing_tree_add_filter ()" link="TrackerIndexingTree.html#tracker-indexing-tree-add-filter"/>
+    <keyword type="function" name="tracker_indexing_tree_clear_filters ()" link="TrackerIndexingTree.html#tracker-indexing-tree-clear-filters"/>
+    <keyword type="function" name="tracker_indexing_tree_file_is_indexable ()" link="TrackerIndexingTree.html#tracker-indexing-tree-file-is-indexable"/>
+    <keyword type="function" name="tracker_indexing_tree_file_is_root ()" link="TrackerIndexingTree.html#tracker-indexing-tree-file-is-root"/>
+    <keyword type="function" name="tracker_indexing_tree_file_matches_filter ()" link="TrackerIndexingTree.html#tracker-indexing-tree-file-matches-filter"/>
+    <keyword type="function" name="tracker_indexing_tree_get_default_policy ()" link="TrackerIndexingTree.html#tracker-indexing-tree-get-default-policy"/>
+    <keyword type="function" name="tracker_indexing_tree_get_filter_hidden ()" link="TrackerIndexingTree.html#tracker-indexing-tree-get-filter-hidden"/>
+    <keyword type="function" name="tracker_indexing_tree_get_root ()" link="TrackerIndexingTree.html#tracker-indexing-tree-get-root"/>
+    <keyword type="function" name="tracker_indexing_tree_list_roots ()" link="TrackerIndexingTree.html#tracker-indexing-tree-list-roots"/>
+    <keyword type="function" name="tracker_indexing_tree_new ()" link="TrackerIndexingTree.html#tracker-indexing-tree-new"/>
+    <keyword type="function" name="tracker_indexing_tree_parent_is_indexable ()" link="TrackerIndexingTree.html#tracker-indexing-tree-parent-is-indexable"/>
+    <keyword type="function" name="tracker_indexing_tree_remove ()" link="TrackerIndexingTree.html#tracker-indexing-tree-remove"/>
+    <keyword type="function" name="tracker_indexing_tree_set_default_policy ()" link="TrackerIndexingTree.html#tracker-indexing-tree-set-default-policy"/>
+    <keyword type="function" name="tracker_indexing_tree_set_filter_hidden ()" link="TrackerIndexingTree.html#tracker-indexing-tree-set-filter-hidden"/>
+    <keyword type="property" name="The &quot;filter-hidden&quot; property" link="TrackerIndexingTree.html#TrackerIndexingTree--filter-hidden"/>
+    <keyword type="signal" name="The &quot;directory-added&quot; signal" link="TrackerIndexingTree.html#TrackerIndexingTree-directory-added"/>
+    <keyword type="signal" name="The &quot;directory-removed&quot; signal" link="TrackerIndexingTree.html#TrackerIndexingTree-directory-removed"/>
+    <keyword type="signal" name="The &quot;directory-updated&quot; signal" link="TrackerIndexingTree.html#TrackerIndexingTree-directory-updated"/>
+    <keyword type="macro" name="TRACKER_MINER_MANAGER_ERROR" link="TrackerMinerManager.html#TRACKER-MINER-MANAGER-ERROR:CAPS"/>
+    <keyword type="struct" name="struct TrackerMinerManager" link="TrackerMinerManager.html#TrackerMinerManager-struct"/>
+    <keyword type="struct" name="TrackerMinerManagerClass" link="TrackerMinerManager.html#TrackerMinerManagerClass"/>
+    <keyword type="enum" name="enum TrackerMinerManagerError" link="TrackerMinerManager.html#TrackerMinerManagerError" since="0.8"/>
+    <keyword type="function" name="tracker_miner_manager_error_quark ()" link="TrackerMinerManager.html#tracker-miner-manager-error-quark" since="0.8"/>
+    <keyword type="function" name="tracker_miner_manager_get_available ()" link="TrackerMinerManager.html#tracker-miner-manager-get-available" since="0.8"/>
+    <keyword type="function" name="tracker_miner_manager_get_description ()" link="TrackerMinerManager.html#tracker-miner-manager-get-description" since="0.8"/>
+    <keyword type="function" name="tracker_miner_manager_get_display_name ()" link="TrackerMinerManager.html#tracker-miner-manager-get-display-name" since="0.8"/>
+    <keyword type="function" name="tracker_miner_manager_get_running ()" link="TrackerMinerManager.html#tracker-miner-manager-get-running" since="0.8"/>
+    <keyword type="function" name="tracker_miner_manager_get_status ()" link="TrackerMinerManager.html#tracker-miner-manager-get-status" since="0.12"/>
+    <keyword type="function" name="tracker_miner_manager_ignore_next_update ()" link="TrackerMinerManager.html#tracker-miner-manager-ignore-next-update" deprecated="0.12" since="0.8"/>
+    <keyword type="function" name="tracker_miner_manager_index_file ()" link="TrackerMinerManager.html#tracker-miner-manager-index-file" since="0.10"/>
+    <keyword type="function" name="tracker_miner_manager_is_active ()" link="TrackerMinerManager.html#tracker-miner-manager-is-active" since="0.8"/>
+    <keyword type="function" name="tracker_miner_manager_is_paused ()" link="TrackerMinerManager.html#tracker-miner-manager-is-paused" since="0.8"/>
+    <keyword type="function" name="tracker_miner_manager_new ()" link="TrackerMinerManager.html#tracker-miner-manager-new" since="0.8"/>
+    <keyword type="function" name="tracker_miner_manager_new_full ()" link="TrackerMinerManager.html#tracker-miner-manager-new-full" since="0.10.5"/>
+    <keyword type="function" name="tracker_miner_manager_pause ()" link="TrackerMinerManager.html#tracker-miner-manager-pause" since="0.8"/>
+    <keyword type="function" name="tracker_miner_manager_pause_for_process ()" link="TrackerMinerManager.html#tracker-miner-manager-pause-for-process" since="0.10.15"/>
+    <keyword type="function" name="tracker_miner_manager_reindex_by_mimetype ()" link="TrackerMinerManager.html#tracker-miner-manager-reindex-by-mimetype" since="0.10"/>
+    <keyword type="function" name="tracker_miner_manager_resume ()" link="TrackerMinerManager.html#tracker-miner-manager-resume" since="0.8"/>
+    <keyword type="property" name="The &quot;auto-start&quot; property" link="TrackerMinerManager.html#TrackerMinerManager--auto-start"/>
+    <keyword type="signal" name="The &quot;miner-activated&quot; signal" link="TrackerMinerManager.html#TrackerMinerManager-miner-activated"/>
+    <keyword type="signal" name="The &quot;miner-deactivated&quot; signal" link="TrackerMinerManager.html#TrackerMinerManager-miner-deactivated"/>
+    <keyword type="signal" name="The &quot;miner-paused&quot; signal" link="TrackerMinerManager.html#TrackerMinerManager-miner-paused"/>
+    <keyword type="signal" name="The &quot;miner-progress&quot; signal" link="TrackerMinerManager.html#TrackerMinerManager-miner-progress"/>
+    <keyword type="signal" name="The &quot;miner-resumed&quot; signal" link="TrackerMinerManager.html#TrackerMinerManager-miner-resumed"/>
+    <keyword type="typedef" name="TrackerNetworkProvider" link="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProvider"/>
+    <keyword type="struct" name="TrackerNetworkProviderIface" link="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProviderIface" since="0.10"/>
+    <keyword type="enum" name="enum TrackerNetworkProviderStatus" link="libtracker-miner-TrackerNetworkProvider.html#TrackerNetworkProviderStatus" since="0.10"/>
+    <keyword type="function" name="tracker_network_provider_get ()" link="libtracker-miner-TrackerNetworkProvider.html#tracker-network-provider-get" since="0.10"/>
+    <keyword type="function" name="tracker_network_provider_get_name ()" link="libtracker-miner-TrackerNetworkProvider.html#tracker-network-provider-get-name" since="0.10"/>
+    <keyword type="function" name="tracker_network_provider_get_status ()" link="libtracker-miner-TrackerNetworkProvider.html#tracker-network-provider-get-status" since="0.10"/>
+    <keyword type="macro" name="TRACKER_PASSWORD_PROVIDER_ERROR" link="libtracker-miner-TrackerPasswordProvider.html#TRACKER-PASSWORD-PROVIDER-ERROR:CAPS"/>
+    <keyword type="macro" name="TRACKER_PASSWORD_PROVIDER_ERROR_DOMAIN" link="libtracker-miner-TrackerPasswordProvider.html#TRACKER-PASSWORD-PROVIDER-ERROR-DOMAIN:CAPS"/>
+    <keyword type="typedef" name="TrackerPasswordProvider" link="libtracker-miner-TrackerPasswordProvider.html#TrackerPasswordProvider"/>
+    <keyword type="enum" name="enum TrackerPasswordProviderError" link="libtracker-miner-TrackerPasswordProvider.html#TrackerPasswordProviderError" since="0.8"/>
+    <keyword type="struct" name="TrackerPasswordProviderIface" link="libtracker-miner-TrackerPasswordProvider.html#TrackerPasswordProviderIface" since="0.8"/>
+    <keyword type="function" name="tracker_password_provider_error_quark ()" link="libtracker-miner-TrackerPasswordProvider.html#tracker-password-provider-error-quark" since="0.8"/>
+    <keyword type="function" name="tracker_password_provider_forget_password ()" link="libtracker-miner-TrackerPasswordProvider.html#tracker-password-provider-forget-password" since="0.8"/>
+    <keyword type="function" name="tracker_password_provider_get ()" link="libtracker-miner-TrackerPasswordProvider.html#tracker-password-provider-get" since="0.8"/>
+    <keyword type="function" name="tracker_password_provider_get_name ()" link="libtracker-miner-TrackerPasswordProvider.html#tracker-password-provider-get-name" since="0.8"/>
+    <keyword type="function" name="tracker_password_provider_get_password ()" link="libtracker-miner-TrackerPasswordProvider.html#tracker-password-provider-get-password" since="0.8"/>
+    <keyword type="function" name="tracker_password_provider_lock_password ()" link="libtracker-miner-TrackerPasswordProvider.html#tracker-password-provider-lock-password" since="0.8"/>
+    <keyword type="function" name="tracker_password_provider_store_password ()" link="libtracker-miner-TrackerPasswordProvider.html#tracker-password-provider-store-password" since="0.8"/>
+    <keyword type="function" name="tracker_password_provider_unlock_password ()" link="libtracker-miner-TrackerPasswordProvider.html#tracker-password-provider-unlock-password" since="0.8"/>
+    <keyword type="enum" name="enum TrackerDirectoryFlags" link="libtracker-miner-Enumerations.html#TrackerDirectoryFlags"/>
+    <keyword type="enum" name="enum TrackerFilterPolicy" link="libtracker-miner-Enumerations.html#TrackerFilterPolicy"/>
+    <keyword type="enum" name="enum TrackerFilterType" link="libtracker-miner-Enumerations.html#TrackerFilterType"/>
+    <keyword type="struct" name="struct TrackerStorage" link="libtracker-miner-TrackerStorage.html#TrackerStorage"/>
+    <keyword type="struct" name="struct TrackerStorageClass" link="libtracker-miner-TrackerStorage.html#TrackerStorageClass"/>
+    <keyword type="enum" name="enum TrackerStorageType" link="libtracker-miner-TrackerStorage.html#TrackerStorageType" since="0.8"/>
+    <keyword type="function" name="tracker_storage_get_device_roots ()" link="libtracker-miner-TrackerStorage.html#tracker-storage-get-device-roots" since="0.8"/>
+    <keyword type="function" name="tracker_storage_get_device_uuids ()" link="libtracker-miner-TrackerStorage.html#tracker-storage-get-device-uuids" since="0.8"/>
+    <keyword type="function" name="tracker_storage_get_mount_point_for_uuid ()" link="libtracker-miner-TrackerStorage.html#tracker-storage-get-mount-point-for-uuid" since="0.8"/>
+    <keyword type="function" name="tracker_storage_get_type_for_uuid ()" link="libtracker-miner-TrackerStorage.html#tracker-storage-get-type-for-uuid" since="0.10"/>
+    <keyword type="function" name="tracker_storage_get_uuid_for_file ()" link="libtracker-miner-TrackerStorage.html#tracker-storage-get-uuid-for-file" since="0.8"/>
+    <keyword type="function" name="tracker_storage_new ()" link="libtracker-miner-TrackerStorage.html#tracker-storage-new" since="0.8"/>
+    <keyword type="function" name="tracker_media_art_execute_queue ()" link="libtracker-miner-Media-art-management.html#tracker-media-art-execute-queue"/>
+    <keyword type="function" name="tracker_media_art_queue_removal ()" link="libtracker-miner-Media-art-management.html#tracker-media-art-queue-removal" since="0.10.4"/>
+    <keyword type="function" name="tracker_thumbnailer_cleanup ()" link="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-cleanup" since="0.8"/>
+    <keyword type="function" name="tracker_thumbnailer_init ()" link="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-init" since="0.8"/>
+    <keyword type="function" name="tracker_thumbnailer_move_add ()" link="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-move-add" since="0.8"/>
+    <keyword type="function" name="tracker_thumbnailer_remove_add ()" link="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-remove-add" since="0.8"/>
+    <keyword type="function" name="tracker_thumbnailer_send ()" link="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-send" since="0.8"/>
+    <keyword type="function" name="tracker_thumbnailer_shutdown ()" link="libtracker-miner-Thumbnailer-management.html#tracker-thumbnailer-shutdown" since="0.8"/>
+    <keyword type="constant" name="TRACKER_MINER_WEB_ERROR_WRONG_CREDENTIALS" link="libtracker-miner-TrackerMinerWeb.html#TRACKER-MINER-WEB-ERROR-WRONG-CREDENTIALS:CAPS"/>
+    <keyword type="constant" name="TRACKER_MINER_WEB_ERROR_TOKEN_EXPIRED" link="libtracker-miner-TrackerMinerWeb.html#TRACKER-MINER-WEB-ERROR-TOKEN-EXPIRED:CAPS"/>
+    <keyword type="constant" name="TRACKER_MINER_WEB_ERROR_NO_CREDENTIALS" link="libtracker-miner-TrackerMinerWeb.html#TRACKER-MINER-WEB-ERROR-NO-CREDENTIALS:CAPS"/>
+    <keyword type="constant" name="TRACKER_MINER_WEB_ERROR_KEYRING" link="libtracker-miner-TrackerMinerWeb.html#TRACKER-MINER-WEB-ERROR-KEYRING:CAPS"/>
+    <keyword type="constant" name="TRACKER_MINER_WEB_ERROR_SERVICE" link="libtracker-miner-TrackerMinerWeb.html#TRACKER-MINER-WEB-ERROR-SERVICE:CAPS"/>
+    <keyword type="constant" name="TRACKER_MINER_WEB_ERROR_TRACKER" link="libtracker-miner-TrackerMinerWeb.html#TRACKER-MINER-WEB-ERROR-TRACKER:CAPS"/>
+    <keyword type="constant" name="TRACKER_MINER_MANAGER_ERROR_NOT_AVAILABLE" link="TrackerMinerManager.html#TRACKER-MINER-MANAGER-ERROR-NOT-AVAILABLE:CAPS"/>
+    <keyword type="constant" name="TRACKER_MINER_MANAGER_ERROR_NOENT" link="TrackerMinerManager.html#TRACKER-MINER-MANAGER-ERROR-NOENT:CAPS"/>
+    <keyword type="constant" name="TRACKER_NETWORK_PROVIDER_DISCONNECTED" link="libtracker-miner-TrackerNetworkProvider.html#TRACKER-NETWORK-PROVIDER-DISCONNECTED:CAPS"/>
+    <keyword type="constant" name="TRACKER_NETWORK_PROVIDER_UNKNOWN" link="libtracker-miner-TrackerNetworkProvider.html#TRACKER-NETWORK-PROVIDER-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="TRACKER_NETWORK_PROVIDER_GPRS" link="libtracker-miner-TrackerNetworkProvider.html#TRACKER-NETWORK-PROVIDER-GPRS:CAPS"/>
+    <keyword type="constant" name="TRACKER_NETWORK_PROVIDER_EDGE" link="libtracker-miner-TrackerNetworkProvider.html#TRACKER-NETWORK-PROVIDER-EDGE:CAPS"/>
+    <keyword type="constant" name="TRACKER_NETWORK_PROVIDER_3G" link="libtracker-miner-TrackerNetworkProvider.html#TRACKER-NETWORK-PROVIDER-3G:CAPS"/>
+    <keyword type="constant" name="TRACKER_NETWORK_PROVIDER_LAN" link="libtracker-miner-TrackerNetworkProvider.html#TRACKER-NETWORK-PROVIDER-LAN:CAPS"/>
+    <keyword type="constant" name="TRACKER_PASSWORD_PROVIDER_ERROR_SERVICE" link="libtracker-miner-TrackerPasswordProvider.html#TRACKER-PASSWORD-PROVIDER-ERROR-SERVICE:CAPS"/>
+    <keyword type="constant" name="TRACKER_PASSWORD_PROVIDER_ERROR_NOTFOUND" link="libtracker-miner-TrackerPasswordProvider.html#TRACKER-PASSWORD-PROVIDER-ERROR-NOTFOUND:CAPS"/>
+    <keyword type="constant" name="TRACKER_DIRECTORY_FLAG_NONE" link="libtracker-miner-Enumerations.html#TRACKER-DIRECTORY-FLAG-NONE:CAPS"/>
+    <keyword type="constant" name="TRACKER_DIRECTORY_FLAG_RECURSE" link="libtracker-miner-Enumerations.html#TRACKER-DIRECTORY-FLAG-RECURSE:CAPS"/>
+    <keyword type="constant" name="TRACKER_DIRECTORY_FLAG_CHECK_MTIME" link="libtracker-miner-Enumerations.html#TRACKER-DIRECTORY-FLAG-CHECK-MTIME:CAPS"/>
+    <keyword type="constant" name="TRACKER_DIRECTORY_FLAG_MONITOR" link="libtracker-miner-Enumerations.html#TRACKER-DIRECTORY-FLAG-MONITOR:CAPS"/>
+    <keyword type="constant" name="TRACKER_DIRECTORY_FLAG_IGNORE" link="libtracker-miner-Enumerations.html#TRACKER-DIRECTORY-FLAG-IGNORE:CAPS"/>
+    <keyword type="constant" name="TRACKER_DIRECTORY_FLAG_PRESERVE" link="libtracker-miner-Enumerations.html#TRACKER-DIRECTORY-FLAG-PRESERVE:CAPS"/>
+    <keyword type="constant" name="TRACKER_FILTER_POLICY_DENY" link="libtracker-miner-Enumerations.html#TRACKER-FILTER-POLICY-DENY:CAPS"/>
+    <keyword type="constant" name="TRACKER_FILTER_POLICY_ACCEPT" link="libtracker-miner-Enumerations.html#TRACKER-FILTER-POLICY-ACCEPT:CAPS"/>
+    <keyword type="constant" name="TRACKER_FILTER_FILE" link="libtracker-miner-Enumerations.html#TRACKER-FILTER-FILE:CAPS"/>
+    <keyword type="constant" name="TRACKER_FILTER_DIRECTORY" link="libtracker-miner-Enumerations.html#TRACKER-FILTER-DIRECTORY:CAPS"/>
+    <keyword type="constant" name="TRACKER_FILTER_PARENT_DIRECTORY" link="libtracker-miner-Enumerations.html#TRACKER-FILTER-PARENT-DIRECTORY:CAPS"/>
+    <keyword type="constant" name="TRACKER_STORAGE_REMOVABLE" link="libtracker-miner-TrackerStorage.html#TRACKER-STORAGE-REMOVABLE:CAPS"/>
+    <keyword type="constant" name="TRACKER_STORAGE_OPTICAL" link="libtracker-miner-TrackerStorage.html#TRACKER-STORAGE-OPTICAL:CAPS"/>
+  </functions>
+</book>

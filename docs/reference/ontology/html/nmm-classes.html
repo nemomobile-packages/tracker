@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>NMM Ontology Classes</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Ontology Reference Manual">
+<link rel="up" href="nmm-ontology.html" title="Nepomuk MultiMedia (NMM): Description of multimedia objects like Music, Video and Images">
+<link rel="prev" href="nmm-ontology.html" title="Nepomuk MultiMedia (NMM): Description of multimedia objects like Music, Video and Images">
+<link rel="next" href="nmm-properties.html" title="NMM Ontology Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="nmm-ontology.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="nmm-ontology.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Ontology Reference Manual</th>
+<td><a accesskey="n" href="nmm-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="nmm-classes"></a>NMM Ontology Classes</h2></div></div></div>
+<div class="refsect2">
+<a name="nmm-Artist"></a><h3>nmm:Artist</h3>
+<p>An artist.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nco-classes.html#nco-Role" title="nco:Role">nco:Role</a>, <a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-artistName" title="nmm:artistName">nmm:artistName</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-leadActor" title="nmm:leadActor">nmm:leadActor</a>, <a class="link" href="nmm-properties.html#nmm-producedBy" title="nmm:producedBy">nmm:producedBy</a>, <a class="link" href="nmm-properties.html#nmm-director" title="nmm:director">nmm:director</a>, <a class="link" href="nmm-properties.html#nmm-lyricist" title="nmm:lyricist">nmm:lyricist</a>, <a class="link" href="nmm-properties.html#nmm-composer" title="nmm:composer">nmm:composer</a>, <a class="link" href="nmm-properties.html#nmm-performer" title="nmm:performer">nmm:performer</a>, <a class="link" href="nmm-properties.html#nmm-albumArtist" title="nmm:albumArtist">nmm:albumArtist</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-Flash"></a><h3>nmm:Flash</h3>
+<p>Enumeration of the possible values of flash property</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-flash" title="nmm:flash">nmm:flash</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nmm:flash-off, nmm:flash-on, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-AnalogRadio"></a><h3>nmm:AnalogRadio</h3>
+<p>FM Radio carrier signal data. Basically the frequency</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-MediaStream" title="nfo:MediaStream">nfo:MediaStream</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-frequency" title="nmm:frequency">nmm:frequency</a>, <a class="link" href="nmm-properties.html#nmm-modulation" title="nmm:modulation">nmm:modulation</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-Video"></a><h3>nmm:Video</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Audio" title="nfo:Audio">nfo:Audio</a>, <a class="link" href="nfo-ontology.html#nfo-Video" title="nfo:Video">nfo:Video</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-isContentEncrypted" title="nmm:isContentEncrypted">nmm:isContentEncrypted</a>, <a class="link" href="nmm-properties.html#nmm-subtitle" title="nmm:subtitle">nmm:subtitle</a>, <a class="link" href="nmm-properties.html#nmm-hasSubtitle" title="nmm:hasSubtitle">nmm:hasSubtitle</a>, <a class="link" href="nmm-properties.html#nmm-leadActor" title="nmm:leadActor">nmm:leadActor</a>, <a class="link" href="nmm-properties.html#nmm-producedBy" title="nmm:producedBy">nmm:producedBy</a>, <a class="link" href="nmm-properties.html#nmm-director" title="nmm:director">nmm:director</a>, <a class="link" href="nmm-properties.html#nmm-category" title="nmm:category">nmm:category</a>, <a class="link" href="nmm-properties.html#nmm-MPAARating" title="nmm:MPAARating">nmm:MPAARating</a>, <a class="link" href="nmm-properties.html#nmm-synopsis" title="nmm:synopsis">nmm:synopsis</a>, <a class="link" href="nmm-properties.html#nmm-runTime" title="nmm:runTime">nmm:runTime</a>, <a class="link" href="nmm-properties.html#nmm-episodeNumber" title="nmm:episodeNumber">nmm:episodeNumber</a>, <a class="link" href="nmm-properties.html#nmm-season" title="nmm:season">nmm:season</a>, <a class="link" href="nmm-properties.html#nmm-isSeries" title="nmm:isSeries">nmm:isSeries</a>, <a class="link" href="nmm-properties.html#nmm-videoAlbum" title="nmm:videoAlbum">nmm:videoAlbum</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-ImageList"></a><h3>nmm:ImageList</h3>
+<p>An album of images</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-MediaList" title="nfo:MediaList">nfo:MediaList</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-MusicPiece"></a><h3>nmm:MusicPiece</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Media" title="nfo:Media">nfo:Media</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-internationalStandardRecordingCode" title="nmm:internationalStandardRecordingCode">nmm:internationalStandardRecordingCode</a>, <a class="link" href="nmm-properties.html#nmm-trackNumber" title="nmm:trackNumber">nmm:trackNumber</a>, <a class="link" href="nmm-properties.html#nmm-lyrics" title="nmm:lyrics">nmm:lyrics</a>, <a class="link" href="nmm-properties.html#nmm-lyricist" title="nmm:lyricist">nmm:lyricist</a>, <a class="link" href="nmm-properties.html#nmm-composer" title="nmm:composer">nmm:composer</a>, <a class="link" href="nmm-properties.html#nmm-performer" title="nmm:performer">nmm:performer</a>, <a class="link" href="nmm-properties.html#nmm-beatsPerMinute" title="nmm:beatsPerMinute">nmm:beatsPerMinute</a>, <a class="link" href="nmm-properties.html#nmm-musicAlbumDisc" title="nmm:musicAlbumDisc">nmm:musicAlbumDisc</a>, <a class="link" href="nmm-properties.html#nmm-musicAlbum" title="nmm:musicAlbum">nmm:musicAlbum</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-MusicAlbum"></a><h3>nmm:MusicAlbum</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-MediaList" title="nfo:MediaList">nfo:MediaList</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-albumPeakGain" title="nmm:albumPeakGain">nmm:albumPeakGain</a>, <a class="link" href="nmm-properties.html#nmm-albumGain" title="nmm:albumGain">nmm:albumGain</a>, <a class="link" href="nmm-properties.html#nmm-albumDuration" title="nmm:albumDuration">nmm:albumDuration</a>, <a class="link" href="nmm-properties.html#nmm-albumTitle" title="nmm:albumTitle">nmm:albumTitle</a>, <a class="link" href="nmm-properties.html#nmm-albumTrackCount" title="nmm:albumTrackCount">nmm:albumTrackCount</a>, <a class="link" href="nmm-properties.html#nmm-albumArtist" title="nmm:albumArtist">nmm:albumArtist</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-musicAlbum" title="nmm:musicAlbum">nmm:musicAlbum</a>, <a class="link" href="nmm-properties.html#nmm-albumDiscAlbum" title="nmm:albumDiscAlbum">nmm:albumDiscAlbum</a>, </td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-Playlist"></a><h3>nmm:Playlist</h3>
+<p>Specific class to split MediaList in Albums and playlists.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-MediaList" title="nfo:MediaList">nfo:MediaList</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-WhiteBalance"></a><h3>nmm:WhiteBalance</h3>
+<p>Camera's white balance setting</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-whiteBalance" title="nmm:whiteBalance">nmm:whiteBalance</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nmm:white-balance-manual, nmm:white-balance-auto, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-Photo"></a><h3>nmm:Photo</h3>
+<p>A photo</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Image" title="nfo:Image">nfo:Image</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-isColorCorrected" title="nmm:isColorCorrected">nmm:isColorCorrected</a>, <a class="link" href="nmm-properties.html#nmm-isCropped" title="nmm:isCropped">nmm:isCropped</a>, <a class="link" href="nmm-properties.html#nmm-whiteBalance" title="nmm:whiteBalance">nmm:whiteBalance</a>, <a class="link" href="nmm-properties.html#nmm-meteringMode" title="nmm:meteringMode">nmm:meteringMode</a>, <a class="link" href="nmm-properties.html#nmm-isoSpeed" title="nmm:isoSpeed">nmm:isoSpeed</a>, <a class="link" href="nmm-properties.html#nmm-focalLength" title="nmm:focalLength">nmm:focalLength</a>, <a class="link" href="nmm-properties.html#nmm-fnumber" title="nmm:fnumber">nmm:fnumber</a>, <a class="link" href="nmm-properties.html#nmm-flash" title="nmm:flash">nmm:flash</a>, <a class="link" href="nmm-properties.html#nmm-exposureTime" title="nmm:exposureTime">nmm:exposureTime</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-RadioModulation"></a><h3>nmm:RadioModulation</h3>
+<p>Set of instances for analog radio modulation</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-modulation" title="nmm:modulation">nmm:modulation</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nmm:radio-modulation-fm, nmm:radio-modulation-am, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-DigitalRadio"></a><h3>nmm:DigitalRadio</h3>
+<p>Online Radio Stream data object (i.e. as a raw flow of bytes)</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-MediaStream" title="nfo:MediaStream">nfo:MediaStream</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-protocol" title="nmm:protocol">nmm:protocol</a>, <a class="link" href="nmm-properties.html#nmm-encoding" title="nmm:encoding">nmm:encoding</a>, <a class="link" href="nmm-properties.html#nmm-streamingBitrate" title="nmm:streamingBitrate">nmm:streamingBitrate</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-RadioStation"></a><h3>nmm:RadioStation</h3>
+<p>The Radio station in user terms: BBC3, Radio5, YLEX, ... It is linked with 1 or more carriers (different FM frenquencies, online sources in different qualities, etc.). Some RDS information is represented with nie properties, nie:identifier for PI, nie:title for PS</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-Audio" title="nfo:Audio">nfo:Audio</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-carrier" title="nmm:carrier">nmm:carrier</a>, <a class="link" href="nmm-properties.html#nmm-radioPTY" title="nmm:radioPTY">nmm:radioPTY</a>, <a class="link" href="nmm-properties.html#nmm-radioIcon" title="nmm:radioIcon">nmm:radioIcon</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note:</h3>
+<p>This class notifies about changes</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-SynchronizedText"></a><h3>nmm:SynchronizedText</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nfo-ontology.html#nfo-PlainTextDocument" title="nfo:PlainTextDocument">nfo:PlainTextDocument</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-isForHearingImpaired" title="nmm:isForHearingImpaired">nmm:isForHearingImpaired</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-subtitle" title="nmm:subtitle">nmm:subtitle</a>, <a class="link" href="nmm-properties.html#nmm-lyrics" title="nmm:lyrics">nmm:lyrics</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-MusicAlbumDisc"></a><h3>nmm:MusicAlbumDisc</h3>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+<a class="link" href="nie-classes.html#nie-InformationElement" title="nie:InformationElement">nie:InformationElement</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-setNumber" title="nmm:setNumber">nmm:setNumber</a>, <a class="link" href="nmm-properties.html#nmm-musicCDIdentifier" title="nmm:musicCDIdentifier">nmm:musicCDIdentifier</a>, <a class="link" href="nmm-properties.html#nmm-albumDiscAlbum" title="nmm:albumDiscAlbum">nmm:albumDiscAlbum</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-musicAlbumDisc" title="nmm:musicAlbumDisc">nmm:musicAlbumDisc</a>, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="nmm-MeteringMode"></a><h3>nmm:MeteringMode</h3>
+<p>Enumeration of different ways a camera determines exposure.</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Superclasses</code></em> :</span></p></td>
+<td>
+rdfs:Resource, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Subclasses</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In domain of</code></em> :</span></p></td>
+<td>--</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>In range of</code></em> :</span></p></td>
+<td>
+<a class="link" href="nmm-properties.html#nmm-meteringMode" title="nmm:meteringMode">nmm:meteringMode</a>, </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>Predefined instances</code></em> :</span></p></td>
+<td>
+nmm:metering-mode-other, nmm:metering-mode-partial, nmm:metering-mode-pattern, nmm:metering-mode-multispot, nmm:metering-mode-spot, nmm:metering-mode-center-weighted-average, nmm:metering-mode-average, </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

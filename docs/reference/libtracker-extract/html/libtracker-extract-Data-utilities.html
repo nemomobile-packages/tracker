@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Data utilities</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Tracker Extract Library Reference Manual">
+<link rel="up" href="ch02.html" title="Core API">
+<link rel="prev" href="libtracker-extract-TrackerExtractInfo.html" title="TrackerExtractInfo">
+<link rel="next" href="ch03.html" title="Common Embedded Support API">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libtracker-extract-TrackerExtractInfo.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Tracker Extract Library Reference Manual</th>
+<td><a accesskey="n" href="ch03.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libtracker-extract-Data-utilities.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libtracker-extract-Data-utilities.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libtracker-extract-Data-utilities"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libtracker-extract-Data-utilities.top_of_page"></a>Data utilities</span></h2>
+<p>Data utilities — Functions for coalescing, merging, date
+handling and normalizing</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libtracker-extract-Data-utilities.stability-level"></a><h2>Stability Level</h2>
+Stable, unless otherwise indicated
+</div>
+<div class="refsynopsisdiv">
+<a name="libtracker-extract-Data-utilities.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;libtracker-extract/tracker-extract.h&gt;
+
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libtracker-extract-Data-utilities.html#tracker-coalesce" title="tracker_coalesce ()">tracker_coalesce</a>                    (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n_values</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="libtracker-extract-Data-utilities.html#tracker-coalesce-strip" title="tracker_coalesce_strip ()">tracker_coalesce_strip</a>              (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n_values</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libtracker-extract-Data-utilities.html#tracker-merge" title="tracker_merge ()">tracker_merge</a>                       (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *delimiter</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n_values</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libtracker-extract-Data-utilities.html#tracker-merge-const" title="tracker_merge_const ()">tracker_merge_const</a>                 (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *delimiter</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n_values</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);
+<span class="returnvalue">gssize</span>              <a class="link" href="libtracker-extract-Data-utilities.html#tracker-getline" title="tracker_getline ()">tracker_getline</a>                     (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **lineptr</code></em>,
+                                                         <em class="parameter"><code><span class="type">gsize</span> *n</code></em>,
+                                                         <em class="parameter"><code><span class="type">FILE</span> *stream</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libtracker-extract-Data-utilities.html#tracker-text-normalize" title="tracker_text_normalize ()">tracker_text_normalize</a>              (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *text</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> max_words</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *n_words</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libtracker-extract-Data-utilities.html#tracker-text-validate-utf8" title="tracker_text_validate_utf8 ()">tracker_text_validate_utf8</a>          (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *text</code></em>,
+                                                         <em class="parameter"><code><span class="type">gssize</span> text_len</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Strings.html#GString"><span class="type">GString</span></a> **str</code></em>,
+                                                         <em class="parameter"><code><span class="type">gsize</span> *valid_len</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libtracker-extract-Data-utilities.html#tracker-date-format-to-iso8601" title="tracker_date_format_to_iso8601 ()">tracker_date_format_to_iso8601</a>      (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *date_string</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *format</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libtracker-extract-Data-utilities.html#tracker-date-guess" title="tracker_date_guess ()">tracker_date_guess</a>                  (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *date_string</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libtracker-extract-Data-utilities.html#tracker-keywords-parse" title="tracker_keywords_parse ()">tracker_keywords_parse</a>              (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *store</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *keywords</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libtracker-extract-Data-utilities.description"></a><h2>Description</h2>
+<p>
+This API is provided to facilitate common more general functions
+which extractors may find useful. These functions are also used by
+the in-house extractors quite frequently.
+</p>
+</div>
+<div class="refsect1">
+<a name="libtracker-extract-Data-utilities.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="tracker-coalesce"></a><h3>tracker_coalesce ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             tracker_coalesce                    (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n_values</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">tracker_coalesce</code> has been deprecated since version 0.10 and should not be used in newly-written code. Use <a class="link" href="libtracker-extract-Data-utilities.html#tracker-coalesce-strip" title="tracker_coalesce_strip ()"><code class="function">tracker_coalesce_strip()</code></a> instead.</p>
+</div>
+<p>
+This function iterates through a series of string pointers passed
+using @... and returns the first which is not <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, not empty
+(i.e. "") and not comprised of one or more spaces (i.e. " ").
+</p>
+<p>
+The returned value is stripped using <a href="http://library.gnome.org/devel/glib/unstable/glib-String-Utility-Functions.html#g-strstrip"><code class="function">g_strstrip()</code></a>. All other values
+supplied are freed. It is MOST important NOT to pass constant
+string pointers to this function!
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>n_values</code></em> :</span></p></td>
+<td>the number of <em class="parameter"><code>Varargs</code></em> supplied</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td>the string pointers to coalesce</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the first string pointer from those provided which
+matches, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-coalesce-strip"></a><h3>tracker_coalesce_strip ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       tracker_coalesce_strip              (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n_values</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);</pre>
+<p>
+This function iterates through a series of string pointers passed
+using @... and returns the first which is not <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, not empty
+(i.e. "") and not comprised of one or more spaces (i.e. " ").
+</p>
+<p>
+The returned value is stripped using <a href="http://library.gnome.org/devel/glib/unstable/glib-String-Utility-Functions.html#g-strstrip"><code class="function">g_strstrip()</code></a>. It is MOST
+important NOT to pass constant string pointers to this function!
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>n_values</code></em> :</span></p></td>
+<td>the number of @... supplied</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td>the string pointers to coalesce</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the first string pointer from those provided which
+matches, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-merge"></a><h3>tracker_merge ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             tracker_merge                       (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *delimiter</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n_values</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">tracker_merge</code> has been deprecated since version 0.10 and should not be used in newly-written code. Use <a class="link" href="libtracker-extract-Data-utilities.html#tracker-merge-const" title="tracker_merge_const ()"><code class="function">tracker_merge_const()</code></a> instead.</p>
+</div>
+<p>
+This function iterates through a series of string pointers passed
+using @... and returns a newly allocated string of the merged
+strings. All passed strings are freed (don't pass const values)/
+</p>
+<p>
+The <em class="parameter"><code>delimiter</code></em> can be <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. If specified, it will be used in
+between each merged string in the result.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>delimiter</code></em> :</span></p></td>
+<td>the delimiter to use when merging</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>n_values</code></em> :</span></p></td>
+<td>the number of @... supplied</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td>the string pointers to merge</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a newly-allocated string holding the result which should
+be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when finished with, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-merge-const"></a><h3>tracker_merge_const ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             tracker_merge_const                 (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *delimiter</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n_values</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);</pre>
+<p>
+This function iterates through a series of string pointers passed
+using @... and returns a newly allocated string of the merged
+strings.
+</p>
+<p>
+The <em class="parameter"><code>delimiter</code></em> can be <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. If specified, it will be used in
+between each merged string in the result.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>delimiter</code></em> :</span></p></td>
+<td>the delimiter to use when merging</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>n_values</code></em> :</span></p></td>
+<td>the number of @... supplied</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td>the string pointers to merge</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a newly-allocated string holding the result which should
+be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when finished with, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-getline"></a><h3>tracker_getline ()</h3>
+<pre class="programlisting"><span class="returnvalue">gssize</span>              tracker_getline                     (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **lineptr</code></em>,
+                                                         <em class="parameter"><code><span class="type">gsize</span> *n</code></em>,
+                                                         <em class="parameter"><code><span class="type">FILE</span> *stream</code></em>);</pre>
+<p>
+Reads an entire line from stream, storing the address of the buffer
+containing  the  text into *lineptr.  The buffer is null-terminated
+and includes the newline character, if one was found.
+</p>
+<p>
+Read GNU <code class="function">getline()</code>'s manpage for more information
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>lineptr</code></em> :</span></p></td>
+<td>Buffer to write into</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>n</code></em> :</span></p></td>
+<td>Max bytes of linebuf</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>stream</code></em> :</span></p></td>
+<td>Filestream to read from</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the number of characters read, including the delimiter
+character, but not including the terminating <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> byte. This value
+can be used to handle embedded <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> bytes in the line read. Upon
+failure, -1 is returned.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-text-normalize"></a><h3>tracker_text_normalize ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             tracker_text_normalize              (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *text</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> max_words</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *n_words</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">tracker_text_normalize</code> has been deprecated since version 0.10 and should not be used in newly-written code. Use <a class="link" href="libtracker-extract-Data-utilities.html#tracker-text-validate-utf8" title="tracker_text_validate_utf8 ()"><code class="function">tracker_text_validate_utf8()</code></a> instead.</p>
+</div>
+<p>
+This function iterates through <em class="parameter"><code>text</code></em> checking for UTF-8 validity
+using <a href="http://library.gnome.org/devel/glib/unstable/glib-Unicode-Manipulation.html#g-utf8-get-char-validated"><code class="function">g_utf8_get_char_validated()</code></a>. For each character found, the
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Unicode-Manipulation.html#GUnicodeType"><code class="literal">GUnicodeType</code></a> is checked to make sure it is one fo the following
+values:
+</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem"><p><a href="http://library.gnome.org/devel/glib/unstable/glib-Unicode-Manipulation.html#G-UNICODE-LOWERCASE-LETTER:CAPS"><code class="literal">G_UNICODE_LOWERCASE_LETTER</code></a></p></li>
+<li class="listitem"><p><a href="http://library.gnome.org/devel/glib/unstable/glib-Unicode-Manipulation.html#G-UNICODE-MODIFIER-LETTER:CAPS"><code class="literal">G_UNICODE_MODIFIER_LETTER</code></a></p></li>
+<li class="listitem"><p><a href="http://library.gnome.org/devel/glib/unstable/glib-Unicode-Manipulation.html#G-UNICODE-OTHER-LETTER:CAPS"><code class="literal">G_UNICODE_OTHER_LETTER</code></a></p></li>
+<li class="listitem"><p><a href="http://library.gnome.org/devel/glib/unstable/glib-Unicode-Manipulation.html#G-UNICODE-TITLECASE-LETTER:CAPS"><code class="literal">G_UNICODE_TITLECASE_LETTER</code></a></p></li>
+<li class="listitem"><p><a href="http://library.gnome.org/devel/glib/unstable/glib-Unicode-Manipulation.html#G-UNICODE-UPPERCASE-LETTER:CAPS"><code class="literal">G_UNICODE_UPPERCASE_LETTER</code></a></p></li>
+</ul></div>
+<p>
+</p>
+<p>
+All other symbols, punctuation, marks, numbers and separators are
+stripped. A regular space (i.e. " ") is used to separate the words
+in the returned string.
+</p>
+<p>
+The <em class="parameter"><code>n_words</code></em> can be <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. If specified, it will be populated with
+the number of words that were normalized in the result.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text</code></em> :</span></p></td>
+<td>the text to normalize</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_words</code></em> :</span></p></td>
+<td>the maximum words of <em class="parameter"><code>text</code></em> to normalize</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>n_words</code></em> :</span></p></td>
+<td>the number of words actually normalized</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a newly-allocated string holding the result which should
+be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when finished with, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-text-validate-utf8"></a><h3>tracker_text_validate_utf8 ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            tracker_text_validate_utf8          (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *text</code></em>,
+                                                         <em class="parameter"><code><span class="type">gssize</span> text_len</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Strings.html#GString"><span class="type">GString</span></a> **str</code></em>,
+                                                         <em class="parameter"><code><span class="type">gsize</span> *valid_len</code></em>);</pre>
+<p>
+This function iterates through <em class="parameter"><code>text</code></em> checking for UTF-8 validity
+using <a href="http://library.gnome.org/devel/glib/unstable/glib-Unicode-Manipulation.html#g-utf8-validate"><code class="function">g_utf8_validate()</code></a>, appends the first chunk of valid characters
+to <em class="parameter"><code>str</code></em>, and gives the number of valid UTF-8 bytes in <em class="parameter"><code>valid_len</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text</code></em> :</span></p></td>
+<td>the text to validate</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text_len</code></em> :</span></p></td>
+<td>length of <em class="parameter"><code>text</code></em>, or -1 if NUL-terminated</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>str</code></em> :</span></p></td>
+<td>the string where to place the validated UTF-8 characters, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if
+not needed.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>valid_len</code></em> :</span></p></td>
+<td>Output number of valid UTF-8 bytes found, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not needed</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if some bytes were found to be valid, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-date-format-to-iso8601"></a><h3>tracker_date_format_to_iso8601 ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             tracker_date_format_to_iso8601      (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *date_string</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *format</code></em>);</pre>
+<p>
+This function uses <code class="function">strptime()</code> to create a time tm structure using
+<em class="parameter"><code>date_string</code></em> and <em class="parameter"><code>format</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>date_string</code></em> :</span></p></td>
+<td>the date in a string pointer</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>format</code></em> :</span></p></td>
+<td>the format of the <em class="parameter"><code>date_string</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a newly-allocated string with the time represented in
+ISO8601 date format which should be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when
+finished with, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-date-guess"></a><h3>tracker_date_guess ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             tracker_date_guess                  (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *date_string</code></em>);</pre>
+<p>
+This function uses a number of methods to try and guess the date
+held in <em class="parameter"><code>date_string</code></em>. The <em class="parameter"><code>date_string</code></em> must be at least 5
+characters in length or longer for any guessing to be attempted.
+Some of the string formats guessed include:
+</p>
+<p>
+</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem"><p>"YYYY-MM-DD" (Simple format)</p></li>
+<li class="listitem"><p>"20050315113224-08'00'" (PDF format)</p></li>
+<li class="listitem"><p>"20050216111533Z" (PDF format)</p></li>
+<li class="listitem"><p>"Mon Feb  9 10:10:00 2004" (Microsoft Office format)</p></li>
+<li class="listitem"><p>"2005:04:29 14:56:54" (Exif format)</p></li>
+<li class="listitem"><p>"YYYY-MM-DDThh:mm:ss.ff+zz:zz</p></li>
+</ul></div>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>date_string</code></em> :</span></p></td>
+<td>the date in a string pointer</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a newly-allocated string with the time represented in
+ISO8601 date format which should be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when
+finished with, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tracker-keywords-parse"></a><h3>tracker_keywords_parse ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                tracker_keywords_parse              (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *store</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *keywords</code></em>);</pre>
+<p>
+Parses a keywords line into store, avoiding duplicates and stripping leading
+and trailing spaces from keywords. Allowed delimiters are , and ;
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>store</code></em> :</span></p></td>
+<td>Array where to store the keywords</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>keywords</code></em> :</span></p></td>
+<td>Keywords line to parse</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

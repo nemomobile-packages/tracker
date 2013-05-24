@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<chapter id='xsd-ontology'>
+<title>XML schema (XSD): Basic types definitions (int, double,...)</title>
+<varlistentry>
+  <term>Authors:</term>
+  <listitem>
+<itemizedlist>
+<listitem>W3C XML Schema Working group</listitem>
+</itemizedlist>
+  </listitem>
+</varlistentry>
+<varlistentry>
+  <term>Editors:</term>
+  <listitem>
+<itemizedlist>
+<listitem>Tracker developers (translation into turtle)</listitem>
+<listitem>Priscilla Walmsley &lt;pwalmsley@datypic.com&gt; - Second Edition</listitem>
+<listitem>David C. Fallside, IBM &lt;fallside@us.ibm.com&gt;</listitem>
+</itemizedlist>
+  </listitem>
+</varlistentry>
+  <varlistentry>
+    <term>Upstream:</term>
+ <listitem><para>Not available</para></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term>ChangeLog:</term>
+ <listitem><para><ulink url="http://git.gnome.org/cgit/tracker/log/data/ontologies/10-xsd.ontology">Tracker changes</ulink></para></listitem>
+  </varlistentry>
+<varlistentry>
+  <term>Copyright:</term>
+  <listitem>
+<para>&copy; 2004 <ulink url="http://www.w3.org/">W3C</ulink><superscript>&#xae;</superscript> (<ulink url="http://www.csail.mit.edu/">MIT</ulink>, <ulink url="http://www.ercim.org/">ERCIM</ulink>, <ulink url="http://www.keio.ac.jp/">Keio</ulink>), All Rights Reserved. W3C <ulink url="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</ulink>, <ulink url="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</ulink> and <ulink url="http://www.w3.org/Consortium/Legal/copyright-documents">document use</ulink></para>
+  </listitem>
+</varlistentry>
+<section id="xsd-explanation">
+  <title>Overview</title>
+
+  <sect2 id="xsd-introduction">
+    <title>Introduction</title>
+    <para>This ontology is a translation into RDF classes of the
+    XML Schema data types supported by tracker. These are only a subset
+    of the official <ulink url="http://www.w3.org/TR/xmlschema-2/">W3C
+    specification</ulink>. Any other divergency between the
+    specs should be considered a bug in this document, and can be
+    reported in the 
+    <ulink url="http://mail.gnome.org/mailman/listinfo/tracker-list">Tracker
+    mailing list</ulink>.
+    </para>
+  </sect2>
+</section>
+<section id='xsd-classes'>
+<title>XSD Ontology Classes</title>
+<refsect2 id='xsd-integer'>
+<title>xsd:integer</title>
+<variablelist>
+<varlistentry>
+<term><parameter>Superclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>Subclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In domain of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In range of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+</variablelist>
+</refsect2>
+
+<refsect2 id='xsd-boolean'>
+<title>xsd:boolean</title>
+<variablelist>
+<varlistentry>
+<term><parameter>Superclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>Subclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In domain of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In range of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+</variablelist>
+</refsect2>
+
+<refsect2 id='xsd-string'>
+<title>xsd:string</title>
+<variablelist>
+<varlistentry>
+<term><parameter>Superclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>Subclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In domain of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In range of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+</variablelist>
+</refsect2>
+
+<refsect2 id='xsd-double'>
+<title>xsd:double</title>
+<variablelist>
+<varlistentry>
+<term><parameter>Superclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>Subclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In domain of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In range of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+</variablelist>
+</refsect2>
+
+<refsect2 id='xsd-date'>
+<title>xsd:date</title>
+<variablelist>
+<varlistentry>
+<term><parameter>Superclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>Subclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In domain of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In range of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+</variablelist>
+</refsect2>
+
+<refsect2 id='xsd-dateTime'>
+<title>xsd:dateTime</title>
+<variablelist>
+<varlistentry>
+<term><parameter>Superclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>Subclasses</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In domain of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+<varlistentry>
+<term><parameter>In range of</parameter>&#160;:</term>
+<listitem><simpara>--</simpara></listitem>
+</varlistentry>
+</variablelist>
+</refsect2>
+
+</section>
+<section id='xsd-properties'>
+<title>XSD Ontology Properties</title>
+</section>
+</chapter>
