@@ -11,7 +11,7 @@ Name:       tracker
 
 Summary:    An object database, tag/metadata database, search tool and indexer
 Version:    0.14.4
-Release:    1
+Release:    2
 Group:      Data Management/Content Framework
 License:    GPLv2+
 URL:        http://ftp.gnome.org/pub/GNOME/sources/tracker/0.10/
@@ -39,6 +39,7 @@ Patch15:     0016-tracker-miner-fs-deal-with-data-inserted-by-other-ap.patch
 Patch16:     0017-tracker-tests-400-extractor-skip-unsupported-file-ty.patch
 Patch17:     0018-tracker-tests-exclude-200-backup-restore.patch
 Patch18:     0019-tracker-disable-userguide-and-applications-miners.patch
+Patch19:     0020-install-data-generator-script.patch
 Requires:   gst-plugins-base >= 0.10
 Requires:   unzip
 Requires(post): /sbin/ldconfig
@@ -175,6 +176,8 @@ Development files for %{name}.
 %patch17 -p1
 # 0019-tracker-disable-userguide-and-applications-miners.patch
 %patch18 -p1
+# 0020-install-data-generator-script.patch
+%patch19 -p1
 # >> setup
 # << setup
 
@@ -221,6 +224,8 @@ cp -a %{SOURCE3} %{buildroot}%{_libdir}/systemd/user/
 # >> install post
 rm -rf %{buildroot}/%{_datadir}/icons/hicolor/
 rm -rf %{buildroot}/%{_datadir}/gtk-doc
+# this is 160MB of test data, let's create that during rpm install
+rm -f %{buildroot}/%{_datadir}/tracker-tests/ttl/*
 # << install post
 
 %find_lang %{name}
@@ -238,6 +243,20 @@ glib-compile-schemas   /usr/share/glib-2.0/schemas/
 # >> postun
 glib-compile-schemas   /usr/share/glib-2.0/schemas/
 # << postun
+
+%preun tests
+# >> preun tests
+# created during post install
+rm -f /usr/share/tracker-tests/ttl/*
+rm -f /usr/share/tracker-tests/source-data.pkl
+# << preun tests
+
+%post tests
+# >> post tests
+# this creates ~160MB of test data for the auto tests
+cd /usr/share/tracker-tests/
+/opt/tests/tracker/bin/generate /opt/tests/tracker/bin/max.cfg
+# << post tests
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
@@ -274,6 +293,7 @@ glib-compile-schemas   /usr/share/glib-2.0/schemas/
 # >> files tests
 %{_datadir}/tracker-tests/*
 %{_sysconfdir}/dconf/profile/trackertest
+/opt/tests/tracker/bin/*
 # << files tests
 
 %files utils
