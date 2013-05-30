@@ -13,8 +13,8 @@ AC_PREREQ([2.64])
 # set TRACKER_BINARY_AGE and TRACKER_INTERFACE_AGE to 0.
 m4_define([tracker_major_version], [0])
 m4_define([tracker_minor_version], [14])
-m4_define([tracker_micro_version], [4])
-m4_define([tracker_interface_age], [4])
+m4_define([tracker_micro_version], [5])
+m4_define([tracker_interface_age], [5])
 m4_define([tracker_binary_age],
           [m4_eval(100 * tracker_minor_version + tracker_micro_version)])
 m4_define([tracker_version],
@@ -284,14 +284,14 @@ TRACKER_EXPLORER_REQUIRED="glib-2.0     >= $GLIB_REQUIRED
                            gio-unix-2.0 >= $GLIB_REQUIRED
                            gmodule-2.0  >= $GLIB_REQUIRED
                            gtk+-3.0     >= $GTK_REQUIRED
-			   gee-1.0      >= $GEE_REQUIRED"
+			   gee-0.8      >= $GEE_REQUIRED"
 
 PKG_CHECK_MODULES(TRACKER_EXPLORER, [$TRACKER_EXPLORER_REQUIRED],
                   [have_tracker_explorer=yes],
                   [have_tracker_explorer=no])
 
 TRACKER_RESDUMP_REQUIRED="glib-2.0     >= $GLIB_REQUIRED
-                          gee-1.0      >= $GEE_REQUIRED"
+                          gee-0.8      >= $GEE_REQUIRED"
 
 PKG_CHECK_MODULES(TRACKER_RESDUMP, [$TRACKER_RESDUMP_REQUIRED],
                   [have_tracker_resdump=yes],
@@ -487,7 +487,7 @@ TRACKER_SEARCH_BAR_REQUIRED="glib-2.0       >= $GLIB_REQUIRED
                              gtk+-3.0       >= $GTK_REQUIRED
                              gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED
                              pango          >= $PANGO_REQUIRED
-			     gee-1.0        >= $GEE_REQUIRED
+			     gee-0.8        >= $GEE_REQUIRED
                              libpanelapplet-4.0"
 
 PKG_CHECK_MODULES(TRACKER_SEARCH_BAR, [$TRACKER_SEARCH_BAR_REQUIRED],
@@ -598,14 +598,6 @@ AM_CONDITIONAL([ENABLE_GTK_DOC], false)
 ])
 
 if test "x$enable_gtk_doc" != xno; then
-   # Check for dia if we are building gtk_doc
-   AC_PATH_PROG(DIA, dia)
-   AC_SUBST(DIA)
-
-   if test -z "$DIA"; then
-      AC_MSG_ERROR([Could not find Dia tool required to build documentation.])
-   fi
-
    # Check for graphviz if we are building gtk_doc
    AC_PATH_PROG(GRAPHVIZ_FDP, fdp)
    AC_SUBST(GRAPHVIZ_FDP)
@@ -1358,7 +1350,7 @@ if test "x$have_tracker_nautilus_extension" = "xyes"; then
    if test "x$with_nautilus_extensions_dir" = "x"; then
       tracker_nautilus_extension_install_dir=`$PKG_CONFIG --variable=extensiondir libnautilus-extension`
    else
-      tracker_nautilus_extension_install_dir="$with_nautilus_extension_install_dir"
+      tracker_nautilus_extension_install_dir="$with_nautilus_extensions_dir"
    fi
 
    TRACKER_NAUTILUS_EXTENSION_INSTALL_DIR="$tracker_nautilus_extension_install_dir"
@@ -1858,7 +1850,7 @@ AM_CONDITIONAL(HAVE_POPPLER, test "x$have_poppler" = "xyes")
 
 AC_ARG_ENABLE(libgxps,
               AS_HELP_STRING([--enable-libgxps],
-                             [enable extractor for PDF data [[default=auto]]]),,
+                             [enable extractor for XPS data [[default=auto]]]),,
               [enable_libgxps=auto])
 
 if test "x$enable_libgxps" != "xno" ; then
