@@ -19,8 +19,7 @@ Source0:    http://ftp.gnome.org/pub/GNOME/sources/%{name}/0.14/%{name}-%{versio
 Source1:    tracker-rpmlintrc
 Source2:    tracker-store.service
 Source3:    tracker-miner-fs.service
-Source100:  tracker.yaml
-Requires:   gst-plugins-base >= 0.10
+Source100:  tracker-libav.yaml
 Requires:   unzip
 Requires:   systemd
 Requires:   systemd-user-session-targets
@@ -33,8 +32,6 @@ BuildRequires:  pkgconfig(gconf-2.0)
 BuildRequires:  pkgconfig(gee-1.0)
 BuildRequires:  pkgconfig(glib-2.0) >= 2.26.0
 BuildRequires:  pkgconfig(gmime-2.6)
-BuildRequires:  pkgconfig(gstreamer-0.10)
-BuildRequires:  pkgconfig(gstreamer-plugins-base-0.10)
 BuildRequires:  pkgconfig(icu-uc)
 BuildRequires:  pkgconfig(id3tag)
 BuildRequires:  pkgconfig(libexif)
@@ -52,6 +49,9 @@ BuildRequires:  pkgconfig(libvala-0.16)
 BuildRequires:  pkgconfig(vorbis)
 BuildRequires:  pkgconfig(zlib)
 BuildRequires:  pkgconfig(Qt5Gui)
+BuildRequires:  pkgconfig(libavcodec)
+BuildRequires:  pkgconfig(libavformat)
+BuildRequires:  pkgconfig(libavutil)
 BuildRequires:  gettext
 BuildRequires:  giflib-devel
 BuildRequires:  intltool

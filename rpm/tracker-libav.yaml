@@ -29,7 +29,6 @@ Description: |
     all types of files and other first class objects
 
 Requires:
-    - gst-plugins-base >= 0.10
     - unzip
     - systemd
     - systemd-user-session-targets
@@ -51,8 +50,6 @@ PkgConfigBR:
     - gee-1.0
     - glib-2.0 >= 2.26.0
     - gmime-2.6
-    - gstreamer-0.10
-    - gstreamer-plugins-base-0.10
     - icu-uc
     - id3tag
     - libexif
@@ -70,6 +67,9 @@ PkgConfigBR:
     - vorbis
     - zlib
     - Qt5Gui
+    - libavcodec
+    - libavformat
+    - libavutil
 SetupOptions: -q -n %{name}-%{version}/%{name}
 Configure: configure
 ConfigOptions:
