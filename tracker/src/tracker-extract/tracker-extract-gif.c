@@ -73,7 +73,7 @@ ext_block_append(ExtBlock *extBlock,
 	return (GIF_OK);
 }
 
-#if GIFLIB_MAJOR >= 4
+#if GIFLIB_MAJOR >= 5
 static inline void
 gif_error (const gchar *action, int err)
 {
@@ -84,7 +84,7 @@ gif_error (const gchar *action, int err)
 		g_message ("%s, undefined error %d", action, err);
 	}
 }
-#endif /* GIFLIB_MAJOR >= 4 */
+#endif /* GIFLIB_MAJOR >= 5 */
 
 static void
 read_metadata (TrackerSparqlBuilder *preupdate,
@@ -111,11 +111,11 @@ read_metadata (TrackerSparqlBuilder *preupdate,
 		ExtBlock extBlock;
 
 		if (DGifGetRecordType(gifFile, &RecordType) == GIF_ERROR) {
-#if GIFLIB_MAJOR < 4
+#if GIFLIB_MAJOR < 5
 			PrintGifError ();
-#else  /* GIFLIB_MAJOR < 4 */
+#else  /* GIFLIB_MAJOR < 5 */
 			gif_error ("Could not read next GIF record type", gifFile->Error);
-#endif /* GIFLIB_MAJOR < 4 */
+#endif /* GIFLIB_MAJOR < 5 */
 			return;
 		}
 
@@ -124,9 +124,9 @@ read_metadata (TrackerSparqlBuilder *preupdate,
 			if (DGifGetImageDesc(gifFile) == GIF_ERROR) {
 #if GIFLIB_MAJOR < 5
 				PrintGifError();
-#else  /* GIFLIB_MAJOR < 4 */
+#else  /* GIFLIB_MAJOR < 5 */
 				gif_error ("Could not get GIF record information", gifFile->Error);
-#endif /* GIFLIB_MAJOR < 4 */
+#endif /* GIFLIB_MAJOR < 5 */
 				return;
 			}
 
@@ -136,11 +136,11 @@ read_metadata (TrackerSparqlBuilder *preupdate,
 			framedata = g_malloc (framewidth*frameheight);
 
 			if (DGifGetLine(gifFile, framedata, framewidth*frameheight)==GIF_ERROR) {
-#if GIFLIB_MAJOR < 4
+#if GIFLIB_MAJOR < 5
 				PrintGifError();
-#else  /* GIFLIB_MAJOR < 4 */
+#else  /* GIFLIB_MAJOR < 5 */
 				gif_error ("Could not load a block of GIF pixes", gifFile->Error);
-#endif /* GIFLIB_MAJOR < 4 */
+#endif /* GIFLIB_MAJOR < 5 */
 				return;
 			}
 
@@ -616,7 +616,7 @@ tracker_extract_get_metadata (TrackerExtractInfo *info)
 	gchar *filename, *uri;
 	GFile *file;
 	int fd;
-#if GIFLIB_MAJOR >= 4
+#if GIFLIB_MAJOR >= 5
 	int err;
 #endif
 
@@ -643,13 +643,13 @@ tracker_extract_get_metadata (TrackerExtractInfo *info)
 		return FALSE;
 	}	
 
-#if GIFLIB_MAJOR < 4
+#if GIFLIB_MAJOR < 5
 	if ((gifFile = DGifOpenFileHandle (fd)) == NULL) {
 		PrintGifError ();
-#else   /* GIFLIB_MAJOR < 4 */
+#else   /* GIFLIB_MAJOR < 5 */
 	if ((gifFile = DGifOpenFileHandle (fd, &err)) == NULL) {
 		gif_error ("Could not open GIF file with handle", err);
-#endif /* GIFLIB_MAJOR < 4 */
+#endif /* GIFLIB_MAJOR < 5 */
 		close (fd);
 		return FALSE;
 	}
@@ -670,11 +670,11 @@ tracker_extract_get_metadata (TrackerExtractInfo *info)
 	g_free (uri);
 
 	if (DGifCloseFile (gifFile) != GIF_OK) {
-#if GIFLIB_MAJOR < 4
+#if GIFLIB_MAJOR < 5
 		PrintGifError ();
-#else  /* GIFLIB_MAJOR < 4 */
+#else  /* GIFLIB_MAJOR < 5 */
 		gif_error ("Could not close GIF file", gifFile->Error);
-#endif /* GIFLIB_MAJOR < 4 */
+#endif /* GIFLIB_MAJOR < 5 */
 	}
 
 	return TRUE;
