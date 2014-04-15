@@ -172,6 +172,11 @@ tracker_extract_get_metadata (TrackerExtractInfo *info)
 	video_stream_index = av_find_best_stream (format, AVMEDIA_TYPE_VIDEO, -1, -1, NULL, 0);
 	if (video_stream_index >= 0) {
 		video_stream = format->streams[video_stream_index];
+#if LIBAVFORMAT_VERSION_MAJOR >= 54
+		if (video_stream->disposition & AV_DISPOSITION_ATTACHED_PIC) {
+			video_stream = NULL;
+		}
+#endif
 	}
 
 	if (!audio_stream && !video_stream) {
@@ -237,6 +242,11 @@ tracker_extract_get_metadata (TrackerExtractInfo *info)
 		const char *album_artist = NULL;
 		gchar *album_artist_uri = NULL;
 		gchar *performer_uri = NULL;
+#ifdef HAVE_LIBMEDIAART
+		unsigned char *media_art_buffer = NULL;
+		size_t media_art_len = 0;
+		const gchar *media_art_mime = NULL;
+#endif
 
 		tracker_sparql_builder_predicate (metadata, "a");
 		tracker_sparql_builder_object (metadata, "nmm:MusicPiece");
@@ -330,13 +340,39 @@ tracker_extract_get_metadata (TrackerExtractInfo *info)
 		}
 
 #ifdef HAVE_LIBMEDIAART
-		media_art_process (NULL,
-		                   0,
-		                   NULL,
-		                   MEDIA_ART_ALBUM,
-		                   album_artist,
-		                   album_title,
-		                   uri);
+#if LIBAVFORMAT_VERSION_MAJOR >= 54
+		{
+			int i;
+			for (i = 0; i < format->nb_streams; ++i) {
+				AVStream *stream = format->streams[i];
+				if (stream->disposition & AV_DISPOSITION_ATTACHED_PIC) {
+					media_art_buffer = stream->attached_pic.data;
+					media_art_len = stream->attached_pic.size;
+					switch (stream->codec->codec_id) {
+					case AV_CODEC_ID_MJPEG:
+						media_art_mime = "image/jpeg";
+						break;
+					case AV_CODEC_ID_PNG:
+						media_art_mime = "image/png";
+						break;
+						case AV_CODEC_ID_BMP:
+						media_art_mime = "image/bmp";
+						break;
+					default:
+						break;
+					}
+					break;
+				}
+			}
+		}
+#endif
+		tracker_media_art_process (media_art_buffer,
+		                           media_art_len,
+		                           media_art_mime,
+		                           TRACKER_MEDIA_ART_ALBUM,
+		                           album_artist,
+		                           album_title,
+		                           uri);
 #endif
 
 		g_free(performer_uri);
